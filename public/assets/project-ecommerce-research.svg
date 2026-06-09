@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-labelledby="title desc">
-  <title id="title">中国电商消费趋势专业指标封面</title>
-  <desc id="desc">展示线上零售相对社零增长溢价、实物线上化提升和限上消费领域动能分化。</desc>
+  <title id="title">中国电商消费趋势核心指标封面</title>
+  <desc id="desc">展示网络购物用户、网络购物使用率、网上零售额和线上化趋势。</desc>
   <defs>
     <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
       <stop offset="0" stop-color="#21070b"/>
@@ -26,50 +26,49 @@
     <rect x="382" y="178" width="292" height="178" rx="18"/>
   </g>
   <g font-family="Microsoft YaHei, Arial, sans-serif" fill="#fff7f7">
-    <text x="70" y="76" font-size="21" opacity=".9" font-weight="800">增长溢价</text>
-    <text x="70" y="117" font-size="34" font-weight="900">+1.8pp</text>
-    <text x="70" y="132" font-size="11" opacity=".58" font-weight="700">线上CAGR-社零CAGR</text>
-    <text x="290" y="76" font-size="21" opacity=".9" font-weight="800">线上化提升</text>
-    <text x="290" y="117" font-size="34" font-weight="900">+1.6pp</text>
-    <text x="290" y="132" font-size="11" opacity=".58" font-weight="700">24.5% -> 26.1%</text>
-    <text x="510" y="76" font-size="21" opacity=".9" font-weight="800">品类分化</text>
-    <text x="510" y="117" font-size="34" font-weight="900">18.9pp</text>
-    <text x="510" y="132" font-size="11" opacity=".58" font-weight="700">16.2% vs -2.7%</text>
-    <text x="70" y="220" font-size="18" font-weight="900">增长指数对比</text>
-    <text x="406" y="220" font-size="18" font-weight="900">2025 领域动能</text>
+    <text x="70" y="76" font-size="21" opacity=".9" font-weight="800">网购用户</text>
+    <text x="70" y="117" font-size="34" font-weight="900">9.37亿</text>
+    <text x="70" y="132" font-size="11" opacity=".58" font-weight="700">CNNIC 2025</text>
+    <text x="290" y="76" font-size="21" opacity=".9" font-weight="800">网购使用率</text>
+    <text x="290" y="117" font-size="34" font-weight="900">83.2%</text>
+    <text x="290" y="132" font-size="11" opacity=".58" font-weight="700">网民中的网购占比</text>
+    <text x="510" y="76" font-size="21" opacity=".9" font-weight="800">网上零售额</text>
+    <text x="510" y="117" font-size="34" font-weight="900">15.97万亿</text>
+    <text x="510" y="132" font-size="11" opacity=".58" font-weight="700">统计局年度累计</text>
+    <text x="70" y="220" font-size="18" font-weight="900">用户规模与使用率</text>
+    <text x="406" y="220" font-size="18" font-weight="900">交易规模与线上化</text>
   </g>
-  <path d="M78 314 L132 302 L184 273 L238 271 L310 263" stroke="url(#red)" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M78 314 L132 315 L184 298 L238 289 L310 282" stroke="url(#cream)" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".72"/>
-  <path d="M78 326 H310" stroke="#fff" stroke-opacity=".12"/>
-  <path d="M78 291 H310M78 256 H310" stroke="#fff" stroke-opacity=".08"/>
+  <path d="M78 326H310M78 291H310M78 256H310" stroke="#fff" stroke-opacity=".09"/>
+  <path d="M88 303 L130 301 L172 277 L214 256 L256 269" stroke="url(#red)" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M88 282 L130 296 L172 262 L214 245 L256 267" stroke="url(#cream)" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".72"/>
   <g fill="#fff7f7" opacity=".82">
-    <circle cx="78" cy="314" r="5"/>
-    <circle cx="184" cy="273" r="5"/>
-    <circle cx="310" cy="263" r="5"/>
+    <circle cx="88" cy="303" r="5"/>
+    <circle cx="172" cy="277" r="5"/>
+    <circle cx="214" cy="256" r="5"/>
+    <circle cx="256" cy="269" r="5"/>
   </g>
-  <g font-family="Microsoft YaHei, Arial, sans-serif" fill="#fff7f7" opacity=".64" font-size="11" font-weight="700">
-    <text x="68" y="344">2021</text>
-    <text x="168" y="344">2023</text>
-    <text x="294" y="344">2025</text>
-    <text x="82" y="238">线上零售</text>
-    <text x="204" y="299" fill="#fff1e5">社零</text>
+  <g font-family="Microsoft YaHei, Arial, sans-serif" fill="#fff7f7" opacity=".65" font-size="10" font-weight="800">
+    <text x="78" y="344">2021</text>
+    <text x="162" y="344">2023</text>
+    <text x="246" y="344">2025</text>
+    <text x="84" y="242">用户</text>
+    <text x="205" y="239" fill="#fff1e5">使用率</text>
   </g>
-  <path d="M408 314 H646" stroke="#fff1e5" stroke-width="2" stroke-dasharray="7 7" opacity=".42"/>
+  <path d="M414 326H646M414 291H646M414 256H646" stroke="#fff" stroke-opacity=".09"/>
   <g fill="url(#red)">
-    <rect x="416" y="242" width="28" height="72" rx="7"/>
-    <rect x="462" y="267" width="28" height="47" rx="7" opacity=".86"/>
-    <rect x="508" y="274" width="28" height="40" rx="7" opacity=".78"/>
-    <rect x="554" y="285" width="28" height="29" rx="7" opacity=".7"/>
-    <rect x="600" y="314" width="28" height="12" rx="6" opacity=".54"/>
+    <rect x="424" y="283" width="24" height="43" rx="7" opacity=".72"/>
+    <rect x="470" y="278" width="24" height="48" rx="7" opacity=".78"/>
+    <rect x="516" y="247" width="24" height="79" rx="7" opacity=".95"/>
+    <rect x="562" y="245" width="24" height="81" rx="7"/>
+    <rect x="608" y="238" width="24" height="88" rx="7"/>
   </g>
-  <text x="414" y="235" fill="#fff1e5" font-family="Microsoft YaHei, Arial, sans-serif" font-size="12" font-weight="900">+16.2%</text>
-  <text x="598" y="342" fill="#fff1e5" font-family="Microsoft YaHei, Arial, sans-serif" font-size="11" font-weight="800">-2.7%</text>
-  <g font-family="Microsoft YaHei, Arial, sans-serif" fill="#fff7f7" opacity=".7" font-size="10" font-weight="700">
-    <text x="412" y="344">家居</text>
-    <text x="458" y="344">医药</text>
-    <text x="504" y="344">食品</text>
-    <text x="550" y="344">服饰</text>
-    <text x="596" y="358">交通</text>
+  <path d="M424 276 L470 252 L516 247 L562 259 L608 268" stroke="url(#cream)" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".78"/>
+  <g font-family="Microsoft YaHei, Arial, sans-serif" fill="#fff7f7" opacity=".68" font-size="10" font-weight="700">
+    <text x="414" y="344">2021</text>
+    <text x="506" y="344">2023</text>
+    <text x="598" y="344">2025</text>
+    <text x="422" y="238">零售额</text>
+    <text x="552" y="249" fill="#fff1e5">实物线上化</text>
   </g>
-  <text x="46" y="386" fill="#fff7f7" opacity=".5" font-family="Microsoft YaHei, Arial, sans-serif" font-size="12">2025线上零售15.97万亿元；右图为限上消费领域动能，非电商销售结构</text>
+  <text x="46" y="386" fill="#fff7f7" opacity=".5" font-family="Microsoft YaHei, Arial, sans-serif" font-size="12">CNNIC用户口径 + 国家统计局年度累计口径；不混写平台GMV</text>
 </svg>

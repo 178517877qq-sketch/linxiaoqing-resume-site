@@ -37,36 +37,36 @@ const stats = [
 
 const projects = [
   {
-    type: "Equity Research Database",
-    title: "核心评分股票研究库",
-    metric: "+10.6pp 验证超额 / -27.0% 平均最大回撤 / 10.9亿 日均成交额中位数",
+    type: "Equity Fundamentals Framework",
+    title: "A股基本面与估值研究框架",
+    metric: "财报覆盖 0/100 / PE覆盖 83/100 / PB覆盖 100/100",
     casePoints: [
       {
         label: "业务问题",
-        text: "股票研究不能只看单一收益指标，需要把评分、排名、主题、风险、流动性和验证结果统一到可查询底座。"
+        text: "股票研究不能只靠回测收益或评分排名，需要先确认财报、估值、市值和行业字段是否足够支撑基本面判断。"
       },
       {
         label: "分析动作",
-        text: "搭建 SQL 研究库，导入 v4_forward_validated 评分结果，沉淀 Top100、评分组件、验证回测和数据质量审计。"
+        text: "核查 Top100 样本的财报与估值字段覆盖，区分可直接分析的 PE/PB/市值字段，以及暂不能展示的营收、ROE、现金流字段。"
       },
       {
         label: "输出价值",
-        text: "让股票筛选从经验判断变成可复核的研究流程，同时明确样本池、验证范围和不能过度推断的边界。"
+        text: "把股票项目从结果包装改成研究框架展示：先讲清楚数据覆盖和缺口，再决定哪些指标可以进入正式分析。"
       }
     ],
-    tags: ["SQL建模", "评分框架", "风险边界"],
-    image: assetPath("assets/project-stock-research.svg?v=20260609-professional-signals"),
-    imageAlt: "核心评分股票研究库验证超额、回撤风险、流动性和因子暴露封面",
+    tags: ["基本面框架", "估值覆盖", "数据缺口"],
+    image: assetPath("assets/project-stock-research.svg?v=20260609-fundamental-coverage"),
+    imageAlt: "A股基本面与估值研究框架财报覆盖、PE覆盖和PB覆盖封面",
     evidence: [
-      "1,901 只评分股票、11,406 条评分组件，可回连总分",
-      "v4 Top100 78.3% vs baseline 67.7%，本地样本池验证",
-      "Top100 最大回撤均值 -27.0%，流动性口径已标注"
+      "Top100 样本估值字段：PE 83/100、PB 100/100、市值 99/100",
+      "财报字段仍为空：营收、ROE、现金流暂不展示数值",
+      "数据口径：当前展示研究框架与覆盖审计，不提供投资建议"
     ]
   },
   {
     type: "China E-commerce Trends",
     title: "中国电商消费趋势分析",
-    metric: "+1.8pp 线上增长溢价 / +1.6pp 实物线上化提升 / 18.9pp 品类动能分化",
+    metric: "9.37亿 网络购物用户 / 83.2% 网络购物使用率 / 15.97万亿元 网上零售额",
     casePoints: [
       {
         label: "业务问题",
@@ -82,39 +82,39 @@ const projects = [
       }
     ],
     tags: ["官方口径", "来源血缘", "趋势报告"],
-    image: assetPath("assets/project-ecommerce-research.svg?v=20260609-professional-signals"),
-    imageAlt: "中国电商消费趋势增长溢价、线上化提升和限上消费领域动能分化封面",
+    image: assetPath("assets/project-ecommerce-research.svg?v=20260609-consumer-core"),
+    imageAlt: "中国电商消费趋势网络购物用户、使用率和网上零售额封面",
     evidence: [
-      "2025 全国网上零售额 15.97 万亿元，保留为规模背景",
-      "线上零售 CAGR 5.1% vs 社零 CAGR 3.3%",
-      "家居家电数码 +16.2% vs 交通能源地产链 -2.7%"
+      "CNNIC 口径：2025 网络购物用户 9.37 亿、使用率 83.2%",
+      "统计局口径：2025 全国网上零售额 15.97 万亿元",
+      "数据口径：官方统计与 CNNIC 用户指标结合，不混写平台 GMV"
     ]
   },
   {
     type: "Novel Market Analysis",
     title: "国际热门小说年度趋势分析",
-    metric: "-45.8% 热度回落 / +2.8pp 评论参与提升 / 8.0pp Romance 占比波动",
+    metric: "6158.8万 书架标记量 / 2459.1万 评分量 / 322.8万 评论量",
     casePoints: [
       {
         label: "业务问题",
-        text: "热门小说榜单容易只停留在排名，需要进一步解释年度热度、题材迁移、风格变化和读者市场偏好。"
+        text: "热门小说榜单容易只停留在排名，需要进一步解释平台读者行为、作品互动强度、题材结构和年度变化。"
       },
       {
         label: "分析动作",
-        text: "基于 Goodreads 年度热门榜快照抓取候选池，过滤非小说，建立 500 本书档案、风格维度和趋势图表。"
+        text: "基于 Goodreads 年度热门榜快照抓取候选池，过滤非小说，建立 500 本书档案，并统计书架标记、评分、评论和题材标签。"
       },
       {
         label: "输出价值",
-        text: "把内容热度拆成可读的数据叙事，既能看年度趋势，也能追溯到单书档案、方法论和数据边界。"
+        text: "把内容热度拆成可读的数据叙事，既能看平台互动趋势，也能追溯到单书档案、方法论和数据边界。"
       }
     ],
-    tags: ["题材趋势", "样本清洗", "内容洞察"],
-    image: assetPath("assets/project-novel-market.svg?v=20260609-professional-signals"),
-    imageAlt: "国际热门小说平台热度回落、评论参与提升和题材迁移封面",
+    tags: ["读者行为代理", "样本清洗", "内容洞察"],
+    image: assetPath("assets/project-novel-market.svg?v=20260609-reader-signals"),
+    imageAlt: "国际热门小说 Goodreads 书架标记量、评分量和评论量封面",
     evidence: [
-      "2025 Top100 平均 shelf_count 较 2022 峰值回落 45.8%",
-      "评论参与率 10.35% -> 13.13%，互动强度提升",
-      "Goodreads 指标仅作平台热度代理，不等同销量"
+      "2025 Goodreads Top100 小说样本：书架标记量 6158.8 万",
+      "评分量 2459.1 万、评论量 322.8 万，可衡量平台互动强度",
+      "数据口径：Goodreads 为平台行为代理，不代表出版市场真实销售"
     ]
   }
 ];

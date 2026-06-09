@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-labelledby="title desc">
-  <title id="title">核心评分股票研究库专业指标封面</title>
-  <desc id="desc">展示股票研究库的本地验证超额、最大回撤、流动性和 Top100 因子暴露。</desc>
+  <title id="title">A股基本面与估值研究框架封面</title>
+  <desc id="desc">展示股票研究框架中财报覆盖、PE覆盖、PB覆盖和待补基本面字段。</desc>
   <defs>
     <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
       <stop offset="0" stop-color="#21070b"/>
@@ -26,51 +26,46 @@
     <rect x="382" y="178" width="292" height="178" rx="18"/>
   </g>
   <g font-family="Microsoft YaHei, Arial, sans-serif" fill="#fff7f7">
-    <text x="70" y="76" font-size="21" opacity=".9" font-weight="800">验证超额</text>
-    <text x="70" y="117" font-size="34" font-weight="900">+10.6pp</text>
-    <text x="70" y="132" font-size="11" opacity=".58" font-weight="700">v4 Top100 vs 基准</text>
-    <text x="290" y="76" font-size="21" opacity=".9" font-weight="800">平均回撤</text>
-    <text x="290" y="117" font-size="34" font-weight="900">-27.0%</text>
-    <text x="290" y="132" font-size="11" opacity=".58" font-weight="700">Top100 风险边界</text>
-    <text x="510" y="76" font-size="21" opacity=".9" font-weight="800">流动性</text>
-    <text x="510" y="117" font-size="34" font-weight="900">10.9亿</text>
-    <text x="510" y="132" font-size="11" opacity=".58" font-weight="700">日均成交额中位数</text>
-    <text x="70" y="220" font-size="18" font-weight="900">Top100 vs baseline</text>
-    <text x="406" y="220" font-size="18" font-weight="900">Top100 因子暴露</text>
+    <text x="70" y="76" font-size="21" opacity=".9" font-weight="800">财报覆盖</text>
+    <text x="70" y="117" font-size="34" font-weight="900">0/100</text>
+    <text x="70" y="132" font-size="11" opacity=".58" font-weight="700">营收 / ROE / 现金流待补</text>
+    <text x="290" y="76" font-size="21" opacity=".9" font-weight="800">PE覆盖</text>
+    <text x="290" y="117" font-size="34" font-weight="900">83/100</text>
+    <text x="290" y="132" font-size="11" opacity=".58" font-weight="700">可做估值筛选</text>
+    <text x="510" y="76" font-size="21" opacity=".9" font-weight="800">PB覆盖</text>
+    <text x="510" y="117" font-size="34" font-weight="900">100/100</text>
+    <text x="510" y="132" font-size="11" opacity=".58" font-weight="700">账面估值字段完整</text>
+    <text x="70" y="220" font-size="18" font-weight="900">基本面覆盖矩阵</text>
+    <text x="406" y="220" font-size="18" font-weight="900">待补字段优先级</text>
   </g>
-  <path d="M78 296 H310" stroke="#fff1e5" stroke-width="2" stroke-dasharray="8 7" opacity=".56"/>
-  <text x="264" y="291" fill="#fff1e5" opacity=".72" font-family="Microsoft YaHei, Arial, sans-serif" font-size="10" font-weight="800">baseline 67.7%</text>
-  <path d="M78 326 H310" stroke="#fff" stroke-opacity=".12"/>
-  <path d="M78 279 H310M78 244 H310" stroke="#fff" stroke-opacity=".08"/>
+  <g font-family="Microsoft YaHei, Arial, sans-serif" font-size="12" font-weight="800">
+    <text x="78" y="257" fill="#fff7f7" opacity=".75">财报字段</text>
+    <rect x="150" y="246" width="150" height="13" rx="6" fill="#fff" opacity=".1"/>
+    <rect x="150" y="246" width="2" height="13" rx="6" fill="url(#red)"/>
+    <text x="308" y="257" fill="#fff1e5" opacity=".8">0%</text>
+    <text x="78" y="293" fill="#fff7f7" opacity=".75">估值字段</text>
+    <rect x="150" y="282" width="150" height="13" rx="6" fill="#fff" opacity=".1"/>
+    <rect x="150" y="282" width="141" height="13" rx="6" fill="url(#red)"/>
+    <text x="308" y="293" fill="#fff1e5" opacity=".8">94%</text>
+    <text x="78" y="329" fill="#fff7f7" opacity=".75">市值字段</text>
+    <rect x="150" y="318" width="150" height="13" rx="6" fill="#fff" opacity=".1"/>
+    <rect x="150" y="318" width="149" height="13" rx="6" fill="url(#cream)"/>
+    <text x="308" y="329" fill="#fff1e5" opacity=".8">99%</text>
+  </g>
+  <g fill="none" stroke="#fff" stroke-opacity=".12">
+    <path d="M414 326H646M414 289H646M414 252H646"/>
+  </g>
   <g fill="url(#red)">
-    <rect x="91" y="291" width="28" height="35" rx="7" opacity=".74"/>
-    <rect x="137" y="308" width="28" height="18" rx="7" opacity=".62"/>
-    <rect x="183" y="296" width="28" height="30" rx="7" opacity=".8"/>
-    <rect x="229" y="272" width="28" height="54" rx="7"/>
-  </g>
-  <g font-family="Microsoft YaHei, Arial, sans-serif" fill="#fff7f7" opacity=".72" font-size="10" font-weight="800">
-    <text x="90" y="344">v1</text>
-    <text x="136" y="344">v2</text>
-    <text x="182" y="344">v3</text>
-    <text x="228" y="344">v4</text>
-    <text x="84" y="282">70.2</text>
-    <text x="222" y="263">78.3</text>
-  </g>
-  <g fill="url(#red)">
-    <rect x="414" y="281" width="20" height="45" rx="6" opacity=".62"/>
-    <rect x="446" y="245" width="20" height="81" rx="6"/>
-    <rect x="478" y="260" width="20" height="66" rx="6" opacity=".8"/>
-    <rect x="510" y="251" width="20" height="75" rx="6" opacity=".9"/>
-    <rect x="542" y="268" width="20" height="58" rx="6" opacity=".72"/>
-    <rect x="574" y="249" width="20" height="77" rx="6" opacity=".94"/>
+    <rect x="424" y="258" width="28" height="68" rx="7"/>
+    <rect x="480" y="276" width="28" height="50" rx="7" opacity=".86"/>
+    <rect x="536" y="266" width="28" height="60" rx="7" opacity=".92"/>
+    <rect x="592" y="294" width="28" height="32" rx="7" opacity=".7"/>
   </g>
   <g font-family="Microsoft YaHei, Arial, sans-serif" fill="#fff7f7" opacity=".72" font-size="10" font-weight="700">
-    <text x="409" y="344">质量</text>
-    <text x="441" y="344">趋势</text>
-    <text x="473" y="344">流动</text>
-    <text x="505" y="344">估值</text>
-    <text x="537" y="344">风险</text>
-    <text x="569" y="344">主题</text>
+    <text x="415" y="344">营收</text>
+    <text x="476" y="344">ROE</text>
+    <text x="528" y="344">现金流</text>
+    <text x="588" y="344">负债率</text>
   </g>
-  <text x="46" y="386" fill="#fff7f7" opacity=".5" font-family="Microsoft YaHei, Arial, sans-serif" font-size="12">本地样本池验证；1,901只股票、6维评分框架仅为研究底座，不代表投资建议</text>
+  <text x="46" y="386" fill="#fff7f7" opacity=".5" font-family="Microsoft YaHei, Arial, sans-serif" font-size="12">Top100样本；财报表0行，估值字段来自日频估值与市值快照</text>
 </svg>
