@@ -28,13 +28,13 @@
   <g font-family="Microsoft YaHei, Arial, sans-serif" fill="#fff7f7">
     <text x="140" y="82" font-size="21" opacity=".9" font-weight="800" text-anchor="middle">样本</text>
     <text x="140" y="122" font-size="34" font-weight="900" text-anchor="middle">500本</text>
-    <text x="360" y="82" font-size="21" opacity=".9" font-weight="800" text-anchor="middle">题材</text>
+    <text x="360" y="82" font-size="21" opacity=".9" font-weight="800" text-anchor="middle">Top5 风格</text>
     <text x="360" y="122" font-size="34" font-weight="900" text-anchor="middle">5类</text>
-    <text x="580" y="76" font-size="20" opacity=".9" font-weight="800" text-anchor="middle">Romance 标签</text>
-    <text x="580" y="112" font-size="34" font-weight="900" text-anchor="middle">66%</text>
-    <text x="580" y="132" font-size="11" opacity=".58" font-weight="700" text-anchor="middle">Top100 样本覆盖</text>
+    <text x="580" y="76" font-size="21" opacity=".9" font-weight="800" text-anchor="middle">主风格</text>
+    <text x="580" y="112" font-size="34" font-weight="900" text-anchor="middle">28本</text>
+    <text x="580" y="132" font-size="11" opacity=".58" font-weight="700" text-anchor="middle">与悬疑并列第一</text>
     <text x="70" y="220" font-size="18" font-weight="900">平台行为趋势</text>
-    <text x="406" y="220" font-size="18" font-weight="900">2025 标签覆盖</text>
+    <text x="406" y="220" font-size="18" font-weight="900">2025 主风格分布</text>
   </g>
   <path d="M78 326H310M78 291H310M78 256H310" stroke="#fff" stroke-opacity=".09"/>
   <path d="M88 278 L130 246 L172 277 L214 312 L256 326" stroke="url(#red)" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -59,22 +59,22 @@
   </g>
   <g fill="url(#red)">
     <rect x="414" y="236" width="26" height="90" rx="7"/>
-    <rect x="468" y="270" width="26" height="56" rx="7" opacity=".86"/>
-    <rect x="522" y="264" width="26" height="62" rx="7" opacity=".74"/>
-    <rect x="576" y="284" width="26" height="42" rx="7" opacity=".8"/>
-    <rect x="630" y="316" width="26" height="10" rx="5" opacity=".58"/>
+    <rect x="468" y="236" width="26" height="90" rx="7" opacity=".86"/>
+    <rect x="522" y="246" width="26" height="80" rx="7" opacity=".74"/>
+    <rect x="576" y="297" width="26" height="29" rx="7" opacity=".8"/>
+    <rect x="630" y="310" width="26" height="16" rx="6" opacity=".58"/>
   </g>
   <g font-family="Microsoft YaHei, Arial, sans-serif" fill="#fff7f7" opacity=".72" font-size="10" font-weight="700">
-    <text x="408" y="344">Romance</text>
+    <text x="404" y="344">Romance</text>
     <text x="464" y="344">Thriller</text>
-    <text x="520" y="344">Literary</text>
-    <text x="574" y="344">Fantasy</text>
-    <text x="628" y="344">Sci-fi</text>
-    <text x="414" y="229">66</text>
-    <text x="468" y="263">41</text>
-    <text x="522" y="257">46</text>
-    <text x="576" y="277">31</text>
-    <text x="632" y="309">7</text>
+    <text x="516" y="344">Romant.</text>
+    <text x="572" y="344">Histor.</text>
+    <text x="626" y="344">Literary</text>
+    <text x="414" y="229">28</text>
+    <text x="468" y="229">28</text>
+    <text x="522" y="239">25</text>
+    <text x="576" y="290">9</text>
+    <text x="632" y="303">5</text>
   </g>
-  <text x="46" y="386" fill="#fff7f7" opacity=".5" font-family="Microsoft YaHei, Arial, sans-serif" font-size="12">Goodreads Top100 小说样本；多标签覆盖口径。</text>
+  <text x="46" y="386" fill="#fff7f7" opacity=".5" font-family="Microsoft YaHei, Arial, sans-serif" font-size="12">Goodreads Top100 小说样本；年度索引主风格口径。</text>
 </svg>
