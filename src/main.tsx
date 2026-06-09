@@ -109,11 +109,11 @@ const projects = [
       }
     ],
     tags: ["读者行为代理", "样本清洗", "内容洞察"],
-    image: assetPath("assets/project-novel-market.svg?v=20260609-stat-center"),
+    image: assetPath("assets/project-novel-market.svg?v=20260609-romance-coverage"),
     imageAlt: "国际热门小说 Goodreads 书架标记量、评分量和评论量封面",
     evidence: [
       "2025 Goodreads Top100 小说样本：书架标记量 6158.8 万",
-      "评分量 2459.1 万、评论量 322.8 万；Romance 在 5 类题材中占比最高，约 40%",
+      "评分量 2459.1 万、评论量 322.8 万；2025 Top100 中 Romance 标签覆盖 66%",
       "数据口径：Goodreads 为平台行为代理，不代表出版市场真实销售"
     ]
   }
