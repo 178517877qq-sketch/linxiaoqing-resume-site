@@ -39,7 +39,7 @@ const projects = [
   {
     type: "Equity Research Database",
     title: "核心评分股票研究库",
-    metric: "1,901 只评分股票 / 6 维评分框架 / 81.6% 本地验证覆盖",
+    metric: "+10.6pp 验证超额 / -27.0% 平均最大回撤 / 10.9亿 日均成交额中位数",
     casePoints: [
       {
         label: "业务问题",
@@ -55,18 +55,18 @@ const projects = [
       }
     ],
     tags: ["SQL建模", "评分框架", "风险边界"],
-    image: assetPath("assets/project-stock-research.svg?v=20260609-chart-audit"),
-    imageAlt: "核心评分股票研究库评分样本、维度和样本池验证封面",
+    image: assetPath("assets/project-stock-research.svg?v=20260609-professional-signals"),
+    imageAlt: "核心评分股票研究库验证超额、回撤风险、流动性和因子暴露封面",
     evidence: [
-      "11406 条评分组件，可回连总分",
-      "2024 本地样本池验证覆盖 506/620，非收益承诺",
-      "覆盖率、价格数据和研究边界已标注"
+      "1,901 只评分股票、11,406 条评分组件，可回连总分",
+      "v4 Top100 78.3% vs baseline 67.7%，本地样本池验证",
+      "Top100 最大回撤均值 -27.0%，流动性口径已标注"
     ]
   },
   {
     type: "China E-commerce Trends",
     title: "中国电商消费趋势分析",
-    metric: "2025 线上零售 15.97 万亿元 / 2021-2025 CAGR 5.1% / 实物线上化 26.1%",
+    metric: "+1.8pp 线上增长溢价 / +1.6pp 实物线上化提升 / 18.9pp 品类动能分化",
     casePoints: [
       {
         label: "业务问题",
@@ -82,18 +82,18 @@ const projects = [
       }
     ],
     tags: ["官方口径", "来源血缘", "趋势报告"],
-    image: assetPath("assets/project-ecommerce-research.svg?v=20260609-final-audit"),
-    imageAlt: "中国电商消费趋势规模、增速、实物线上化和领域结构封面",
+    image: assetPath("assets/project-ecommerce-research.svg?v=20260609-professional-signals"),
+    imageAlt: "中国电商消费趋势增长溢价、线上化提升和限上消费领域动能分化封面",
     evidence: [
-      "68 项数据包交付物与 201 项校验",
-      "HTML 报告、PNG 图表和 SQLite 数据库",
-      "指标字典、来源血缘和补数模板"
+      "2025 全国网上零售额 15.97 万亿元，保留为规模背景",
+      "线上零售 CAGR 5.1% vs 社零 CAGR 3.3%",
+      "家居家电数码 +16.2% vs 交通能源地产链 -2.7%"
     ]
   },
   {
     type: "Novel Market Analysis",
     title: "国际热门小说年度趋势分析",
-    metric: "Romance 集中度 62.6% / 2023 峰值 67% / 2025 Top10 热度占比 28.3%",
+    metric: "-45.8% 热度回落 / +2.8pp 评论参与提升 / 8.0pp Romance 占比波动",
     casePoints: [
       {
         label: "业务问题",
@@ -109,12 +109,12 @@ const projects = [
       }
     ],
     tags: ["题材趋势", "样本清洗", "内容洞察"],
-    image: assetPath("assets/project-novel-market.svg?v=20260609-signal-audit"),
-    imageAlt: "国际热门小说 Romance 集中度、年度峰值、头部热度集中度和风格维度封面",
+    image: assetPath("assets/project-novel-market.svg?v=20260609-professional-signals"),
+    imageAlt: "国际热门小说平台热度回落、评论参与提升和题材迁移封面",
     evidence: [
-      "2021-2025 年 500 本小说本地分析档案",
-      "Goodreads 热度快照与风格维度说明",
-      "数据质量复核通过，仅 1 项低风险警告"
+      "2025 Top100 平均 shelf_count 较 2022 峰值回落 45.8%",
+      "评论参与率 10.35% -> 13.13%，互动强度提升",
+      "Goodreads 指标仅作平台热度代理，不等同销量"
     ]
   }
 ];
@@ -246,17 +246,36 @@ function usePortfolioMotion() {
       if (!target) return false;
 
       const scrollOffset = 118;
-      const targetTop = () => target.getBoundingClientRect().top + window.scrollY - scrollOffset;
+      const scrollRoot = document.scrollingElement ?? document.documentElement;
+      const currentScrollTop = () =>
+        window.scrollY || scrollRoot.scrollTop || document.documentElement.scrollTop || document.body.scrollTop;
+      const targetTop = () => target.getBoundingClientRect().top + currentScrollTop() - scrollOffset;
+      const applyScroll = (top: number, scrollBehavior: ScrollBehavior) => {
+        const nextTop = Math.max(0, Math.round(top));
+        window.scrollTo({ top: nextTop, behavior: scrollBehavior });
+
+        if (scrollBehavior === "auto") {
+          scrollRoot.scrollTop = nextTop;
+          document.documentElement.scrollTop = nextTop;
+          document.body.scrollTop = nextTop;
+        }
+      };
+      const correctScroll = (delay: number) => {
+        scrollCorrectionTimer = window.setTimeout(() => {
+          if (Math.abs(target.getBoundingClientRect().top - scrollOffset) > 28) {
+            applyScroll(targetTop(), "auto");
+          }
+        }, delay);
+      };
+
       window.clearTimeout(scrollCorrectionTimer);
-      window.scrollTo({ top: Math.max(0, targetTop()), behavior });
+      applyScroll(targetTop(), behavior);
       nav?.classList.toggle("is-floating", targetId !== "#top");
 
       if (behavior === "smooth") {
-        scrollCorrectionTimer = window.setTimeout(() => {
-          if (Math.abs(target.getBoundingClientRect().top - scrollOffset) > 28) {
-            window.scrollTo({ top: Math.max(0, targetTop()), behavior: "auto" });
-          }
-        }, 650);
+        correctScroll(650);
+      } else {
+        correctScroll(120);
       }
 
       return true;
