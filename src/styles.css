@@ -728,6 +728,8 @@ p {
 }
 
 .project-card {
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
 }
 
@@ -787,6 +789,9 @@ p {
 }
 
 .project-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
   padding: 30px;
 }
 
@@ -815,7 +820,8 @@ p {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-top: 22px;
+  margin-top: auto;
+  padding-top: 22px;
 }
 
 .case-points {

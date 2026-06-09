@@ -37,36 +37,36 @@ const stats = [
 
 const projects = [
   {
-    type: "BUSINESS METRICS MONITORING",
-    title: "经营指标监控与数据口径治理",
-    metric: "3年+ 经营数据分析 / 核心经营指标监控 / 字段口径文档沉淀",
+    type: "BUSINESS DATA ANALYTICS",
+    title: "经营数据分析与业务优化",
+    metric: "3年+ 经营数据分析 / 合作商 GMV +10% / 外呼接通率 +8%",
     casePoints: [
       {
         label: "业务问题",
-        text: "经营数据分散在不同字段、状态和规则里，口径不统一，异常发现滞后，业务、统计和会议复盘之间常出现对数偏差。"
+        text: "合作商资源分散、客群质量参差，数据口径不统一、异常发现滞后，业务与合作商之间常出现对数偏差，影响派发效率与外呼转化。"
       },
       {
         label: "分析动作",
-        text: "统一字段含义、状态流转和资源派发规则；搭建日常进度、资源使用、反馈状态和异常波动的监控；整理会议复盘材料并跟进动作；与开发对齐字段、报表逻辑和功能体验。"
+        text: "制定行方数据管理与派发规则；对客群数据做质量分层、实现精准下发；搭建经营指标监控与异常跟进，覆盖 20+ 核心经营指标并沉淀字段口径与报表文档；与开发共建外呼接通率响应模型；每周主持与合作商的数据对数复盘会并落实改善措施。"
       },
       {
         label: "输出价值",
-        text: "让业务、统计、会议、复盘共用同一套数据口径，异常更早被发现、复盘更快，经营判断和策略调整都有数据依据。"
+        text: "数据派发规则带动合作商 GMV 提升约 10%、接通率模型带动外呼接通率提升约 8%；异常更早发现、对数偏差下降、复盘更快，经营判断有据可依。"
       }
     ],
-    tags: ["口径治理", "指标监控", "复盘协同"],
-    image: assetPath("assets/project-bank-monitoring.svg?v=20260609-bank-case-2"),
-    imageAlt: "广发银行经营指标监控与数据口径治理项目封面",
+    tags: ["数据派发", "接通率模型", "复盘协同"],
+    image: assetPath("assets/project-bank-monitoring.svg?v=20260609-business-analytics"),
+    imageAlt: "广发银行经营数据分析与业务优化项目封面",
     evidence: [
-      "负责经营指标监控、异常跟进和数据会议材料整理，为经营复盘与策略调整提供依据",
-      "统一字段口径、状态流转和资源派发规则，并与开发对齐报表逻辑和使用体验",
-      "数据口径：涉及内部数据，展示为脱敏/相对口径，不含敏感数值"
+      "制定数据管理与派发规则、客群质量分层，精准下发，带动合作商 GMV 提升约 10%",
+      "与开发共建外呼接通率响应模型，外呼接通率提升约 8%",
+      "主持每周对数复盘会，统一口径、降低对数偏差，异常发现从 T+3 提到 T+1"
     ]
   },
   {
     type: "China E-commerce Trends",
     title: "中国电商消费趋势分析",
-    metric: "9.37亿 网络购物用户 / 83.2% 网络购物使用率 / 15.97万亿元 网上零售额",
+    metric: "3 个官方数据源 / 线上化率 2021→2025 +1.6pct / 数据包·SQL视图·HTML报告",
     casePoints: [
       {
         label: "业务问题",
@@ -82,7 +82,7 @@ const projects = [
       }
     ],
     tags: ["官方口径", "来源血缘", "趋势报告"],
-    image: assetPath("assets/project-ecommerce-research.svg?v=20260609-source-delivery"),
+    image: assetPath("assets/project-ecommerce-research.svg?v=20260609-online-share"),
     imageAlt: "中国电商消费趋势网络购物用户、使用率和网上零售额封面",
     evidence: [
       "CNNIC 口径：2025 网络购物用户 9.37 亿、使用率 83.2%",
@@ -93,7 +93,7 @@ const projects = [
   {
     type: "Novel Market Analysis",
     title: "国际热门小说年度趋势分析",
-    metric: "6158.8万 书架标记量 / 2459.1万 评分量 / 322.8万 评论量",
+    metric: "500 本清洗样本 / 5 类题材 / Romance 占比 66%(题材第一)",
     casePoints: [
       {
         label: "业务问题",
@@ -109,7 +109,7 @@ const projects = [
       }
     ],
     tags: ["读者行为代理", "样本清洗", "内容洞察"],
-    image: assetPath("assets/project-novel-market.svg?v=20260609-sample-dimensions"),
+    image: assetPath("assets/project-novel-market.svg?v=20260609-romance-share"),
     imageAlt: "国际热门小说 Goodreads 书架标记量、评分量和评论量封面",
     evidence: [
       "2025 Goodreads Top100 小说样本：书架标记量 6158.8 万",

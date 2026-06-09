@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-labelledby="title desc">
-  <title id="title">经营指标监控与数据口径治理封面</title>
-  <desc id="desc">展示广发银行项目的在岗经验、指标监控、口径沉淀和脱敏示意图表。</desc>
+  <title id="title">经营数据分析与业务优化封面</title>
+  <desc id="desc">展示广发银行项目的合作商 GMV、外呼接通率、异常发现时效和脱敏示意图表。</desc>
   <defs>
     <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
       <stop offset="0" stop-color="#21070b"/>
@@ -26,15 +26,15 @@
     <rect x="382" y="178" width="292" height="178" rx="18"/>
   </g>
   <g font-family="Microsoft YaHei, Arial, sans-serif" fill="#fff7f7">
-    <text x="70" y="76" font-size="21" opacity=".9" font-weight="800">在岗经验</text>
-    <text x="70" y="117" font-size="34" font-weight="900">3年+</text>
-    <text x="70" y="132" font-size="11" opacity=".58" font-weight="700">2022.09–2025.12 核心数据岗</text>
-    <text x="290" y="76" font-size="21" opacity=".9" font-weight="800">指标监控</text>
-    <text x="290" y="117" font-size="34" font-weight="900">20+ 项</text>
-    <text x="290" y="132" font-size="11" opacity=".58" font-weight="700">核心经营指标日常监控</text>
-    <text x="510" y="76" font-size="21" opacity=".9" font-weight="800">口径沉淀</text>
-    <text x="510" y="117" font-size="34" font-weight="900">100+项</text>
-    <text x="510" y="132" font-size="11" opacity=".58" font-weight="700">字段口径与报表文档</text>
+    <text x="70" y="76" font-size="21" opacity=".9" font-weight="800">合作商 GMV</text>
+    <text x="70" y="117" font-size="34" font-weight="900">+10%</text>
+    <text x="70" y="132" font-size="11" opacity=".58" font-weight="700">数据派发规则优化带动</text>
+    <text x="290" y="76" font-size="21" opacity=".9" font-weight="800">外呼接通率</text>
+    <text x="290" y="117" font-size="34" font-weight="900">+8%</text>
+    <text x="290" y="132" font-size="10" opacity=".58" font-weight="700">与开发共建接通率响应模型</text>
+    <text x="510" y="76" font-size="21" opacity=".9" font-weight="800">异常发现时效</text>
+    <text x="510" y="117" font-size="32" font-weight="900">T+3→T+1</text>
+    <text x="510" y="132" font-size="11" opacity=".58" font-weight="700">经营指标监控提速</text>
     <text x="70" y="220" font-size="18" font-weight="900">指标监控趋势</text>
     <text x="406" y="220" font-size="18" font-weight="900">口径/异常分布</text>
   </g>
@@ -68,5 +68,5 @@
     <text x="528" y="344">规则</text>
     <text x="584" y="344">报表</text>
   </g>
-  <text x="46" y="386" fill="#fff7f7" opacity=".5" font-family="Microsoft YaHei, Arial, sans-serif" font-size="12">广发银行真实项目；涉及内部数据，此处为脱敏/相对口径，不展示敏感数值。</text>
+  <text x="46" y="386" fill="#fff7f7" opacity=".5" font-family="Microsoft YaHei, Arial, sans-serif" font-size="12">广发银行真实项目；以相对口径展示成效，不含绝对敏感数值。</text>
 </svg>
