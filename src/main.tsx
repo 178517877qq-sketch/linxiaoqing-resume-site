@@ -82,7 +82,7 @@ const projects = [
       }
     ],
     tags: ["官方口径", "来源血缘", "趋势报告"],
-    image: assetPath("assets/project-ecommerce-research.svg?v=20260609-stat-center"),
+    image: assetPath("assets/project-ecommerce-research.svg?v=20260610-chart-span"),
     imageAlt: "中国电商消费趋势网络购物用户、使用率和网上零售额封面",
     evidence: [
       "CNNIC 口径：2025 网络购物用户 9.37 亿、使用率 83.2%",

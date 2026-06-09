@@ -36,18 +36,19 @@
     <text x="406" y="220" font-size="18" font-weight="900">交易规模与线上化</text>
   </g>
   <path d="M78 326H310M78 291H310M78 256H310" stroke="#fff" stroke-opacity=".09"/>
-  <path d="M88 303 L130 301 L172 277 L214 256 L256 269" stroke="url(#red)" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M88 282 L130 296 L172 262 L214 245 L256 267" stroke="url(#cream)" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".72"/>
+  <path d="M88 303 L141 301 L194 277 L247 256 L300 269" stroke="url(#red)" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M88 282 L141 296 L194 262 L247 245 L300 267" stroke="url(#cream)" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".72"/>
   <g fill="#fff7f7" opacity=".82">
     <circle cx="88" cy="303" r="5"/>
-    <circle cx="172" cy="277" r="5"/>
-    <circle cx="214" cy="256" r="5"/>
-    <circle cx="256" cy="269" r="5"/>
+    <circle cx="141" cy="301" r="5"/>
+    <circle cx="194" cy="277" r="5"/>
+    <circle cx="247" cy="256" r="5"/>
+    <circle cx="300" cy="269" r="5"/>
   </g>
   <g font-family="Microsoft YaHei, Arial, sans-serif" fill="#fff7f7" opacity=".65" font-size="10" font-weight="800">
     <text x="78" y="344">2021</text>
-    <text x="162" y="344">2023</text>
-    <text x="246" y="344">2025</text>
+    <text x="184" y="344">2023</text>
+    <text x="290" y="344">2025</text>
     <text x="84" y="242">用户</text>
     <text x="205" y="239" fill="#fff1e5">使用率</text>
   </g>
