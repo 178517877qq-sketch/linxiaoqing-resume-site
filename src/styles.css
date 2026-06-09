@@ -513,6 +513,12 @@ p {
   pointer-events: none;
 }
 
+.projects-section .section-heading .section-label {
+  color: rgba(255, 126, 138, 0.84);
+  text-shadow: 0 0 24px rgba(255, 36, 61, 0.3);
+  -webkit-text-stroke: 1px rgba(255, 241, 229, 0.22);
+}
+
 [data-motion-section].is-visible .section-heading .section-label {
   animation: sectionLabelIn 1.2s var(--ease-silk) forwards;
 }

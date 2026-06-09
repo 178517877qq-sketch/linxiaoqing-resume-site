@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-labelledby="title desc">
   <title id="title">中国电商消费趋势核心指标封面</title>
-  <desc id="desc">展示网络购物用户、网络购物使用率、网上零售额和线上化趋势。</desc>
+  <desc id="desc">展示整合数据源、覆盖区间、交付物和电商消费趋势图表。</desc>
   <defs>
     <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
       <stop offset="0" stop-color="#21070b"/>
@@ -26,15 +26,15 @@
     <rect x="382" y="178" width="292" height="178" rx="18"/>
   </g>
   <g font-family="Microsoft YaHei, Arial, sans-serif" fill="#fff7f7">
-    <text x="70" y="76" font-size="21" opacity=".9" font-weight="800">网购用户</text>
-    <text x="70" y="117" font-size="34" font-weight="900">9.37亿</text>
-    <text x="70" y="132" font-size="11" opacity=".58" font-weight="700">CNNIC 2025</text>
-    <text x="290" y="76" font-size="21" opacity=".9" font-weight="800">网购使用率</text>
-    <text x="290" y="117" font-size="34" font-weight="900">83.2%</text>
-    <text x="290" y="132" font-size="11" opacity=".58" font-weight="700">网民中的网购占比</text>
-    <text x="510" y="76" font-size="21" opacity=".9" font-weight="800">网上零售额</text>
-    <text x="510" y="117" font-size="34" font-weight="900">15.97万亿</text>
-    <text x="510" y="132" font-size="11" opacity=".58" font-weight="700">统计局年度累计</text>
+    <text x="70" y="76" font-size="21" opacity=".9" font-weight="800">整合数据源</text>
+    <text x="70" y="117" font-size="34" font-weight="900">3个</text>
+    <text x="70" y="132" font-size="10" opacity=".58" font-weight="700">统计局·平台披露·CNNIC</text>
+    <text x="290" y="76" font-size="21" opacity=".9" font-weight="800">覆盖区间</text>
+    <text x="290" y="117" font-size="34" font-weight="900">2021–2025</text>
+    <text x="290" y="132" font-size="11" opacity=".58" font-weight="700">用户·使用率·零售额</text>
+    <text x="510" y="76" font-size="21" opacity=".9" font-weight="800">交付物</text>
+    <text x="510" y="117" font-size="34" font-weight="900">3类</text>
+    <text x="510" y="132" font-size="11" opacity=".58" font-weight="700">数据包·SQL视图·HTML报告</text>
     <text x="70" y="220" font-size="18" font-weight="900">用户规模与使用率</text>
     <text x="406" y="220" font-size="18" font-weight="900">交易规模与线上化</text>
   </g>

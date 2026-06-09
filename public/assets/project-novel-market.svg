@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-labelledby="title desc">
   <title id="title">国际热门小说平台行为指标封面</title>
-  <desc id="desc">展示 Goodreads Top100 小说样本的书架标记量、评分量、评论量和题材结构。</desc>
+  <desc id="desc">展示样本档案、覆盖题材、互动维度和 Goodreads 平台行为图表。</desc>
   <defs>
     <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
       <stop offset="0" stop-color="#21070b"/>
@@ -26,15 +26,15 @@
     <rect x="382" y="178" width="292" height="178" rx="18"/>
   </g>
   <g font-family="Microsoft YaHei, Arial, sans-serif" fill="#fff7f7">
-    <text x="70" y="76" font-size="21" opacity=".9" font-weight="800">书架标记</text>
-    <text x="70" y="117" font-size="34" font-weight="900">6158.8万</text>
-    <text x="70" y="132" font-size="11" opacity=".58" font-weight="700">2025 Top100 样本</text>
-    <text x="290" y="76" font-size="21" opacity=".9" font-weight="800">评分量</text>
-    <text x="290" y="117" font-size="34" font-weight="900">2459.1万</text>
-    <text x="290" y="132" font-size="11" opacity=".58" font-weight="700">Goodreads ratings</text>
-    <text x="510" y="76" font-size="21" opacity=".9" font-weight="800">评论量</text>
-    <text x="510" y="117" font-size="34" font-weight="900">322.8万</text>
-    <text x="510" y="132" font-size="11" opacity=".58" font-weight="700">text reviews</text>
+    <text x="70" y="76" font-size="21" opacity=".9" font-weight="800">样本档案</text>
+    <text x="70" y="117" font-size="34" font-weight="900">500本</text>
+    <text x="70" y="132" font-size="11" opacity=".58" font-weight="700">候选池清洗后小说</text>
+    <text x="290" y="76" font-size="21" opacity=".9" font-weight="800">覆盖题材</text>
+    <text x="290" y="117" font-size="34" font-weight="900">5类</text>
+    <text x="290" y="132" font-size="9" opacity=".58" font-weight="700" textLength="150" lengthAdjust="spacingAndGlyphs">Romance·Thriller·Literary·Fantasy·Sci-fi</text>
+    <text x="510" y="76" font-size="21" opacity=".9" font-weight="800">互动维度</text>
+    <text x="510" y="117" font-size="34" font-weight="900">3类</text>
+    <text x="510" y="132" font-size="11" opacity=".58" font-weight="700">书架·评分·评论(平台代理)</text>
     <text x="70" y="220" font-size="18" font-weight="900">平台行为趋势</text>
     <text x="406" y="220" font-size="18" font-weight="900">2025 题材结构</text>
   </g>

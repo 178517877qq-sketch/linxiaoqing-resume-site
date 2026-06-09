@@ -37,30 +37,30 @@ const stats = [
 
 const projects = [
   {
-    type: "Equity Fundamentals Framework",
-    title: "A股基本面与估值研究框架",
-    metric: "财报覆盖 0/100 / PE覆盖 83/100 / PB覆盖 100/100",
+    type: "BUSINESS METRICS MONITORING",
+    title: "经营指标监控与数据口径治理",
+    metric: "3年+ 经营数据分析 / 核心经营指标监控 / 字段口径文档沉淀",
     casePoints: [
       {
         label: "业务问题",
-        text: "股票研究不能只靠回测收益或评分排名，需要先确认财报、估值、市值和行业字段是否足够支撑基本面判断。"
+        text: "经营数据分散在不同字段、状态和规则里，口径不统一，异常发现滞后，业务、统计和会议复盘之间常出现对数偏差。"
       },
       {
         label: "分析动作",
-        text: "核查 Top100 样本的财报与估值字段覆盖，区分可直接分析的 PE/PB/市值字段，以及暂不能展示的营收、ROE、现金流字段。"
+        text: "统一字段含义、状态流转和资源派发规则；搭建日常进度、资源使用、反馈状态和异常波动的监控；整理会议复盘材料并跟进动作；与开发对齐字段、报表逻辑和功能体验。"
       },
       {
         label: "输出价值",
-        text: "把股票项目从结果包装改成研究框架展示：先讲清楚数据覆盖和缺口，再决定哪些指标可以进入正式分析。"
+        text: "让业务、统计、会议、复盘共用同一套数据口径，异常更早被发现、复盘更快，经营判断和策略调整都有数据依据。"
       }
     ],
-    tags: ["基本面框架", "估值覆盖", "数据缺口"],
-    image: assetPath("assets/project-stock-research.svg?v=20260609-fundamental-coverage"),
-    imageAlt: "A股基本面与估值研究框架财报覆盖、PE覆盖和PB覆盖封面",
+    tags: ["口径治理", "指标监控", "复盘协同"],
+    image: assetPath("assets/project-bank-monitoring.svg?v=20260609-bank-case-2"),
+    imageAlt: "广发银行经营指标监控与数据口径治理项目封面",
     evidence: [
-      "Top100 样本估值字段：PE 83/100、PB 100/100、市值 99/100",
-      "财报字段仍为空：营收、ROE、现金流暂不展示数值",
-      "数据口径：当前展示研究框架与覆盖审计，不提供投资建议"
+      "负责经营指标监控、异常跟进和数据会议材料整理，为经营复盘与策略调整提供依据",
+      "统一字段口径、状态流转和资源派发规则，并与开发对齐报表逻辑和使用体验",
+      "数据口径：涉及内部数据，展示为脱敏/相对口径，不含敏感数值"
     ]
   },
   {
@@ -82,7 +82,7 @@ const projects = [
       }
     ],
     tags: ["官方口径", "来源血缘", "趋势报告"],
-    image: assetPath("assets/project-ecommerce-research.svg?v=20260609-consumer-core"),
+    image: assetPath("assets/project-ecommerce-research.svg?v=20260609-source-delivery"),
     imageAlt: "中国电商消费趋势网络购物用户、使用率和网上零售额封面",
     evidence: [
       "CNNIC 口径：2025 网络购物用户 9.37 亿、使用率 83.2%",
@@ -109,7 +109,7 @@ const projects = [
       }
     ],
     tags: ["读者行为代理", "样本清洗", "内容洞察"],
-    image: assetPath("assets/project-novel-market.svg?v=20260609-reader-signals"),
+    image: assetPath("assets/project-novel-market.svg?v=20260609-sample-dimensions"),
     imageAlt: "国际热门小说 Goodreads 书架标记量、评分量和评论量封面",
     evidence: [
       "2025 Goodreads Top100 小说样本：书架标记量 6158.8 万",
