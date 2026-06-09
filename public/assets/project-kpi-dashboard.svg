@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-labelledby="title desc">
+  <title id="title">经营指标监控看板</title>
+  <desc id="desc">展示项目进度、资源使用、异常变化和趋势曲线的数据分析看板。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#120507"/>
+      <stop offset="0.55" stop-color="#080405"/>
+      <stop offset="1" stop-color="#5f0712"/>
+    </linearGradient>
+    <linearGradient id="red" x1="0" x2="1">
+      <stop offset="0" stop-color="#ff7782"/>
+      <stop offset="1" stop-color="#ff243d"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="420" rx="24" fill="url(#bg)"/>
+  <path d="M0 78H720M0 156H720M0 234H720M0 312H720M90 0V420M180 0V420M270 0V420M360 0V420M450 0V420M540 0V420M630 0V420" stroke="#fff" stroke-opacity=".07"/>
+  <g fill="#16080b" stroke="#ff6b78" stroke-opacity=".38">
+    <rect x="46" y="44" width="180" height="96" rx="16"/>
+    <rect x="270" y="44" width="180" height="96" rx="16"/>
+    <rect x="494" y="44" width="180" height="96" rx="16"/>
+    <rect x="46" y="180" width="292" height="176" rx="18"/>
+    <rect x="382" y="180" width="292" height="176" rx="18"/>
+  </g>
+  <g font-family="Microsoft YaHei, Arial, sans-serif" fill="#fff7f7">
+    <text x="70" y="84" font-size="15" opacity=".62" font-weight="700">项目进度</text>
+    <text x="70" y="120" font-size="34" font-weight="900">86%</text>
+    <text x="294" y="84" font-size="15" opacity=".62" font-weight="700">资源使用</text>
+    <text x="294" y="120" font-size="34" font-weight="900">12.8k</text>
+    <text x="518" y="84" font-size="15" opacity=".62" font-weight="700">异常跟进</text>
+    <text x="518" y="120" font-size="34" font-weight="900">24</text>
+    <text x="70" y="222" font-size="18" font-weight="900">指标趋势</text>
+    <text x="406" y="222" font-size="18" font-weight="900">问题分布</text>
+  </g>
+  <path d="M74 318 C112 276, 146 292, 180 248 S254 226, 310 256" stroke="url(#red)" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M74 318 H310" stroke="#fff" stroke-opacity=".12"/>
+  <path d="M74 280 H310M74 242 H310" stroke="#fff" stroke-opacity=".08"/>
+  <g fill="url(#red)">
+    <rect x="424" y="292" width="32" height="32" rx="6"/>
+    <rect x="468" y="258" width="32" height="66" rx="6"/>
+    <rect x="512" y="232" width="32" height="92" rx="6"/>
+    <rect x="556" y="274" width="32" height="50" rx="6"/>
+    <rect x="600" y="216" width="32" height="108" rx="6"/>
+  </g>
+  <circle cx="180" cy="248" r="7" fill="#fff7f7"/>
+  <circle cx="310" cy="256" r="7" fill="#fff7f7"/>
+</svg>

@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-labelledby="title desc">
+  <title id="title">国际热门小说年度趋势分析封面</title>
+  <desc id="desc">展示国际热门小说 Romance 题材集中度、年度峰值、2025 头部热度集中度和风格维度。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#21070b"/>
+      <stop offset="0.56" stop-color="#070405"/>
+      <stop offset="1" stop-color="#5c0711"/>
+    </linearGradient>
+    <linearGradient id="red" x1="0" x2="1">
+      <stop offset="0" stop-color="#ff7b86"/>
+      <stop offset="1" stop-color="#ff243d"/>
+    </linearGradient>
+    <linearGradient id="cream" x1="0" x2="1">
+      <stop offset="0" stop-color="#fff1e5"/>
+      <stop offset="1" stop-color="#ff8a94"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="420" rx="24" fill="url(#bg)"/>
+  <path d="M0 78H720M0 156H720M0 234H720M0 312H720M90 0V420M180 0V420M270 0V420M360 0V420M450 0V420M540 0V420M630 0V420" stroke="#fff" stroke-opacity=".06"/>
+  <g fill="#15070a" stroke="#ff6b78" stroke-opacity=".38">
+    <rect x="46" y="44" width="188" height="96" rx="16"/>
+    <rect x="266" y="44" width="188" height="96" rx="16"/>
+    <rect x="486" y="44" width="188" height="96" rx="16"/>
+    <rect x="46" y="178" width="292" height="178" rx="18"/>
+    <rect x="382" y="178" width="292" height="178" rx="18"/>
+  </g>
+  <g font-family="Microsoft YaHei, Arial, sans-serif" fill="#fff7f7">
+    <text x="70" y="77" font-size="22" opacity=".9" font-weight="800">题材集中</text>
+    <text x="70" y="118" font-size="34" font-weight="900">62.6%</text>
+    <text x="70" y="132" font-size="11" opacity=".58" font-weight="700">Romance / 全周期</text>
+    <text x="290" y="77" font-size="22" opacity=".9" font-weight="800">年度峰值</text>
+    <text x="290" y="118" font-size="34" font-weight="900">67%</text>
+    <text x="290" y="132" font-size="11" opacity=".58" font-weight="700">2023 Romance</text>
+    <text x="510" y="77" font-size="22" opacity=".9" font-weight="800">头部集中</text>
+    <text x="510" y="118" font-size="34" font-weight="900">28.3%</text>
+    <text x="510" y="132" font-size="11" opacity=".58" font-weight="700">2025 Top10热度</text>
+    <text x="70" y="220" font-size="18" font-weight="900">Romance占比趋势</text>
+    <text x="406" y="220" font-size="18" font-weight="900">2025八类风格</text>
+  </g>
+  <path d="M78 330 H310" stroke="#fff" stroke-opacity=".12"/>
+  <path d="M78 292 H310M78 254 H310" stroke="#fff" stroke-opacity=".08"/>
+  <path d="M88 292 L130 284 L172 258 L214 262 L256 288" stroke="url(#red)" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M88 306 L130 298 L172 270 L214 274 L256 302" stroke="#fff1e5" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".42"/>
+  <g fill="#fff7f7" opacity=".86">
+    <circle cx="88" cy="292" r="5"/>
+    <circle cx="130" cy="284" r="5"/>
+    <circle cx="172" cy="258" r="5"/>
+    <circle cx="214" cy="262" r="5"/>
+    <circle cx="256" cy="288" r="5"/>
+  </g>
+  <g font-family="Microsoft YaHei, Arial, sans-serif" fill="#fff7f7" opacity=".72" font-size="10" font-weight="800">
+    <text x="78" y="280">59%</text>
+    <text x="120" y="272">61%</text>
+    <text x="162" y="246">67%</text>
+    <text x="204" y="250">66%</text>
+    <text x="246" y="276">60%</text>
+  </g>
+  <g font-family="Microsoft YaHei, Arial, sans-serif" fill="#fff7f7" opacity=".62" font-size="12" font-weight="700">
+    <text x="76" y="346">2021</text>
+    <text x="118" y="346">2022</text>
+    <text x="160" y="346">2023</text>
+    <text x="202" y="346">2024</text>
+    <text x="244" y="346">2025</text>
+  </g>
+  <g fill="url(#red)">
+    <rect x="414" y="250" width="20" height="76" rx="6"/>
+    <rect x="444" y="273" width="20" height="53" rx="6" opacity=".88"/>
+    <rect x="474" y="279" width="20" height="47" rx="6" opacity=".82"/>
+    <rect x="504" y="289" width="20" height="37" rx="6" opacity=".76"/>
+    <rect x="534" y="290" width="20" height="36" rx="6" opacity=".72"/>
+    <rect x="564" y="301" width="20" height="25" rx="6" opacity=".68"/>
+    <rect x="594" y="306" width="20" height="20" rx="6" opacity=".64"/>
+    <rect x="624" y="318" width="20" height="8" rx="4" opacity=".58"/>
+  </g>
+  <g font-family="Microsoft YaHei, Arial, sans-serif" fill="#fff7f7" opacity=".7" font-size="9" font-weight="700">
+    <text x="409" y="344">Rom</text>
+    <text x="442" y="344">Lit</text>
+    <text x="472" y="344">Thr</text>
+    <text x="500" y="344">Dark</text>
+    <text x="530" y="344">Fant</text>
+    <text x="560" y="344">Hist</text>
+    <text x="594" y="344">YA</text>
+    <text x="622" y="344">Sci</text>
+  </g>
+  <text x="46" y="386" fill="#fff7f7" opacity=".5" font-family="Microsoft YaHei, Arial, sans-serif" font-size="12">题材占比按年度热门小说样本计算；shelf_count 为平台热度代理，不等同销量</text>
+</svg>

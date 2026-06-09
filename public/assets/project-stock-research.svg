@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-labelledby="title desc">
+  <title id="title">核心评分股票研究库封面</title>
+  <desc id="desc">展示 2025 评分股票、六维评分框架、本地验证覆盖和评分结构的股票研究库分析封面。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#21070b"/>
+      <stop offset="0.56" stop-color="#070405"/>
+      <stop offset="1" stop-color="#5c0711"/>
+    </linearGradient>
+    <linearGradient id="red" x1="0" x2="1">
+      <stop offset="0" stop-color="#ff7b86"/>
+      <stop offset="1" stop-color="#ff243d"/>
+    </linearGradient>
+    <linearGradient id="soft" x1="0" x2="1">
+      <stop offset="0" stop-color="#fff1e5"/>
+      <stop offset="1" stop-color="#ff6b78"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="420" rx="24" fill="url(#bg)"/>
+  <path d="M0 78H720M0 156H720M0 234H720M0 312H720M90 0V420M180 0V420M270 0V420M360 0V420M450 0V420M540 0V420M630 0V420" stroke="#fff" stroke-opacity=".06"/>
+  <g fill="#15070a" stroke="#ff6b78" stroke-opacity=".38">
+    <rect x="46" y="44" width="188" height="96" rx="16"/>
+    <rect x="266" y="44" width="188" height="96" rx="16"/>
+    <rect x="486" y="44" width="188" height="96" rx="16"/>
+    <rect x="46" y="178" width="292" height="178" rx="18"/>
+    <rect x="382" y="178" width="292" height="178" rx="18"/>
+  </g>
+  <g font-family="Microsoft YaHei, Arial, sans-serif" fill="#fff7f7">
+    <text x="70" y="77" font-size="22" opacity=".9" font-weight="800">评分股票</text>
+    <text x="70" y="124" font-size="34" font-weight="900">1,901</text>
+    <text x="290" y="77" font-size="22" opacity=".9" font-weight="800">评分框架</text>
+    <text x="290" y="124" font-size="34" font-weight="900">6维</text>
+    <text x="510" y="77" font-size="22" opacity=".9" font-weight="800">验证覆盖</text>
+    <text x="510" y="124" font-size="34" font-weight="900">81.6%</text>
+    <text x="70" y="220" font-size="18" font-weight="900">本地样本池验证</text>
+    <text x="406" y="220" font-size="18" font-weight="900">Top100 六维均值</text>
+  </g>
+  <path d="M78 312 L132 287 L184 295 L238 278 L310 260" stroke="url(#red)" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M78 322 H310" stroke="#fff" stroke-opacity=".12"/>
+  <path d="M78 286 H310M78 250 H310" stroke="#fff" stroke-opacity=".08"/>
+  <g fill="#fff7f7" opacity=".88">
+    <circle cx="78" cy="312" r="6"/>
+    <circle cx="132" cy="287" r="6"/>
+    <circle cx="184" cy="295" r="6"/>
+    <circle cx="238" cy="278" r="6"/>
+    <circle cx="310" cy="260" r="6"/>
+  </g>
+  <g font-family="Microsoft YaHei, Arial, sans-serif" fill="#fff7f7" opacity=".62" font-size="12" font-weight="700">
+    <text x="68" y="340">v1</text>
+    <text x="122" y="340">v2</text>
+    <text x="174" y="340">v3</text>
+    <text x="300" y="340">v4</text>
+  </g>
+  <g fill="url(#red)">
+    <rect x="416" y="284" width="24" height="42" rx="6" opacity=".68"/>
+    <rect x="452" y="250" width="24" height="76" rx="6"/>
+    <rect x="488" y="264" width="24" height="62" rx="6" opacity=".82"/>
+    <rect x="524" y="256" width="24" height="70" rx="6" opacity=".9"/>
+    <rect x="560" y="271" width="24" height="55" rx="6" opacity=".76"/>
+    <rect x="596" y="254" width="24" height="72" rx="6" opacity=".92"/>
+  </g>
+  <g font-family="Microsoft YaHei, Arial, sans-serif" fill="#fff7f7" opacity=".72" font-size="11" font-weight="700">
+    <text x="413" y="344">质量</text>
+    <text x="449" y="344">趋势</text>
+    <text x="485" y="344">流动</text>
+    <text x="521" y="344">估值</text>
+    <text x="557" y="344">风险</text>
+    <text x="593" y="344">主题</text>
+  </g>
+  <text x="46" y="386" fill="#fff7f7" opacity=".5" font-family="Microsoft YaHei, Arial, sans-serif" font-size="12">验证覆盖=506/620；评分库仅用于研究流程展示，不代表投资建议</text>
+</svg>
