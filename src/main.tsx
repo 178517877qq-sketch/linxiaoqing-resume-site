@@ -55,7 +55,7 @@ const projects = [
       }
     ],
     tags: ["数据派发", "接通率模型", "复盘协同"],
-    image: assetPath("assets/project-bank-monitoring.svg?v=20260609-stat-center"),
+    image: assetPath("assets/project-bank-monitoring.svg?v=20260610-axis-fix"),
     imageAlt: "广发银行经营数据分析与业务优化项目封面",
     evidence: [
       "制定数据管理与派发规则、客群质量分层，精准下发，带动合作商 GMV 提升约 10%",
