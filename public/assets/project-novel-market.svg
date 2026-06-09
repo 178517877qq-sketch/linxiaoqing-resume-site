@@ -26,15 +26,12 @@
     <rect x="382" y="178" width="292" height="178" rx="18"/>
   </g>
   <g font-family="Microsoft YaHei, Arial, sans-serif" fill="#fff7f7">
-    <text x="70" y="76" font-size="21" opacity=".9" font-weight="800">样本档案</text>
-    <text x="70" y="117" font-size="34" font-weight="900">500本</text>
-    <text x="70" y="132" font-size="11" opacity=".58" font-weight="700">候选池清洗后小说</text>
-    <text x="290" y="76" font-size="21" opacity=".9" font-weight="800">覆盖题材</text>
-    <text x="290" y="117" font-size="34" font-weight="900">5类</text>
-    <text x="290" y="132" font-size="9" opacity=".58" font-weight="700" textLength="150" lengthAdjust="spacingAndGlyphs">Romance·Thriller·Literary·Fantasy·Sci-fi</text>
-    <text x="510" y="76" font-size="21" opacity=".9" font-weight="800">题材结构</text>
-    <text x="510" y="117" font-size="28" font-weight="900">Romance 66%</text>
-    <text x="510" y="132" font-size="11" opacity=".58" font-weight="700">5 类中占比最高</text>
+    <text x="70" y="82" font-size="21" opacity=".9" font-weight="800">样本</text>
+    <text x="70" y="122" font-size="34" font-weight="900">500本</text>
+    <text x="290" y="82" font-size="21" opacity=".9" font-weight="800">题材</text>
+    <text x="290" y="122" font-size="34" font-weight="900">5类</text>
+    <text x="510" y="82" font-size="21" opacity=".9" font-weight="800">Romance</text>
+    <text x="510" y="122" font-size="34" font-weight="900">66%</text>
     <text x="70" y="220" font-size="18" font-weight="900">平台行为趋势</text>
     <text x="406" y="220" font-size="18" font-weight="900">2025 题材结构</text>
   </g>
@@ -77,5 +74,5 @@
     <text x="522" y="293">16</text>
     <text x="576" y="276">31</text>
   </g>
-  <text x="46" y="386" fill="#fff7f7" opacity=".5" font-family="Microsoft YaHei, Arial, sans-serif" font-size="12">Goodreads Top100小说样本；书架、评分、评论为平台行为代理</text>
+  <text x="46" y="386" fill="#fff7f7" opacity=".5" font-family="Microsoft YaHei, Arial, sans-serif" font-size="12">Goodreads Top100 小说样本；平台行为代理。</text>
 </svg>

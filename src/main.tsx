@@ -39,7 +39,7 @@ const projects = [
   {
     type: "BUSINESS DATA ANALYTICS",
     title: "经营数据分析与业务优化",
-    metric: "3年+ 经营数据分析 / 合作商 GMV +10% / 外呼接通率 +8%",
+    metric: "3年+ 经营数据分析 / 资源派发 / 模型协同 / 复盘机制",
     casePoints: [
       {
         label: "业务问题",
@@ -47,15 +47,15 @@ const projects = [
       },
       {
         label: "分析动作",
-        text: "制定行方数据管理与派发规则；对客群数据做质量分层、实现精准下发；搭建经营指标监控与异常跟进，覆盖 20+ 核心经营指标并沉淀字段口径与报表文档；与开发共建外呼接通率响应模型；每周主持与合作商的数据对数复盘会并落实改善措施。"
+        text: "制定数据管理与派发规则，对客群做质量分层并精准下发；搭建 20+ 核心指标监控与异常跟进，沉淀字段口径和报表文档；与开发共建外呼接通率响应模型，并主持每周对数复盘。"
       },
       {
         label: "输出价值",
-        text: "数据派发规则带动合作商 GMV 提升约 10%、接通率模型带动外呼接通率提升约 8%；异常更早发现、对数偏差下降、复盘更快，经营判断有据可依。"
+        text: "数据派发规则带动合作商 GMV 提升约 10%，接通率模型带动外呼接通率提升约 8%；异常更早发现、复盘更快，经营判断有据可依。"
       }
     ],
     tags: ["数据派发", "接通率模型", "复盘协同"],
-    image: assetPath("assets/project-bank-monitoring.svg?v=20260609-business-analytics"),
+    image: assetPath("assets/project-bank-monitoring.svg?v=20260609-denoise"),
     imageAlt: "广发银行经营数据分析与业务优化项目封面",
     evidence: [
       "制定数据管理与派发规则、客群质量分层，精准下发，带动合作商 GMV 提升约 10%",
@@ -66,7 +66,7 @@ const projects = [
   {
     type: "China E-commerce Trends",
     title: "中国电商消费趋势分析",
-    metric: "3 个官方数据源 / 线上化率 2021→2025 +1.6pct / 数据包·SQL视图·HTML报告",
+    metric: "3 个官方数据源 / 线上化趋势跟踪 / 数据包·SQL视图·HTML报告",
     casePoints: [
       {
         label: "业务问题",
@@ -82,18 +82,18 @@ const projects = [
       }
     ],
     tags: ["官方口径", "来源血缘", "趋势报告"],
-    image: assetPath("assets/project-ecommerce-research.svg?v=20260609-online-share"),
+    image: assetPath("assets/project-ecommerce-research.svg?v=20260609-denoise"),
     imageAlt: "中国电商消费趋势网络购物用户、使用率和网上零售额封面",
     evidence: [
       "CNNIC 口径：2025 网络购物用户 9.37 亿、使用率 83.2%",
-      "统计局口径：2025 全国网上零售额 15.97 万亿元",
+      "统计局口径：2025 全国网上零售额 15.97 万亿元，实物网零占社零较 2021 提升 1.6pct",
       "数据口径：官方统计与 CNNIC 用户指标结合，不混写平台 GMV"
     ]
   },
   {
     type: "Novel Market Analysis",
     title: "国际热门小说年度趋势分析",
-    metric: "500 本清洗样本 / 5 类题材 / Romance 占比 66%(题材第一)",
+    metric: "500 本清洗样本 / 题材结构分析 / Goodreads 平台行为代理",
     casePoints: [
       {
         label: "业务问题",
@@ -109,11 +109,11 @@ const projects = [
       }
     ],
     tags: ["读者行为代理", "样本清洗", "内容洞察"],
-    image: assetPath("assets/project-novel-market.svg?v=20260609-romance-share"),
+    image: assetPath("assets/project-novel-market.svg?v=20260609-denoise"),
     imageAlt: "国际热门小说 Goodreads 书架标记量、评分量和评论量封面",
     evidence: [
       "2025 Goodreads Top100 小说样本：书架标记量 6158.8 万",
-      "评分量 2459.1 万、评论量 322.8 万，可衡量平台互动强度",
+      "评分量 2459.1 万、评论量 322.8 万；Romance 在 5 类题材中占比最高，为 66%",
       "数据口径：Goodreads 为平台行为代理，不代表出版市场真实销售"
     ]
   }

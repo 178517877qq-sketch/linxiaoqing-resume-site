@@ -26,15 +26,12 @@
     <rect x="382" y="178" width="292" height="178" rx="18"/>
   </g>
   <g font-family="Microsoft YaHei, Arial, sans-serif" fill="#fff7f7">
-    <text x="70" y="76" font-size="21" opacity=".9" font-weight="800">整合数据源</text>
-    <text x="70" y="117" font-size="34" font-weight="900">3个</text>
-    <text x="70" y="132" font-size="10" opacity=".58" font-weight="700">统计局·平台披露·CNNIC</text>
-    <text x="290" y="76" font-size="21" opacity=".9" font-weight="800">线上化率</text>
-    <text x="290" y="117" font-size="34" font-weight="900">+1.6pct</text>
-    <text x="290" y="132" font-size="9" opacity=".58" font-weight="700" textLength="150" lengthAdjust="spacingAndGlyphs">2021→2025(实物网零占社零)</text>
-    <text x="510" y="76" font-size="21" opacity=".9" font-weight="800">交付物</text>
-    <text x="510" y="117" font-size="34" font-weight="900">3类</text>
-    <text x="510" y="132" font-size="11" opacity=".58" font-weight="700">数据包·SQL视图·HTML报告</text>
+    <text x="70" y="82" font-size="21" opacity=".9" font-weight="800">数据源</text>
+    <text x="70" y="122" font-size="34" font-weight="900">3个</text>
+    <text x="290" y="82" font-size="21" opacity=".9" font-weight="800">线上化率</text>
+    <text x="290" y="122" font-size="34" font-weight="900">+1.6pct</text>
+    <text x="510" y="82" font-size="21" opacity=".9" font-weight="800">交付物</text>
+    <text x="510" y="122" font-size="34" font-weight="900">3类</text>
     <text x="70" y="220" font-size="18" font-weight="900">用户规模与使用率</text>
     <text x="406" y="220" font-size="18" font-weight="900">交易规模与线上化</text>
   </g>
@@ -70,5 +67,5 @@
     <text x="422" y="238">零售额</text>
     <text x="552" y="249" fill="#fff1e5">实物线上化</text>
   </g>
-  <text x="46" y="386" fill="#fff7f7" opacity=".5" font-family="Microsoft YaHei, Arial, sans-serif" font-size="12">CNNIC用户口径 + 国家统计局年度累计口径；不混写平台GMV</text>
+  <text x="46" y="386" fill="#fff7f7" opacity=".5" font-family="Microsoft YaHei, Arial, sans-serif" font-size="12">官方统计 + CNNIC 用户口径；不混写平台 GMV。</text>
 </svg>

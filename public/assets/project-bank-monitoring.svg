@@ -26,15 +26,12 @@
     <rect x="382" y="178" width="292" height="178" rx="18"/>
   </g>
   <g font-family="Microsoft YaHei, Arial, sans-serif" fill="#fff7f7">
-    <text x="70" y="76" font-size="21" opacity=".9" font-weight="800">合作商 GMV</text>
-    <text x="70" y="117" font-size="34" font-weight="900">+10%</text>
-    <text x="70" y="132" font-size="11" opacity=".58" font-weight="700">数据派发规则优化带动</text>
-    <text x="290" y="76" font-size="21" opacity=".9" font-weight="800">外呼接通率</text>
-    <text x="290" y="117" font-size="34" font-weight="900">+8%</text>
-    <text x="290" y="132" font-size="10" opacity=".58" font-weight="700">与开发共建接通率响应模型</text>
-    <text x="510" y="76" font-size="21" opacity=".9" font-weight="800">异常发现时效</text>
-    <text x="510" y="117" font-size="32" font-weight="900">T+3→T+1</text>
-    <text x="510" y="132" font-size="11" opacity=".58" font-weight="700">经营指标监控提速</text>
+    <text x="70" y="82" font-size="21" opacity=".9" font-weight="800">合作商 GMV</text>
+    <text x="70" y="122" font-size="34" font-weight="900">+10%</text>
+    <text x="290" y="82" font-size="21" opacity=".9" font-weight="800">外呼接通率</text>
+    <text x="290" y="122" font-size="34" font-weight="900">+8%</text>
+    <text x="510" y="82" font-size="21" opacity=".9" font-weight="800">异常发现</text>
+    <text x="510" y="122" font-size="32" font-weight="900">T+3→T+1</text>
     <text x="70" y="220" font-size="18" font-weight="900">指标监控趋势</text>
     <text x="406" y="220" font-size="18" font-weight="900">口径/异常分布</text>
   </g>
@@ -68,5 +65,5 @@
     <text x="528" y="344">规则</text>
     <text x="584" y="344">报表</text>
   </g>
-  <text x="46" y="386" fill="#fff7f7" opacity=".5" font-family="Microsoft YaHei, Arial, sans-serif" font-size="12">广发银行真实项目；以相对口径展示成效，不含绝对敏感数值。</text>
+  <text x="46" y="386" fill="#fff7f7" opacity=".5" font-family="Microsoft YaHei, Arial, sans-serif" font-size="12">广发银行真实项目；相对口径展示，不含敏感绝对值。</text>
 </svg>
