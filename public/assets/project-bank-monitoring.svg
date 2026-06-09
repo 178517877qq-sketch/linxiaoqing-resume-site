@@ -26,12 +26,12 @@
     <rect x="382" y="178" width="292" height="178" rx="18"/>
   </g>
   <g font-family="Microsoft YaHei, Arial, sans-serif" fill="#fff7f7">
-    <text x="70" y="82" font-size="21" opacity=".9" font-weight="800">合作商 GMV</text>
-    <text x="70" y="122" font-size="34" font-weight="900">+10%</text>
-    <text x="290" y="82" font-size="21" opacity=".9" font-weight="800">外呼接通率</text>
-    <text x="290" y="122" font-size="34" font-weight="900">+8%</text>
-    <text x="510" y="82" font-size="21" opacity=".9" font-weight="800">异常发现</text>
-    <text x="510" y="122" font-size="32" font-weight="900">T+3→T+1</text>
+    <text x="140" y="82" font-size="21" opacity=".9" font-weight="800" text-anchor="middle">合作商 GMV</text>
+    <text x="140" y="122" font-size="34" font-weight="900" text-anchor="middle">+10%</text>
+    <text x="360" y="82" font-size="21" opacity=".9" font-weight="800" text-anchor="middle">外呼接通率</text>
+    <text x="360" y="122" font-size="34" font-weight="900" text-anchor="middle">+8%</text>
+    <text x="580" y="82" font-size="21" opacity=".9" font-weight="800" text-anchor="middle">异常发现</text>
+    <text x="580" y="122" font-size="30" font-weight="900" text-anchor="middle">T+3→T+1</text>
     <text x="70" y="220" font-size="18" font-weight="900">指标监控趋势</text>
     <text x="406" y="220" font-size="18" font-weight="900">口径/异常分布</text>
   </g>

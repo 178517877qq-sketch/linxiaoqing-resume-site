@@ -55,7 +55,7 @@ const projects = [
       }
     ],
     tags: ["数据派发", "接通率模型", "复盘协同"],
-    image: assetPath("assets/project-bank-monitoring.svg?v=20260609-case-tune"),
+    image: assetPath("assets/project-bank-monitoring.svg?v=20260609-stat-center"),
     imageAlt: "广发银行经营数据分析与业务优化项目封面",
     evidence: [
       "制定数据管理与派发规则、客群质量分层，精准下发，带动合作商 GMV 提升约 10%",
@@ -82,7 +82,7 @@ const projects = [
       }
     ],
     tags: ["官方口径", "来源血缘", "趋势报告"],
-    image: assetPath("assets/project-ecommerce-research.svg?v=20260609-case-tune"),
+    image: assetPath("assets/project-ecommerce-research.svg?v=20260609-stat-center"),
     imageAlt: "中国电商消费趋势网络购物用户、使用率和网上零售额封面",
     evidence: [
       "CNNIC 口径：2025 网络购物用户 9.37 亿、使用率 83.2%",
@@ -109,7 +109,7 @@ const projects = [
       }
     ],
     tags: ["读者行为代理", "样本清洗", "内容洞察"],
-    image: assetPath("assets/project-novel-market.svg?v=20260609-case-tune"),
+    image: assetPath("assets/project-novel-market.svg?v=20260609-stat-center"),
     imageAlt: "国际热门小说 Goodreads 书架标记量、评分量和评论量封面",
     evidence: [
       "2025 Goodreads Top100 小说样本：书架标记量 6158.8 万",
