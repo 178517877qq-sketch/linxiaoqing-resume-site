@@ -39,7 +39,7 @@ const projects = [
   {
     type: "BUSINESS DATA ANALYTICS",
     title: "经营数据分析与业务优化",
-    metric: "3年+ 经营数据分析 / 资源派发 / 模型协同 / 复盘机制",
+    metric: "3年+ 经营数据分析 · 合作商 GMV +10% · 外呼接通率 +8%",
     casePoints: [
       {
         label: "业务问题",
@@ -55,7 +55,7 @@ const projects = [
       }
     ],
     tags: ["数据派发", "接通率模型", "复盘协同"],
-    image: assetPath("assets/project-bank-monitoring.svg?v=20260609-denoise"),
+    image: assetPath("assets/project-bank-monitoring.svg?v=20260609-case-tune"),
     imageAlt: "广发银行经营数据分析与业务优化项目封面",
     evidence: [
       "制定数据管理与派发规则、客群质量分层，精准下发，带动合作商 GMV 提升约 10%",
@@ -82,11 +82,11 @@ const projects = [
       }
     ],
     tags: ["官方口径", "来源血缘", "趋势报告"],
-    image: assetPath("assets/project-ecommerce-research.svg?v=20260609-denoise"),
+    image: assetPath("assets/project-ecommerce-research.svg?v=20260609-case-tune"),
     imageAlt: "中国电商消费趋势网络购物用户、使用率和网上零售额封面",
     evidence: [
       "CNNIC 口径：2025 网络购物用户 9.37 亿、使用率 83.2%",
-      "统计局口径：2025 全国网上零售额 15.97 万亿元，实物网零占社零较 2021 提升 1.6pct",
+      "统计局口径：2025 全国网上零售额 15.97 万亿元，实物商品网上零售额占社零比重较 2021 提升 1.6 个百分点",
       "数据口径：官方统计与 CNNIC 用户指标结合，不混写平台 GMV"
     ]
   },
@@ -109,11 +109,11 @@ const projects = [
       }
     ],
     tags: ["读者行为代理", "样本清洗", "内容洞察"],
-    image: assetPath("assets/project-novel-market.svg?v=20260609-denoise"),
+    image: assetPath("assets/project-novel-market.svg?v=20260609-case-tune"),
     imageAlt: "国际热门小说 Goodreads 书架标记量、评分量和评论量封面",
     evidence: [
       "2025 Goodreads Top100 小说样本：书架标记量 6158.8 万",
-      "评分量 2459.1 万、评论量 322.8 万；Romance 在 5 类题材中占比最高，为 66%",
+      "评分量 2459.1 万、评论量 322.8 万；Romance 在 5 类题材中占比最高，约 40%",
       "数据口径：Goodreads 为平台行为代理，不代表出版市场真实销售"
     ]
   }
