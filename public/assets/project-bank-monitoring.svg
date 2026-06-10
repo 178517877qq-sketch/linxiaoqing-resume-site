@@ -18,6 +18,7 @@
   </defs>
   <rect width="720" height="420" rx="24" fill="url(#bg)"/>
   <path d="M0 78H720M0 156H720M0 234H720M0 312H720M90 0V420M180 0V420M270 0V420M360 0V420M450 0V420M540 0V420M630 0V420" stroke="#fff" stroke-opacity=".06"/>
+  <g transform="translate(-43.2 -25.2) scale(1.12)">
   <g fill="#15070a" stroke="#ff6b78" stroke-opacity=".38">
     <rect x="46" y="44" width="188" height="96" rx="16"/>
     <rect x="266" y="44" width="188" height="96" rx="16"/>
@@ -35,22 +36,22 @@
     <text x="70" y="220" font-size="18" font-weight="900">指标监控趋势</text>
     <text x="406" y="220" font-size="18" font-weight="900">口径/异常分布</text>
   </g>
-  <path d="M78 326H310M78 291H310M78 256H310" stroke="#fff" stroke-opacity=".09"/>
-  <path d="M88 309 L159 286 L230 258 L300 238" stroke="url(#red)" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M88 317 L159 302 L230 284 L300 268" stroke="url(#cream)" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".72"/>
+  <path d="M78 326H316M78 291H316M78 256H316" stroke="#fff" stroke-opacity=".09"/>
+  <path d="M88 309 L162 286 L236 258 L310 238" stroke="url(#red)" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M88 317 L162 302 L236 284 L310 268" stroke="url(#cream)" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".72"/>
   <g fill="#fff7f7" opacity=".82">
     <circle cx="88" cy="309" r="5"/>
-    <circle cx="159" cy="286" r="5"/>
-    <circle cx="230" cy="258" r="5"/>
-    <circle cx="300" cy="238" r="5"/>
+    <circle cx="162" cy="286" r="5"/>
+    <circle cx="236" cy="258" r="5"/>
+    <circle cx="310" cy="238" r="5"/>
   </g>
-  <g font-family="Microsoft YaHei, Arial, sans-serif" fill="#fff7f7" opacity=".65" font-size="10" font-weight="800">
-    <text x="78" y="344">Q1</text>
-    <text x="149" y="344">Q2</text>
-    <text x="220" y="344">Q3</text>
-    <text x="292" y="344">Q4</text>
-    <text x="90" y="245">监控</text>
-    <text x="214" y="276" fill="#fff1e5">异常</text>
+  <g font-family="Microsoft YaHei, Arial, sans-serif" fill="#fff7f7" opacity=".65" font-size="10" font-weight="800" text-anchor="middle">
+    <text x="88" y="346">Q1</text>
+    <text x="162" y="346">Q2</text>
+    <text x="236" y="346">Q3</text>
+    <text x="310" y="346">Q4</text>
+    <text x="102" y="245">监控</text>
+    <text x="222" y="278" fill="#fff1e5">异常</text>
   </g>
   <path d="M414 326H646M414 291H646M414 256H646" stroke="#fff" stroke-opacity=".09"/>
   <g fill="url(#red)">
@@ -59,11 +60,12 @@
     <rect x="536" y="294" width="30" height="32" rx="7" opacity=".72"/>
     <rect x="592" y="281" width="30" height="45" rx="7" opacity=".82"/>
   </g>
-  <g font-family="Microsoft YaHei, Arial, sans-serif" fill="#fff7f7" opacity=".72" font-size="10" font-weight="700">
-    <text x="416" y="344">字段</text>
-    <text x="472" y="344">状态</text>
-    <text x="528" y="344">规则</text>
-    <text x="584" y="344">异常</text>
+  <g font-family="Microsoft YaHei, Arial, sans-serif" fill="#fff7f7" opacity=".72" font-size="10" font-weight="700" text-anchor="middle">
+    <text x="439" y="344">字段</text>
+    <text x="495" y="344">状态</text>
+    <text x="551" y="344">规则</text>
+    <text x="607" y="344">异常</text>
   </g>
   <text x="46" y="386" fill="#fff7f7" opacity=".5" font-family="Microsoft YaHei, Arial, sans-serif" font-size="12">广发银行真实项目；相对口径展示，不含敏感绝对值。</text>
+  </g>
 </svg>
