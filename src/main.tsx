@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom/client";
 import {
   ArrowUpRight,
@@ -21,7 +21,6 @@ const heroVideoMp4 = assetPath("assets/hero-data-flow.mp4");
 const profile = {
   name: "林晓庆",
   title: "业务数据分析师 / 指标监控 / 数据治理 / 数据需求协同",
-  phone: "134-8030-3776",
   email: "xunni8214@gmail.com",
   education: "广东理工学院 - 机械设计与制造 - 专科",
   summary:
@@ -82,10 +81,10 @@ const projects = [
       }
     ],
     tags: ["官方口径", "来源血缘", "趋势报告"],
-    image: assetPath("assets/project-ecommerce-research.svg?v=20260610-chart-span"),
+    image: assetPath("assets/project-ecommerce-research.svg?v=20260610-chart-legend"),
     imageAlt: "中国电商消费趋势网络购物用户、使用率和网上零售额封面",
     evidence: [
-      "CNNIC 口径：2025 网络购物用户 9.37 亿、使用率 83.2%",
+      "CNNIC 第57次报告口径：2025 网络购物用户 9.37 亿、使用率 83.2%",
       "统计局口径：2025 全国网上零售额 15.97 万亿元，实物商品网上零售额占社零比重较 2021 提升 1.6 个百分点",
       "数据口径：官方统计与 CNNIC 用户指标结合，不混写平台 GMV"
     ]
@@ -425,6 +424,36 @@ function usePortfolioMotion() {
   }, []);
 }
 
+function PhoneReveal() {
+  const [phone, setPhone] = useState<string | null>(null);
+  const reveal = () => {
+    // 号码分段倒序存放，避免被爬虫直接抓取明文
+    const parts = ["6773", "0308", "431"];
+    setPhone(
+      parts
+        .map((part) => part.split("").reverse().join(""))
+        .reverse()
+        .join("-")
+    );
+  };
+
+  if (phone) {
+    return (
+      <a href={`tel:${phone.replace(/-/g, "")}`}>
+        <Phone size={18} />
+        {phone}
+      </a>
+    );
+  }
+
+  return (
+    <button type="button" className="phone-reveal" onClick={reveal}>
+      <Phone size={18} />
+      点击查看手机号
+    </button>
+  );
+}
+
 function SectionHeading({ label, title }: { label: string; title: string }) {
   return (
     <div className="section-heading">
@@ -624,10 +653,7 @@ function App() {
           <span className="section-label">Contact</span>
           <h2>期待在数据分析、经营指标监控与业务复盘方向继续深入。</h2>
           <div className="contact-list">
-            <a href={`tel:${profile.phone.replace(/-/g, "")}`}>
-              <Phone size={18} />
-              {profile.phone}
-            </a>
+            <PhoneReveal />
             <a href={`mailto:${profile.email}`}>
               <Mail size={18} />
               {profile.email}

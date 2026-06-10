@@ -60,13 +60,13 @@
     <rect x="562" y="245" width="24" height="81" rx="7"/>
     <rect x="608" y="238" width="24" height="88" rx="7"/>
   </g>
-  <path d="M424 276 L470 252 L516 247 L562 259 L608 268" stroke="url(#cream)" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".78"/>
+  <path d="M424 272 L470 262 L516 254 L562 258 L608 266" stroke="url(#cream)" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".78"/>
   <g font-family="Microsoft YaHei, Arial, sans-serif" fill="#fff7f7" opacity=".68" font-size="10" font-weight="700">
     <text x="414" y="344">2021</text>
     <text x="506" y="344">2023</text>
     <text x="598" y="344">2025</text>
-    <text x="422" y="238">零售额</text>
-    <text x="552" y="249" fill="#fff1e5">实物线上化</text>
+    <text x="414" y="236">柱：零售额</text>
+    <text x="548" y="236" fill="#fff1e5">线：实物线上化</text>
   </g>
   <text x="46" y="386" fill="#fff7f7" opacity=".5" font-family="Microsoft YaHei, Arial, sans-serif" font-size="12">官方统计 + CNNIC 用户口径；不混写平台 GMV。</text>
 </svg>
