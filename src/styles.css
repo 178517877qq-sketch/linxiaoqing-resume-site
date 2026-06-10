@@ -553,10 +553,38 @@ p {
 }
 
 .edu-note {
-  margin: 14px 0 0;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 14px;
+  padding: 14px 18px;
+  background:
+    linear-gradient(180deg, rgba(32, 12, 15, 0.58), rgba(11, 6, 7, 0.68)),
+    linear-gradient(90deg, rgba(255, 36, 61, 0.08), transparent 54%);
+  border: 1px solid rgba(255, 233, 233, 0.14);
+  border-radius: 8px;
+}
+
+.edu-note > span {
+  flex: 0 0 auto;
+  color: var(--red-soft);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.edu-note strong {
+  display: block;
+  color: var(--text);
+  font-size: 14.5px;
+  line-height: 1.45;
+}
+
+.edu-note small {
+  display: block;
   color: var(--muted);
-  font-size: 14px;
-  line-height: 1.6;
+  font-size: 12.5px;
+  line-height: 1.5;
 }
 
 .experience-focus {
@@ -656,6 +684,16 @@ p {
   color: var(--muted);
   font-size: 15px;
   line-height: 1.6;
+}
+
+.stat-note {
+  display: block;
+  margin-top: 12px;
+  padding-top: 11px;
+  color: var(--dim);
+  border-top: 1px solid rgba(255, 233, 233, 0.1);
+  font-size: 12.5px;
+  line-height: 1.55;
 }
 
 .timeline {
@@ -823,12 +861,19 @@ p {
   line-height: 1.6;
 }
 
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 14px;
+  margin-top: auto;
+  padding-top: 22px;
+}
+
 .tag-list {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-top: auto;
-  padding-top: 22px;
 }
 
 .case-points {
@@ -1321,10 +1366,11 @@ p {
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  margin-top: 18px;
+  flex: 0 0 auto;
   color: var(--red-soft);
   font-size: 13.5px;
   font-weight: 700;
+  white-space: nowrap;
   transition: color 0.3s var(--ease-out);
 }
 
