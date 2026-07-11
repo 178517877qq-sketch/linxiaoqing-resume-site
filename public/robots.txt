@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://178517877qq-sketch.github.io/linxiaoqing-resume-site/sitemap.xml

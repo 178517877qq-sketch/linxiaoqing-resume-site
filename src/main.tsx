@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import ReactDOM from "react-dom/client";
 import {
   ArrowUpRight,
@@ -15,22 +15,43 @@ import {
 import "./styles.css";
 
 const assetPath = (path: string) => `${import.meta.env.BASE_URL}${path.replace(/^\/+/, "")}`;
-const heroPoster = assetPath("assets/hero-data-flow-poster.jpg");
-const heroVideoWebm = assetPath("assets/hero-data-flow.webm");
-const heroVideoMp4 = assetPath("assets/hero-data-flow.mp4");
+const heroImage = assetPath("assets/hero-data-flow-clean.jpg");
+
+const projectPagePaths: Record<string, string> = {
+  bank: "bank.html",
+  ecommerce: "ecommerce.html",
+  novel: "novel.html"
+};
+
+const projectDocumentTitles: Record<string, string> = {
+  bank: "经营数据分析与业务优化 | 林晓庆数据分析作品集",
+  ecommerce: "中国电商消费趋势分析 | 林晓庆数据分析作品集",
+  novel: "国际热门小说年度趋势分析 | 林晓庆数据分析作品集"
+};
+
+const projectHref = (id: string) => assetPath(projectPagePaths[id] ?? "index.html");
 
 const profile = {
   name: "林晓庆",
+  role: "业务数据分析师",
   title: "业务数据分析师 / 指标监控 / 数据治理 / 数据需求协同",
   email: "xunni8214@gmail.com",
-  education: "广东理工学院 - 机械设计与制造 - 专科",
+  educationSchool: "广东理工学院",
+  educationDetail: "机械设计与制造 · 专科",
   summary:
     "聚焦业务数据分析，熟悉数据口径治理、资源规则管理、经营指标监控、会议复盘支持和数据功能需求协同。能够把业务问题整理成清晰的指标逻辑、数据流程和复盘结论，支持经营判断与跨团队沟通。"
 };
 
+const toolMethods = [
+  { label: "SQL 视图", value: "官方值与分析标签分层" },
+  { label: "数据包", value: "CSV 样例与来源血缘" },
+  { label: "HTML 报告", value: "可视化趋势与边界说明" },
+  { label: "口径文档", value: "字段、状态与统计规则" }
+];
+
 const stats = [
   {
-    value: "3年+",
+    value: "3 年+",
     label: "2022.09-2025.12 核心数据分析岗位经历，覆盖口径治理、派发规则、指标监控、复盘协同全链路",
     note: "广发银行 + 广发信用卡中心两段银行数据岗"
   },
@@ -56,87 +77,70 @@ const projects = [
     id: "bank",
     type: "BUSINESS DATA ANALYTICS",
     title: "经营数据分析与业务优化",
-    metric: "3年+ 经营数据分析 · 合作商 GMV +10% · 外呼接通率 +8%",
+    metric: "3 年+ 经营数据分析 · 合作商 GMV 提升约 10% · 外呼接通率提升约 8%",
     casePoints: [
       {
         label: "业务问题",
-        text: "合作商资源分散、客群质量参差，数据口径不统一、异常发现滞后，业务与合作商之间常出现对数偏差，影响派发效率与外呼转化。"
+        text: "资源分散、客群质量参差、口径不统一，异常发现和协作对数都较滞后。"
       },
       {
         label: "分析动作",
-        text: "制定数据管理与派发规则，对客群做质量分层并精准下发；搭建 20+ 核心指标监控与异常跟进，沉淀字段口径和报表文档；与开发共建外呼接通率响应模型，并主持每周对数复盘。"
+        text: "建立派发与分层规则、20+ 指标监控和异常归因机制，并与开发共建接通率响应模型。"
       },
       {
         label: "输出价值",
-        text: "数据派发规则带动合作商 GMV 提升约 10%，接通率模型带动外呼接通率提升约 8%；异常更早发现、复盘更快，经营判断有据可依。"
+        text: "合作商 GMV 提升约 10%，外呼接通率提升约 8%，异常发现从 T+3 提前到 T+1。"
       }
     ],
     tags: ["数据派发", "接通率模型", "复盘协同"],
-    image: assetPath("assets/project-bank-monitoring.svg?v=20260610-chart-fill"),
-    imageAlt: "广发银行经营数据分析与业务优化项目封面",
-    evidence: [
-      "制定数据管理与派发规则、客群质量分层，精准下发，带动合作商 GMV 提升约 10%",
-      "与开发共建外呼接通率响应模型，外呼接通率提升约 8%",
-      "主持每周对数复盘会，统一口径、降低对数偏差，异常发现从 T+3 提到 T+1"
-    ]
+    image: assetPath("assets/project-bank-monitoring.svg?v=20260711-approx-labels"),
+    imageAlt: "广发银行经营数据分析与业务优化项目封面"
   },
   {
     id: "ecommerce",
     type: "China E-commerce Trends",
     title: "中国电商消费趋势分析",
-    metric: "3 个官方数据源 / 线上化趋势跟踪 / 数据包·SQL视图·HTML报告",
+    metric: "2 类权威公开来源 / 五年趋势跟踪 / 数据包·SQL 视图·HTML 报告",
     casePoints: [
       {
         label: "业务问题",
-        text: "公开资料口径分散，电商趋势需要同时看官方零售、平台披露、用户结构、品类和消费领域。"
+        text: "公开口径分散，用户规模、零售额与线上化率难以直接对齐。"
       },
       {
         label: "分析动作",
-        text: "整理国家统计局、上市平台披露和 CNNIC 第 49-57 次报告数据，建立 2021-2025 五年序列，形成事实表、来源血缘、SQL 视图、趋势洞察和 HTML 报告，推导指标单独标记不冒充官方披露。"
+        text: "对齐国家统计局与 CNNIC 口径，建立 2021-2025 事实表、来源血缘、SQL 视图和 HTML 报告。"
       },
       {
         label: "输出价值",
-        text: "输出可导入数据库的数据包和可视化报告，能解释线上零售、消费领域、平台指标和客群变化，每个数字可追溯到具体报告期数。"
+        text: "形成可复核的数据包与趋势报告，官方值与分析标签分开维护。"
       }
     ],
     tags: ["官方口径", "来源血缘", "趋势报告"],
-    image: assetPath("assets/project-ecommerce-research.svg?v=20260610-real-data"),
-    imageAlt: "中国电商消费趋势网络购物用户、使用率和网上零售额封面",
-    evidence: [
-      "CNNIC 口径五年序列：网购用户 8.42 亿（2021）→ 9.74 亿（2024）→ 9.37 亿（2025），大盘进入平台期",
-      "CNNIC 第57次报告口径：2025 网络购物用户 9.37 亿、使用率 83.2%",
-      "统计局口径：网上零售额五年从 13.09 万亿增至 15.97 万亿，实物线上化比重较 2021 提升 1.6 个百分点",
-      "数据口径：官方统计与 CNNIC 用户指标结合，不混写平台 GMV"
-    ]
+    image: assetPath("assets/project-ecommerce-research.svg?v=20260711-source-labels"),
+    imageAlt: "中国电商消费趋势网络购物用户、使用率和网上零售额封面"
   },
   {
     id: "novel",
-    type: "Novel Market Analysis",
+    type: "Goodreads Content Trends",
     title: "国际热门小说年度趋势分析",
     metric: "500 本清洗样本 / 2025 主风格 Romance 28 本 / Goodreads 平台行为代理",
     casePoints: [
       {
         label: "业务问题",
-        text: "热门小说榜单容易只停留在排名，需要进一步解释平台读者行为、作品互动强度、题材结构和年度变化。"
+        text: "热门榜只有排名，难以解释平台互动、题材结构和年度变化。"
       },
       {
         label: "分析动作",
-        text: "基于 Goodreads 年度热门榜快照抓取候选池，按类目过滤非小说并记录剔除原因，建立 500 本书档案，统计书架标记、评分、评论和题材标签，主风格单标签与风格信号多标签两套口径分开维护。"
+        text: "清洗 Goodreads 年度榜并记录剔除原因，建立 500 本书档案，分开维护单标签主风格与多标签信号。"
       },
       {
         label: "输出价值",
-        text: "把内容热度拆成可读的数据叙事，既能看主风格五年变化和平台互动趋势，也能追溯到单书档案、方法论和数据边界。"
+        text: "输出五年主风格与平台互动趋势，并保留单书档案、方法和数据边界。"
       }
     ],
     tags: ["读者行为代理", "样本清洗", "内容洞察"],
-    image: assetPath("assets/project-novel-market.svg?v=20260610-real-trend"),
-    imageAlt: "国际热门小说主风格五年变化与 2025 主风格分布封面",
-    evidence: [
-      "2025 Goodreads Top100 小说样本：书架标记量 6158.8 万",
-      "2025 年度索引口径：Romance 主风格 28 本，与 Thriller Mystery 并列第一",
-      "五年热度峰值：2023《Fourth Wing》书架标记 637 万，类型混合是近年最强商业信号",
-      "数据口径：Goodreads 为平台行为代理，不代表出版市场真实销售"
-    ]
+    image: assetPath("assets/project-novel-market.svg?v=20260711-label-spacing"),
+    imageAlt: "国际热门小说主风格五年变化与 2025 主风格分布封面"
   }
 ];
 
@@ -151,6 +155,8 @@ type ProjectDetailData = {
   type: string;
   title: string;
   metric: string;
+  meta: { label: string; value: string }[];
+  resources: { label: string; description: string; href?: string; download?: boolean }[];
   sections: DetailSection[];
 };
 
@@ -158,7 +164,18 @@ const projectDetails: Record<string, ProjectDetailData> = {
   bank: {
     type: "BUSINESS DATA ANALYTICS",
     title: "经营数据分析与业务优化（广发银行）",
-    metric: "3年+ 经营数据分析 · 合作商 GMV +10% · 外呼接通率 +8% · 异常发现 T+3 → T+1",
+    metric: "3 年+ 经营数据分析 · 合作商 GMV 提升约 10% · 外呼接通率提升约 8% · 异常发现 T+3 → T+1",
+    meta: [
+      { label: "项目周期", value: "2022.09 - 2025.12" },
+      { label: "本人职责", value: "口径治理、资源规则、指标监控、复盘协同" },
+      { label: "协作对象", value: "业务团队、开发团队、合作商" },
+      { label: "交付载体", value: "指标口径、监控报表、异常跟进与周复盘材料" }
+    ],
+    resources: [
+      { label: "脱敏指标体系", description: "页面仅展示指标域、监控节奏和异常动作，不含内部绝对值。" },
+      { label: "异常归因框架", description: "按口径、客群/合作商、业务环节三层逐步缩小问题范围。" },
+      { label: "协作边界", description: "本人负责业务目标、数据口径和效果验证；开发团队负责模型与功能实现。" }
+    ],
     sections: [
       {
         heading: "摘要",
@@ -233,86 +250,134 @@ const projectDetails: Record<string, ProjectDetailData> = {
   ecommerce: {
     type: "CHINA E-COMMERCE TRENDS",
     title: "中国电商消费趋势分析",
-    metric: "3 个官方数据源 / 2021-2025 五年序列 / 数据包·SQL视图·HTML报告",
+    metric: "2 类权威公开来源 / 2021-2025 五年序列 / 数据包·SQL 视图·HTML 报告",
+    meta: [
+      { label: "项目性质", value: "独立公开数据研究" },
+      { label: "数据范围", value: "2021 - 2025 年度口径" },
+      { label: "本人职责", value: "来源核验、事实表设计、官方口径对齐、趋势解读" },
+      { label: "工具与交付", value: "CSV 数据包、SQL 视图、HTML 报告" }
+    ],
+    resources: [
+      {
+        label: "CNNIC 统计报告",
+        description: "网络购物用户规模与使用率的报告索引。",
+        href: "https://www.cnnic.net.cn/6/86/88/index.html"
+      },
+      {
+        label: "国家统计局公开数据",
+        description: "网上零售额与实物商品网上零售额占比的官方发布入口。",
+        href: "https://www.stats.gov.cn/sj/zxfb/"
+      },
+      {
+        label: "五年事实表样例",
+        description: "页面核心序列、来源期数和官方可比口径同比，可下载复核。",
+        href: assetPath("assets/ecommerce-2021-2025-sample.csv"),
+        download: true
+      },
+      {
+        label: "SQL 视图样例",
+        description: "演示官方披露值与分析标签分层的视图逻辑。",
+        href: assetPath("assets/ecommerce-trend-view.sql"),
+        download: true
+      }
+    ],
     sections: [
       {
         heading: "摘要",
         body: [
-          "本报告整合国家统计局、CNNIC 和上市平台披露三类公开数据，建立 2021-2025 五年可追溯序列，回答三个问题：电商用户大盘还在不在增长、交易规模处于什么阶段、线上化程度走到了哪一步。核心结论：网购用户规模进入 9 亿量级的平台期，2024 年在以旧换新政策拉动下冲高至 9.74 亿后于 2025 年回落；网上零售额五年累计增长约 22%（13.09 → 15.97 万亿）但增速明显放缓；实物商品线上化比重较 2021 年提升 1.6 个百分点，2022-2023 冲高后回落，线上线下进入再平衡阶段。电商已经从增量市场转入存量运营市场。"
+          "2021-2025 年，CNNIC 年末网络购物用户规模从 8.42 亿升至 2024 年的 9.74 亿，2025 年回落至 9.37 亿，呈现高位波动。国家统计局各年公布的全国网上零售额从 13.09 万亿元升至 15.97 万亿元，2024、2025 年官方可比口径同比增速分别为 7.2% 和 8.6%。实物商品网上零售额占社零比重在 2023 年达到 27.6% 的五年高点，随后降至 26.8% 和 26.1%。这些数据支持观察用户规模、交易金额与渠道占比的变化，但不足以单独证明客单价、复购或用户结构变化。"
         ]
       },
       {
         heading: "数据与方法",
         list: [
-          "国家统计局：全国网上零售额、实物商品网上零售额及占社会消费品零售总额比重（年度公报口径）",
-          "CNNIC《中国互联网络发展状况统计报告》：网络购物用户规模与网民使用率，取第 49/51/53/55/57 次报告的年末口径，每个数字标注报告期数",
-          "上市平台披露：财报中的 GMV、用户与品类指标，仅作平台层参考，不与官方口径混算",
-          "处理方式：原始披露值进事实表并记录来源血缘；推导指标（占比、增速）单独标记为 derived；交付可导入数据库的数据包、SQL 视图和 HTML 可视化报告"
+          "CNNIC《中国互联网络发展状况统计报告》：网络购物用户规模与网民使用率分别取第 49、51、53、55、57 次报告的年末口径",
+          "国家统计局：采用各年度直接披露的全国网上零售额、官方可比口径同比增速及实物商品网上零售额占社零比重",
+          "处理方式：官方披露值进入事实表并记录来源血缘；官方同比及其来源单独记录，分析标签分层维护；交付 CSV 数据包、SQL 视图和 HTML 可视化报告"
         ]
       },
       {
-        heading: "一、用户大盘：从拉新见顶到政策脉冲",
+        heading: "一、用户规模：五年高位波动",
         table: {
           caption: "网络购物用户规模与使用率（CNNIC，年末口径）",
           head: ["年份", "2021", "2022", "2023", "2024", "2025"],
           rows: [
             ["网购用户规模（亿）", "8.42", "8.45", "9.15", "9.74", "9.37"],
             ["占网民比例（%）", "81.6", "79.2", "83.8", "87.9", "83.2"],
-            ["数据来源", "第49次", "第51次", "第53次", "第55次", "第57次"]
+            ["数据来源", "第 49 次", "第 51 次", "第 53 次", "第 55 次", "第 57 次"]
           ]
         },
         body: [
-          "2021-2022 年用户规模几乎零增长（8.42 → 8.45 亿），拉新逻辑率先见顶。2023-2024 年重新上行，其中 2024 年较上年净增 5947 万、使用率冲至 87.9%——CNNIC 第 55 次报告将其明确归因于电商平台联合各级政府补贴推动的以旧换新带动线上成交。2025 年回落至 9.37 亿（使用率 83.2%），与网民总规模升至 11.25 亿对照，说明政策脉冲消退后大盘回归平台期均值。对业务的含义：用户增长依赖政策与场景事件驱动，常态化经营的重心应放在使用深度、复购结构和客单价上。"
+          "2021-2022 年末网络购物用户规模从 8.42 亿小幅增至 8.45 亿；2023、2024 年分别升至 9.15 亿和 9.74 亿，2025 年回落至 9.37 亿。第 55 次报告将以旧换新和跨境电商列为 2024 年电子商务行业发展的重要因素，但没有把用户增量全部归因于这些因素。因此，本序列更适合描述用户规模的高位波动，政策贡献仍需专项识别。"
         ]
       },
       {
         heading: "二、交易规模：增长仍在，斜率变缓",
         table: {
-          caption: "全国网上零售额与实物线上化（国家统计局口径；增速为 derived 推导值）",
+          caption: "全国网上零售额与实物线上化（国家统计局口径；同比为官方可比口径）",
           head: ["年份", "2021", "2022", "2023", "2024", "2025"],
           rows: [
             ["全国网上零售额（万亿元）", "13.09", "13.79", "15.43", "15.52", "15.97"],
-            ["同比增速（derived，%）", "—", "+5.3", "+11.9", "+0.6", "+2.9"],
+            ["官方可比口径同比（%）", "+14.1", "+4.0", "+11.0", "+7.2", "+8.6"],
             ["实物商品网上零售额占社零比重（%）", "24.5", "27.2", "27.6", "26.8", "26.1"]
           ]
         },
         body: [
-          "五年序列呈现清晰的三段式：2022 年低速增长（+5.3%），2023 年补偿性反弹（+11.9%，对应线下消费场景恢复后的整体消费回暖），2024-2025 年回落到低个位数增速。交易规模仍在创新高，但 0.6%-2.9% 的增速意味着行业整体已无法靠大盘红利增长，平台与商家的竞争本质转为存量份额争夺。",
-          "实物线上化比重的形态更值得注意：2022 年冲至 27.2% 的高点后逐年回落至 26.1%，并非线上衰退，而是线下消费恢复带来的再平衡。线上化率较 2021 年仍净提升 1.6 个百分点，长期趋势未逆转，但「线上无限替代线下」的叙事在数据上已不成立。"
+          "国家统计局直接披露的可比口径同比增速在 2022 年降至 4.0%，2023 年回升至 11.0%，2024、2025 年分别为 7.2% 和 8.6%。由于纳入统计的重点平台范围每年变化，官方同比所采用的同期数会按本期平台范围调整，不能用相邻年度公布值简单相除替代官方增速。",
+          "实物商品网上零售额占社零比重从 2021 年的 24.5% 升至 2023 年的 27.6%，随后连续两年回落至 26.1%。份额回落不等于网上零售额萎缩，但其原因不能仅凭这组宏观数据归因于线下消费恢复，还需结合社零分项、品类与渠道数据验证。"
         ]
       },
       {
-        heading: "三、交叉验证：用户 × 交易的剪刀差",
+        heading: "三、交叉观察：两类指标并不同步",
         body: [
-          "把两组序列放在一起看：2024 年用户冲高（+5947 万）与零售额近乎停滞（+0.6%）同年出现，剪刀差说明以旧换新拉来的增量用户客单贡献有限，政策驱动的用户增长并未等比例转化为交易增长；2025 年用户回落而零售额增速回升至 2.9%，则指向存量用户的消费深度在修复。这种「用户量与交易额背离」的结构，正是判断市场进入存量阶段的典型信号。"
+          "2024 年用户规模与网上零售额均增长；2025 年年末用户规模回落，而全国网上零售额按官方可比口径增长 8.6%。由于前者是年末人数、后者是全年金额，且统计范围不同，这一现象只能说明两类指标没有保持同步，不能据此推断增量用户客单贡献、政策转化效率或存量用户消费深度。"
         ]
       },
       {
         heading: "结论与应用",
         list: [
-          "大盘判断：用户与交易双双进入低增速区间，电商整体从增量市场切换为存量市场，经营重点从获客转向留存、复购与客单结构",
-          "政策敏感性：2024 年以旧换新的脉冲效应清晰可量化，做经营预测时需要把政策事件单独建模，不能直接线性外推",
-          "线上化再平衡：26% 上下的实物线上化比重可作为渠道结构决策的基准线，线上线下融合而非替代是中期主旋律",
-          "方法论沉淀：官方口径 + 用户口径 + 平台口径三层分离的事实表结构，可复用于任何需要多源公开数据对齐的行业分析"
+          "用户规模：2021-2025 年由 8.42 亿升至 9.37 亿，但年度路径并非单向增长，2025 年较 2024 年回落",
+          "交易规模：网上零售额持续上升，年度增速必须采用国家统计局直接披露的可比口径",
+          "渠道占比：实物线上化比重在 2023 年达到五年高点后连续两年回落，原因仍需更多分项数据验证",
+          "方法论沉淀：用户时点值、全年金额与渠道占比三类指标分表维护，可复用于多源公开数据对齐"
         ]
       },
       {
         heading: "口径边界说明",
         body: [
-          "官方统计与 CNNIC 用户指标分开标注，不混写平台 GMV；同比增速等推导指标在事实表中标记为 derived，不冒充官方直接披露值；CNNIC 用户数为年末时点值，与统计局全年流量值的时间口径不同，交叉解读时已做区分。"
+          "CNNIC 用户数为年末时点人数，国家统计局网上零售额为全年金额，两者不能直接相除或替代人均消费指标。国家统计局各年绝对额与官方同比还受平台统计范围变化影响，增速分析优先采用官方可比口径。"
         ]
       }
     ]
   },
   novel: {
-    type: "NOVEL MARKET ANALYSIS",
+    type: "GOODREADS CONTENT TRENDS",
     title: "国际热门小说年度趋势分析",
     metric: "500 本清洗样本 / 2021-2025 / Goodreads 平台行为代理口径",
+    meta: [
+      { label: "项目性质", value: "独立内容趋势研究" },
+      { label: "数据范围", value: "2021 - 2025，每年 Top 100 小说样本" },
+      { label: "本人职责", value: "候选池清洗、标签口径、趋势表与边界说明" },
+      { label: "交付载体", value: "500 本书档案、排除记录、年度索引与趋势表" }
+    ],
+    resources: [
+      {
+        label: "Goodreads 年度热门榜",
+        description: "候选池来源；研究仅使用公开元数据，不下载小说全文。",
+        href: "https://www.goodreads.com/book/popular_by_date/2025"
+      },
+      {
+        label: "清洗与口径样例",
+        description: "展示年度样本规则、热度最高作品、双风格口径规则与指标边界。",
+        href: assetPath("assets/novel-methodology-sample.csv"),
+        download: true
+      }
+    ],
     sections: [
       {
         heading: "摘要",
         body: [
-          "本报告基于 Goodreads 2021-2025 年度热门榜单，清洗建档 500 本小说样本，从主风格结构、热度集中度和题材信号三个维度刻画国际大众小说市场的年度变化。核心结论：Romance 始终是大盘主力，2023 年达到峰值（33 本）后回落；Thriller Mystery 在 2023 年探底（22 本）后连续两年回升，2025 年与 Romance 以 28 本并列第一；Romantasy（爱情幻想混合）波动最大，是近五年最强的商业混合类型。热门作品的共同信号是类型混合与高情绪密度叙事，而非单一题材快感。"
+          "本报告基于 Goodreads 2021-2025 年度热门榜单，清洗建档 500 本小说样本，从主风格结构、平台热度和题材信号三个维度观察样本变化。Romance 在 2023 年达到 33 本后回落；Thriller Mystery 在 2023 年为 22 本，2025 年与 Romance 以 28 本并列第一；Romantasy 在 20-28 本间波动，是样本中变化较明显的主风格之一。现有数据不包含销量、收入或营销曝光，因此结论只限于 Goodreads 样本。"
         ]
       },
       {
@@ -320,13 +385,13 @@ const projectDetails: Record<string, ProjectDetailData> = {
         list: [
           "候选池：Goodreads「Most popular books published in YEAR」年度榜单快照，2021-2025 共五年",
           "清洗规则：按 Goodreads genres 过滤非小说（保留 fiction 类目），剔除原因逐条记录在排除表，每本保留原始榜单名次（raw_rank）可回溯",
-          "样本规模：每年 Top 100 小说，共 500 本，每本建立独立书档（元数据、题材标签、互动指标、市场象限）",
+          "样本规模：每年 Top 100 小说，共 500 本，每本建立独立书档（元数据、题材标签、互动指标、热度-评分象限）",
           "热度主口径：shelf_count（读者加入书架次数），为平台行为代理指标；辅助指标 ratings_count、text_reviews_count、average_rating",
           "两套风格口径分开维护：主风格（单标签，每本归入一个风格家族，用于结构对比）与风格信号（多标签，一本书可同时命中多个信号，用于趋势观察）"
         ]
       },
       {
-        heading: "一、主风格结构：Romance 大盘、悬疑基本盘、Romantasy 高波动",
+        heading: "一、主风格结构：三类风格占比较高",
         table: {
           caption: "主风格五年变化（每年 Top 100 中的数量，年度索引口径）",
           head: ["主风格", "2021", "2022", "2023", "2024", "2025"],
@@ -339,7 +404,7 @@ const projectDetails: Record<string, ProjectDetailData> = {
           ]
         },
         body: [
-          "三大家族（Romance、Thriller Mystery、Romantasy）合计稳定占据每年 Top 100 的约八成，市场头部结构高度稳定。Romance 2023 年冲到 33 本的峰值与当年 BookTok 推动的爱情题材热度一致；Thriller Mystery 同年被挤压到 22 本后逐年收复，说明反转、谜团和道德不确定性仍是全球大众阅读的稳定需求；Romantasy 在 20-28 本之间大幅波动，头部系列（如 Fourth Wing 系列）的出版节奏直接影响该家族的年度占位。"
+          "Romance、Thriller Mystery 与 Romantasy 三类合计每年占样本 74-83 本，说明 Goodreads 热门样本的主风格结构较为集中。Romance 在 2023 年达到 33 本；现有数据未记录 BookTok 曝光，不能将该峰值归因于 BookTok。Romantasy 在 20-28 本间波动，是样本中变化较明显的主风格之一。"
         ]
       },
       {
@@ -359,7 +424,7 @@ const projectDetails: Record<string, ProjectDetailData> = {
           ]
         },
         body: [
-          "2025 年 Romance 与 Thriller Mystery 以 28 本并列第一，五年来首次出现双头格局；前三家族合计 81 本，集中度仍在高位。纯 Fantasy、恐怖和科幻在热门榜中只剩个位数——这些题材并未消失，而是被吸收进 Romantasy、悬疑等混合类型中。"
+          "2025 年 Romance 与 Thriller Mystery 以 28 本并列第一，五年来首次出现双头格局；前三家族合计 81 本，集中度仍在高位。Fantasy、Horror Dark 与 Speculative Sci-Fi 的主风格计数均为个位数；现有汇总数据不足以判断相关题材是否被归入其他混合类型。"
         ]
       },
       {
@@ -376,7 +441,7 @@ const projectDetails: Record<string, ProjectDetailData> = {
           ]
         },
         body: [
-          "2022-2023 是热度峰值期：《The Housemaid》和《Fourth Wing》先后突破 600 万书架标记，且双双兼具高热度与高口碑。2024 年后头部作品热度回落至 300 万量级，部分是时间累积效应（新书标记量随时间增长），但头部断层收窄、腰部变厚的趋势在样本内同样可见。2025 年样本书架标记总量为 6158.8 万。"
+          "各年度最高 shelf_count 在当前抓取快照中于 2022-2023 年超过 600 万，2024-2025 年约为 300 万。由于 shelf_count 会随时间累积，不同出版年份的曝光窗口不同，不能据此判断头部效应减弱或腰部变厚。2025 年样本书架标记总量为 6158.8 万。"
         ]
       },
       {
@@ -393,16 +458,16 @@ const projectDetails: Record<string, ProjectDetailData> = {
           ]
         },
         body: [
-          "多标签口径下，每年约三分之二的热门小说带有 Romance 信号——远高于主风格口径的 28 本左右，说明爱情元素已经是大众小说的通用配方而非独立类型。热门作品反复命中女性成长、家庭与历史创伤、危险亲密关系等高情绪密度母题；读者要的不是单一类型快感，而是强情绪驱动下的可沉浸、可讨论、可推荐的故事。"
+          "多标签口径下，每年约三分之二的样本带有 Romance 信号，高于主风格单标签计数。爱情、奇幻、悬疑等信号经常共同出现，这支持‘类型组合在样本中较常见’的描述，但不能证明混合类型具有更高销量或商业回报。"
         ]
       },
       {
         heading: "结论与应用",
         list: [
-          "市场结构判断：Romance 是大盘、悬疑是基本盘、Romantasy 是弹性最大的进攻型类型，三者合计约八成，新作选型绕不开这三个家族",
-          "混合策略优于单一类型：fantasy × romance、悬疑 × 亲密关系的交叠是近五年最强商业信号，纯单一题材进入头部的难度持续上升",
-          "口碑与热度并非同步：象限分析显示高热度口碑分化的作品常年存在，热度指标必须搭配评分与评论结构一起读",
-          "该方法论可平移到任何内容市场：榜单清洗 → 双口径建档 → 结构/集中度/信号三维拆解"
+          "样本结构：Romance、Thriller Mystery 与 Romantasy 合计每年占 74-83 本，是当前样本的主要风格家族",
+          "类型组合：多标签结果显示爱情、奇幻、悬疑等信号经常共同出现，但商业优势仍需销量和曝光数据验证",
+          "口碑与热度：shelf_count、评分与评论量反映不同维度，不能以单一指标替代市场表现",
+          "方法论：榜单清洗 → 双口径建档 → 结构、平台热度与信号拆解"
         ]
       },
       {
@@ -421,44 +486,40 @@ const strengths = [
     icon: Database,
     title: "数据口径与治理",
     text:
-      "能把分散的字段、规则和状态整理成可执行口径，明确每个指标的定义、统计范围和更新频率，让业务、统计、会议和复盘使用同一套数据理解，从源头减少对数偏差。",
+      "把分散字段、规则和状态整理成可执行口径，让业务与复盘使用同一套数据语言。",
     points: [
-      "梳理字段含义、状态流转和资源规则口径，明确指标的分子分母与统计边界",
-      "对派发、统计、复盘三类数据做一致性检查，发现口径冲突先对齐再使用",
-      "沉淀口径说明和字段文档，让新人和跨团队成员能快速复用，减少重复沟通"
+      "明确指标分子分母、统计边界与状态流转",
+      "沉淀口径文档并做跨场景一致性检查"
     ]
   },
   {
     icon: LineChart,
     title: "经营指标监控",
     text:
-      "关注指标变化背后的业务动作，持续跟踪项目进度、资源使用、反馈结果和异常波动，区分正常波动和真实异常，让监控结果能直接支撑经营判断。",
+      "按日/周节奏跟踪进度、资源与反馈状态，把异常定位到具体规则、客群或环节。",
     points: [
-      "按日/周节奏跟踪进度、资源消耗和反馈状态，维护核心指标的监控视图",
-      "定位异常数据并拆解波动原因，按规则、客群、环节逐层缩小排查范围",
-      "输出会议可用的指标摘要和问题提示，附带初步判断和建议跟进动作"
+      "维护核心指标视图并识别异常波动",
+      "输出问题提示、初步归因与跟进动作"
     ]
   },
   {
     icon: BarChart3,
     title: "业务复盘与汇报",
     text:
-      "把阶段结果、异常问题和跟进动作整理成结构化复盘材料，区分事实、判断和建议，帮助团队更快判断问题来源和策略调整方向，并跟踪调整后的实际效果。",
+      "把事实、判断和建议整理成结构化复盘材料，让数据结论落到负责人和检查节点。",
     points: [
-      "按阶段整理经营结果、目标差异和问题清单，让差异能追溯到具体动作",
-      "把数据结论转成会议讨论和可执行行动项，明确负责人和检查节点",
-      "跟进复盘后的调整动作与后续表现，验证策略调整是否真正生效"
+      "整理经营结果、目标差异和问题清单",
+      "跟进调整动作与后续表现，验证实际效果"
     ]
   },
   {
     icon: MonitorCog,
     title: "数据需求协同",
     text:
-      "能把业务反馈转成清晰的数据功能需求，与开发对齐字段、报表逻辑、展示规则和使用体验，在需求、联调、验收各环节把住数据准确性，降低返工成本。",
+      "把业务反馈拆成字段、报表逻辑与验收规则，并与开发完成联调和上线验证。",
     points: [
-      "梳理需求背景、字段逻辑和使用场景，把模糊反馈拆成可开发的明确需求",
-      "参与报表逻辑核对、功能联调和上线验收，用真实业务数据交叉验证结果",
-      "持续收集使用反馈并推动迭代，让数据工具更贴近日常经营管理动作"
+      "把模糊反馈拆成可开发的数据需求",
+      "用真实业务数据核对逻辑、联调并验收"
     ]
   }
 ];
@@ -469,16 +530,16 @@ const timeline = [
     company: "广发银行",
     role: "数据分析师",
     detail:
-      "负责项目数据管理、资源派发、数据会议材料整理、经营指标监控和异常跟进；与开发团队沟通数据功能需求，推动字段口径、报表逻辑和业务使用体验持续优化，为项目经营复盘与策略调整提供依据。",
+      "负责数据管理、资源派发、指标监控、异常跟进与复盘材料；协同开发优化字段口径、报表逻辑和数据功能。",
     icon: Database,
     phase: "primary"
   },
   {
     time: "2022.02 - 2022.06",
     company: "广发信用卡中心（中英项目）",
-    role: "数据岗",
+    role: "数据岗（资源管理与经营检视）",
     detail:
-      "负责客户资源管理、资源下发规则、周/月度数据检视和异常追踪，支持团队进行资源分配、进度复盘和业务策略调整。这段经历形成了后续银行数据岗的口径意识和定期检视习惯。",
+      "负责客户资源管理、下发规则、周/月度检视和异常追踪，支持资源分配与进度复盘。",
     icon: LineChart,
     phase: "supporting"
   },
@@ -487,7 +548,7 @@ const timeline = [
     company: "广州乐芙信息科技有限公司",
     role: "电商老师",
     detail:
-      "维护 1500+ 会员，理解健康产品需求并制定销售方案；通过退单率、业绩结构等数据定位流失原因和体验提升点，是从业务岗位转向数据视角的起点。",
+      "维护 1500+ 会员并制定销售方案，通过退单率、业绩结构定位流失原因和体验提升点。",
     icon: Users,
     phase: "early"
   },
@@ -496,7 +557,7 @@ const timeline = [
     company: "泉后（广州）生物科技有限公司",
     role: "社群运营",
     detail:
-      "协同 150+ 线下门店，参与直播会员引入、售后处理、销售计划和私域活跃维护，提升用户触达和运营承接效率；多门店协同中积累了跨节点对齐目标与跟踪反馈的经验。",
+      "协同 150+ 线下门店，参与会员引入、售后、销售计划和私域维护，跟踪多门店反馈。",
     icon: MonitorCog,
     phase: "early"
   },
@@ -505,7 +566,7 @@ const timeline = [
     company: "中国平安广州电销分中心",
     role: "小组长",
     detail:
-      "负责新人培训 PPT、产品卖点讲解、入职流程协同和每日数据追踪，帮助新人提升业务理解和产出效率；每日盯数、用数据带人的习惯从这段经历开始养成。",
+      "负责新人培训、产品讲解、入职协同和每日数据追踪，用数据支持新人产出提升。",
     icon: BadgeCheck,
     phase: "early"
   }
@@ -522,6 +583,15 @@ function usePortfolioMotion() {
     const reveals = Array.from(document.querySelectorAll<HTMLElement>("[data-reveal]"));
     const motionTargets = [...sections, ...cards, ...reveals];
 
+    const findHashTarget = (targetId: string) => {
+      if (!targetId.startsWith("#") || targetId.length === 1) return null;
+      try {
+        return document.getElementById(decodeURIComponent(targetId.slice(1)));
+      } catch {
+        return null;
+      }
+    };
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -531,7 +601,7 @@ function usePortfolioMotion() {
           }
         });
       },
-      { threshold: 0.16, rootMargin: "0px 0px -12% 0px" }
+      { threshold: 0.08, rootMargin: "0px 0px -8% 0px" }
     );
 
     motionTargets.forEach((target) => observer.observe(target));
@@ -539,7 +609,7 @@ function usePortfolioMotion() {
     const nav = document.querySelector<HTMLElement>(".top-nav");
     let scrollCorrectionTimer = 0;
     const scrollToTarget = (targetId: string, behavior: ScrollBehavior) => {
-      const target = document.querySelector<HTMLElement>(targetId);
+      const target = findHashTarget(targetId);
       if (!target) return false;
 
       const scrollOffset = 118;
@@ -602,7 +672,7 @@ function usePortfolioMotion() {
 
       const targetId = link.getAttribute("href");
       if (!targetId || targetId === "#") return;
-      if (!document.querySelector(targetId)) return;
+      if (!findHashTarget(targetId)) return;
 
       event.preventDefault();
       event.stopPropagation();
@@ -616,69 +686,6 @@ function usePortfolioMotion() {
       window.requestAnimationFrame(() => scrollToTarget(targetId, "smooth"));
     };
     window.addEventListener("hashchange", onHashChange);
-
-    const heroVideo = document.querySelector<HTMLVideoElement>(".hero-video");
-    const reduceMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const desktopVideoQuery = window.matchMedia("(min-width: 721px)");
-    let heroVideoLoaded = false;
-    let heroVideoInView = true;
-
-    const unloadHeroVideo = () => {
-      if (!heroVideo || !heroVideoLoaded) return;
-      heroVideo.pause();
-      heroVideo.querySelectorAll<HTMLSourceElement>("source").forEach((source) => {
-        source.removeAttribute("src");
-      });
-      heroVideo.load();
-      heroVideoLoaded = false;
-      heroVideo.dataset.videoReady = "false";
-    };
-
-    const loadHeroVideo = () => {
-      if (!heroVideo || heroVideoLoaded) return;
-      heroVideo.querySelectorAll<HTMLSourceElement>("source[data-src]").forEach((source) => {
-        const src = source.dataset.src;
-        if (src) source.src = src;
-      });
-      heroVideo.load();
-      heroVideoLoaded = true;
-      heroVideo.dataset.videoReady = "true";
-    };
-
-    const syncHeroVideo = () => {
-      if (!heroVideo) return;
-      const allowMotionVideo = desktopVideoQuery.matches && !reduceMotionQuery.matches;
-      if (!allowMotionVideo) {
-        unloadHeroVideo();
-        return;
-      }
-
-      loadHeroVideo();
-      if (heroVideoInView && !document.hidden) {
-        heroVideo.play().catch(() => undefined);
-      } else {
-        heroVideo.pause();
-      }
-    };
-
-    const heroVideoObserver = heroVideo
-      ? new IntersectionObserver(
-          ([entry]) => {
-            heroVideoInView = entry.isIntersecting && entry.intersectionRatio > 0.22;
-            syncHeroVideo();
-          },
-          { threshold: [0, 0.22] }
-        )
-      : null;
-    if (heroVideo) {
-      heroVideoObserver?.observe(heroVideo);
-      syncHeroVideo();
-    }
-    const onVideoPreferenceChange = () => syncHeroVideo();
-    const onHeroVisibilityChange = () => syncHeroVideo();
-    reduceMotionQuery.addEventListener("change", onVideoPreferenceChange);
-    desktopVideoQuery.addEventListener("change", onVideoPreferenceChange);
-    document.addEventListener("visibilitychange", onHeroVisibilityChange);
 
     const glowCards = Array.from(document.querySelectorAll<HTMLElement>(".glow-card"));
     const cleanups = glowCards.map((card) => {
@@ -709,11 +716,6 @@ function usePortfolioMotion() {
       window.clearTimeout(hashSyncTimer);
       window.clearTimeout(scrollCorrectionTimer);
       observer.disconnect();
-      heroVideoObserver?.disconnect();
-      unloadHeroVideo();
-      reduceMotionQuery.removeEventListener("change", onVideoPreferenceChange);
-      desktopVideoQuery.removeEventListener("change", onVideoPreferenceChange);
-      document.removeEventListener("visibilitychange", onHeroVisibilityChange);
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("hashchange", onHashChange);
       document.removeEventListener("click", onNavClick, true);
@@ -724,6 +726,12 @@ function usePortfolioMotion() {
 
 function PhoneReveal() {
   const [phone, setPhone] = useState<string | null>(null);
+  const phoneLinkRef = useRef<HTMLAnchorElement>(null);
+
+  useEffect(() => {
+    if (phone) phoneLinkRef.current?.focus();
+  }, [phone]);
+
   const reveal = () => {
     // 号码分段倒序存放，避免被爬虫直接抓取明文
     const parts = ["6773", "0308", "431"];
@@ -737,16 +745,19 @@ function PhoneReveal() {
 
   if (phone) {
     return (
-      <a href={`tel:${phone.replace(/-/g, "")}`}>
-        <Phone size={18} />
-        {phone}
-      </a>
+      <span className="phone-reveal-result">
+        <a ref={phoneLinkRef} href={`tel:${phone.replace(/-/g, "")}`}>
+          <Phone size={18} aria-hidden="true" focusable="false" />
+          {phone}
+        </a>
+        <span className="sr-only" role="status">手机号已显示，可按回车拨打。</span>
+      </span>
     );
   }
 
   return (
-    <button type="button" className="phone-reveal" onClick={reveal}>
-      <Phone size={18} />
+    <button type="button" className="phone-reveal" onClick={reveal} aria-label="显示手机号">
+      <Phone size={18} aria-hidden="true" focusable="false" />
       点击查看手机号
     </button>
   );
@@ -755,7 +766,7 @@ function PhoneReveal() {
 function SectionHeading({ label, title }: { label: string; title: string }) {
   return (
     <div className="section-heading">
-      <span className="section-label">{label}</span>
+      <span className="section-label" aria-hidden="true">{label}</span>
       <h2>{title}</h2>
     </div>
   );
@@ -764,9 +775,11 @@ function SectionHeading({ label, title }: { label: string; title: string }) {
 function ProjectDetailPage({ id }: { id: string }) {
   const detail = projectDetails[id];
   const cover = projects.find((item) => item.id === id);
+  const homeHref = assetPath("index.html");
+  const projectsHref = assetPath("index.html#projects");
 
   useEffect(() => {
-    document.title = `${detail.title} | 林晓庆数据分析作品集`;
+    document.title = projectDocumentTitles[id] ?? `${detail.title} | 林晓庆数据分析作品集`;
     window.scrollTo(0, 0);
     return () => {
       document.title = "林晓庆 | 数据分析简历与项目作品集";
@@ -774,29 +787,65 @@ function ProjectDetailPage({ id }: { id: string }) {
   }, [detail.title]);
 
   return (
-    <main className="site-shell detail-shell">
+    <div className="site-shell detail-shell">
+      <a className="skip-link" href="#main-content">跳到主要内容</a>
       <header className="top-nav is-floating detail-nav">
-        <a className="brand-mark" href="./" aria-label="返回首页">
+        <a className="brand-mark" href={homeHref} aria-label="返回首页">
           LXQ
         </a>
         <nav aria-label="详情页导航">
-          <a href="./">返回首页</a>
-          <a href="./#projects">全部项目</a>
+          <a href={homeHref}>返回首页</a>
+          <a href={projectsHref}>全部项目</a>
         </nav>
         <a className="contact-chip" href={`mailto:${profile.email}`}>
           联系我
         </a>
       </header>
 
+      <main id="main-content" tabIndex={-1}>
       <article className="detail-page page-band">
         <p className="detail-type">{detail.type}</p>
         <h1>{detail.title}</h1>
         <strong className="project-metric detail-metric">{detail.metric}</strong>
+        <dl className="detail-meta" aria-label="项目概况">
+          {detail.meta.map((item) => (
+            <div key={item.label}>
+              <dt>{item.label}</dt>
+              <dd>{item.value}</dd>
+            </div>
+          ))}
+        </dl>
         {cover && (
           <div className="detail-cover">
-            <img src={cover.image} alt={cover.imageAlt} />
+            <img src={cover.image} alt={cover.imageAlt} width="720" height="420" />
           </div>
         )}
+        <section className="detail-section detail-resources" aria-labelledby="detail-resources-title">
+          <h2 id="detail-resources-title">来源与交付物</h2>
+          <div className="resource-grid">
+            {detail.resources.map((resource) => {
+              const content = (
+                <>
+                  <strong>{resource.label}</strong>
+                  <span>{resource.description}</span>
+                </>
+              );
+              return resource.href ? (
+                <a
+                  key={resource.label}
+                  href={resource.href}
+                  target={resource.download ? undefined : "_blank"}
+                  rel={resource.download ? undefined : "noopener noreferrer"}
+                  download={resource.download || undefined}
+                >
+                  {content}
+                </a>
+              ) : (
+                <div key={resource.label}>{content}</div>
+              );
+            })}
+          </div>
+        </section>
         {detail.sections.map((section, index) => (
           <section className="detail-section" key={`${section.heading}-${index}`}>
             {section.heading && <h2>{section.heading}</h2>}
@@ -811,13 +860,13 @@ function ProjectDetailPage({ id }: { id: string }) {
               </ul>
             )}
             {section.table && (
-              <figure className="detail-table-wrap">
-                {section.table.caption && <figcaption>{section.table.caption}</figcaption>}
+              <div className="detail-table-wrap" tabIndex={0} aria-label={`${section.table.caption ?? section.heading}，可横向滚动`}>
                 <table className="detail-table">
+                  {section.table.caption && <caption>{section.table.caption}</caption>}
                   <thead>
                     <tr>
                       {section.table.head.map((cell) => (
-                        <th key={cell}>{cell}</th>
+                        <th key={cell} scope="col">{cell}</th>
                       ))}
                     </tr>
                   </thead>
@@ -825,27 +874,34 @@ function ProjectDetailPage({ id }: { id: string }) {
                     {section.table.rows.map((row) => (
                       <tr key={row[0]}>
                         {row.map((cell, cellIndex) => (
-                          <td key={`${row[0]}-${cellIndex}`}>{cell}</td>
+                          cellIndex === 0 ? (
+                            <th key={`${row[0]}-${cellIndex}`} scope="row">{cell}</th>
+                          ) : (
+                            <td key={`${row[0]}-${cellIndex}`}>{cell}</td>
+                          )
                         ))}
                       </tr>
                     ))}
                   </tbody>
                 </table>
-              </figure>
+              </div>
             )}
           </section>
         ))}
-        <a className="back-link" href="./#projects">
+        <a className="back-link" href={projectsHref}>
           ← 返回项目列表
         </a>
       </article>
-    </main>
+      </main>
+    </div>
   );
 }
 
 function App() {
-  const detailId = new URLSearchParams(window.location.search).get("p");
-  if (detailId && projectDetails[detailId]) {
+  const pageProjectId = document.body.dataset.project;
+  const queryProjectId = new URLSearchParams(window.location.search).get("p");
+  const detailId = pageProjectId || queryProjectId;
+  if (detailId && Object.prototype.hasOwnProperty.call(projectDetails, detailId)) {
     return <ProjectDetailPage id={detailId} />;
   }
   return <HomePage />;
@@ -855,7 +911,8 @@ function HomePage() {
   usePortfolioMotion();
 
   return (
-    <main className="site-shell">
+    <div className="site-shell">
+      <a className="skip-link" href="#main-content">跳到主要内容</a>
       <header className="top-nav">
         <a className="brand-mark" href="#top" aria-label="返回顶部">
           LXQ
@@ -871,20 +928,12 @@ function HomePage() {
         </a>
       </header>
 
-      <section className="hero-section" id="top">
-        <video
-          className="hero-video"
-          muted
-          loop
-          playsInline
-          preload="none"
-          poster={heroPoster}
-          style={{ "--hero-video-poster": `url("${heroPoster}")` } as React.CSSProperties}
-          aria-hidden="true"
-        >
-          <source data-src={heroVideoWebm} type="video/webm" />
-          <source data-src={heroVideoMp4} type="video/mp4" />
-        </video>
+      <main id="main-content" tabIndex={-1}>
+      <section
+        className="hero-section"
+        id="top"
+        style={{ "--hero-image": `url("${heroImage}")` } as React.CSSProperties}
+      >
         <div className="grain-overlay" aria-hidden="true" />
         <div className="hero-frame">
           <div className="hero-copy">
@@ -893,13 +942,13 @@ function HomePage() {
             </p>
             <p className="kicker">业务数据分析 / 指标监控 / 数据治理 / 数据需求协同</p>
             <h1>
-              <span>林晓庆</span>
-              <span>业务数据分析师</span>
+              <span>{profile.name}</span>
+              <span>{profile.role}</span>
             </h1>
             <p className="lead">{profile.summary}</p>
             <div className="hero-actions">
               <a className="primary-action" href="#projects">
-                查看精选案例 <ArrowUpRight size={18} />
+                查看精选案例 <ArrowUpRight size={18} aria-hidden="true" focusable="false" />
               </a>
               <a className="secondary-action" href="#profile">
                 查看经历
@@ -908,6 +957,15 @@ function HomePage() {
           </div>
 
         </div>
+      </section>
+
+      <section className="method-strip" aria-label="已验证的工具与交付方式">
+        {toolMethods.map((item) => (
+          <div key={item.label}>
+            <strong>{item.label}</strong>
+            <span>{item.value}</span>
+          </div>
+        ))}
       </section>
 
       <section className="projects-section page-band" id="projects" data-motion-section>
@@ -920,12 +978,14 @@ function HomePage() {
               data-motion-card
               style={{ "--delay": `${index * 130}ms` } as React.CSSProperties}
             >
-              <div className={`project-visual visual-${index + 1}`} data-reveal>
-                <img src={project.image} alt={project.imageAlt} loading="lazy" />
-              </div>
+              <a className="project-cover-link" href={projectHref(project.id)} aria-label={`查看${project.title}详情`}>
+                <div className={`project-visual visual-${index + 1}`} data-reveal>
+                  <img src={project.image} alt={project.imageAlt} width="720" height="420" loading="lazy" />
+                </div>
+              </a>
               <div className="project-body">
                 <p>{project.type}</p>
-                <h3>{project.title}</h3>
+                <h3><a href={projectHref(project.id)}>{project.title}</a></h3>
                 <strong className="project-metric">{project.metric}</strong>
                 <div className="case-points">
                   {project.casePoints.map((point) => (
@@ -935,19 +995,14 @@ function HomePage() {
                     </div>
                   ))}
                 </div>
-                <ul className="evidence-list" aria-label={`${project.title}项目证据`}>
-                  {project.evidence.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
                 <div className="card-footer">
                   <div className="tag-list">
                     {project.tags.map((tag) => (
                       <small key={tag}>{tag}</small>
                     ))}
                   </div>
-                  <a className="detail-link" href={`?p=${project.id}`}>
-                    查看项目详情 <ArrowUpRight size={15} />
+                  <a className="detail-link" href={projectHref(project.id)}>
+                    查看项目详情 <ArrowUpRight size={15} aria-hidden="true" focusable="false" />
                   </a>
                 </div>
               </div>
@@ -961,11 +1016,8 @@ function HomePage() {
         <div className="profile-layout">
           <div className="profile-intro">
             <p>
-              这部分呈现数据分析岗位最相关的工作能力：数据口径治理、资源派发、经营指标监控、会议复盘、异常跟进，
-              以及与开发协同优化数据功能。日常工作贯穿"定义口径 → 监控指标 → 定位异常 → 复盘沉淀 → 推动改进"的完整链路：
-              先把字段含义、状态流转和统计规则定义清楚，让业务、统计和会议使用同一套数据语言；再通过日常监控发现进度
-              和质量的异常波动，拆解到具体规则、客群或环节；最后把结论整理成复盘材料和功能需求，推动规则调整与工具优化，
-              帮助业务团队更快看清问题、沉淀结论并推动后续动作。
+              日常工作贯穿"定义口径 → 监控指标 → 定位异常 → 复盘沉淀 → 推动改进"：
+              先统一字段、状态和统计规则，再把异常拆到规则、客群或环节，最后将结论转成行动项和数据功能需求。
             </p>
             <div className="experience-focus" aria-label="核心工作链路">
               <span>核心工作链路</span>
@@ -985,8 +1037,8 @@ function HomePage() {
             <div className="edu-note" aria-label="教育背景">
               <span>教育背景</span>
               <div>
-                <strong>广东理工学院</strong>
-                <small>机械设计与制造 · 专科</small>
+                <strong>{profile.educationSchool}</strong>
+                <small>{profile.educationDetail}</small>
               </div>
             </div>
           </div>
@@ -1013,7 +1065,7 @@ function HomePage() {
                 style={{ "--delay": `${index * 110}ms` } as React.CSSProperties}
               >
                 <div className="timeline-icon">
-                  <Icon size={20} />
+                  <Icon size={20} aria-hidden="true" focusable="false" />
                 </div>
                 <time>{item.time}</time>
                 <h3>{item.company}</h3>
@@ -1038,7 +1090,7 @@ function HomePage() {
                 data-motion-card
                 style={{ "--delay": `${index * 100}ms` } as React.CSSProperties}
               >
-                <Icon size={26} />
+                <Icon size={26} aria-hidden="true" focusable="false" />
                 <h3>{item.title}</h3>
                 <p>{item.text}</p>
                 <ul className="strength-points" aria-label={`${item.title}能力点`}>
@@ -1054,22 +1106,23 @@ function HomePage() {
 
       <section className="contact-section" id="contact" data-motion-section>
         <div className="contact-inner glow-card" data-motion-card>
-          <span className="section-label">Contact</span>
+          <span className="section-label" aria-hidden="true">Contact</span>
           <h2>期待在数据分析、经营指标监控与业务复盘方向继续深入。</h2>
           <div className="contact-list">
             <PhoneReveal />
             <a href={`mailto:${profile.email}`}>
-              <Mail size={18} />
+              <Mail size={18} aria-hidden="true" focusable="false" />
               {profile.email}
             </a>
-            <a href={assetPath("resume.html?print=1")} target="_blank" rel="noopener">
-              <FileDown size={18} />
+            <a href={assetPath("assets/lin-xiaoqing-data-analyst-resume.pdf")} download>
+              <FileDown size={18} aria-hidden="true" focusable="false" />
               下载简历 PDF
             </a>
           </div>
         </div>
       </section>
-    </main>
+      </main>
+    </div>
   );
 }
 
