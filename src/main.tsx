@@ -44,7 +44,7 @@ const profile = {
 
 const toolMethods = [
   { label: "SQL 视图", value: "官方值与分析标签分层" },
-  { label: "数据包", value: "CSV 样例与来源血缘" },
+  { label: "数据包", value: "CSV 样例与来源记录" },
   { label: "HTML 报告", value: "可视化趋势与边界说明" },
   { label: "口径文档", value: "字段、状态与统计规则" }
 ];
@@ -108,14 +108,14 @@ const projects = [
       },
       {
         label: "分析动作",
-        text: "对齐国家统计局与 CNNIC 口径，建立 2021-2025 事实表、来源血缘、SQL 视图和 HTML 报告。"
+        text: "对齐国家统计局与 CNNIC 口径，建立 2021-2025 事实表、来源记录、SQL 视图和 HTML 报告。"
       },
       {
         label: "输出价值",
         text: "形成可复核的数据包与趋势报告，官方值与分析标签分开维护。"
       }
     ],
-    tags: ["官方口径", "来源血缘", "趋势报告"],
+    tags: ["官方口径", "来源可追溯", "趋势报告"],
     image: assetPath("assets/project-ecommerce-research.svg?v=20260711-source-labels"),
     imageAlt: "中国电商消费趋势网络购物用户、使用率和网上零售额封面"
   },
@@ -293,7 +293,7 @@ const projectDetails: Record<string, ProjectDetailData> = {
         list: [
           "CNNIC《中国互联网络发展状况统计报告》：网络购物用户规模与网民使用率分别取第 49、51、53、55、57 次报告的年末口径",
           "国家统计局：采用各年度直接披露的全国网上零售额、官方可比口径同比增速及实物商品网上零售额占社零比重",
-          "处理方式：官方披露值进入事实表并记录来源血缘；官方同比及其来源单独记录，分析标签分层维护；交付 CSV 数据包、SQL 视图和 HTML 可视化报告"
+          "处理方式：官方披露值进入事实表并记录来源链接；官方同比及其来源单独记录，分析标签分层维护；交付 CSV 数据包、SQL 视图和 HTML 可视化报告"
         ]
       },
       {
