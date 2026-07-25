@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-labelledby="title desc">
+  <title id="title">中国电商消费趋势核心指标封面</title>
+  <desc id="desc">展示整合数据源、线上化率、交付物和电商消费趋势图表。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#21070b"/>
+      <stop offset="0.56" stop-color="#070405"/>
+      <stop offset="1" stop-color="#5c0711"/>
+    </linearGradient>
+    <linearGradient id="red" x1="0" x2="1">
+      <stop offset="0" stop-color="#ff7b86"/>
+      <stop offset="1" stop-color="#ff243d"/>
+    </linearGradient>
+    <linearGradient id="cream" x1="0" x2="1">
+      <stop offset="0" stop-color="#fff1e5"/>
+      <stop offset="1" stop-color="#ff8a94"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="420" rx="24" fill="url(#bg)"/>
+  <path d="M0 78H720M0 156H720M0 234H720M0 312H720M90 0V420M180 0V420M270 0V420M360 0V420M450 0V420M540 0V420M630 0V420" stroke="#fff" stroke-opacity=".06"/>
+  <g transform="translate(-43.2 -25.2) scale(1.12)">
+  <g fill="#15070a" stroke="#ff6b78" stroke-opacity=".38">
+    <rect x="46" y="44" width="188" height="96" rx="16"/>
+    <rect x="266" y="44" width="188" height="96" rx="16"/>
+    <rect x="486" y="44" width="188" height="96" rx="16"/>
+    <rect x="46" y="178" width="292" height="178" rx="18"/>
+    <rect x="382" y="178" width="292" height="178" rx="18"/>
+  </g>
+  <g font-family="Microsoft YaHei, Arial, sans-serif" fill="#fff7f7">
+    <text x="140" y="82" font-size="21" opacity=".9" font-weight="800" text-anchor="middle">权威来源</text>
+    <text x="140" y="122" font-size="34" font-weight="900" text-anchor="middle">2类</text>
+    <text x="360" y="82" font-size="21" opacity=".9" font-weight="800" text-anchor="middle">线上化率</text>
+    <text x="360" y="122" font-size="24" font-weight="900" text-anchor="middle">+1.6个百分点</text>
+    <text x="580" y="82" font-size="21" opacity=".9" font-weight="800" text-anchor="middle">交付物</text>
+    <text x="580" y="122" font-size="34" font-weight="900" text-anchor="middle">3类</text>
+    <text x="70" y="220" font-size="18" font-weight="900">用户规模与使用率</text>
+    <text x="406" y="220" font-size="18" font-weight="900">交易规模与线上化</text>
+  </g>
+  <path d="M78 326H316M78 291H316M78 256H316" stroke="#fff" stroke-opacity=".09"/>
+  <path d="M88 307 L142 306 L196 274 L250 248 L304 264" stroke="url(#red)" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M88 299 L142 317 L196 283 L250 252 L304 287" stroke="url(#cream)" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".72"/>
+  <g fill="#fff7f7" opacity=".82">
+    <circle cx="88" cy="307" r="5"/>
+    <circle cx="142" cy="306" r="5"/>
+    <circle cx="196" cy="274" r="5"/>
+    <circle cx="250" cy="248" r="5"/>
+    <circle cx="304" cy="264" r="5"/>
+  </g>
+  <g font-family="Microsoft YaHei, Arial, sans-serif" fill="#fff7f7" opacity=".72" font-size="13" font-weight="800" text-anchor="middle">
+    <text x="88" y="346">2021</text>
+    <text x="196" y="346">2023</text>
+    <text x="304" y="346">2025</text>
+    <text x="104" y="322">用户规模</text>
+    <text x="196" y="299" fill="#fff1e5">使用率</text>
+  </g>
+  <path d="M414 326H646M414 291H646M414 256H646" stroke="#fff" stroke-opacity=".09"/>
+  <g fill="url(#red)">
+    <rect x="424" y="254" width="24" height="72" rx="7" opacity=".72"/>
+    <rect x="478" y="250" width="24" height="76" rx="7" opacity=".78"/>
+    <rect x="532" y="241" width="24" height="85" rx="7" opacity=".95"/>
+    <rect x="586" y="241" width="24" height="85" rx="7"/>
+    <rect x="640" y="238" width="24" height="88" rx="7"/>
+  </g>
+  <path d="M436 281 L490 254 L544 250 L598 258 L652 265" stroke="url(#cream)" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".78"/>
+  <g font-family="Microsoft YaHei, Arial, sans-serif" fill="#fff7f7" opacity=".76" font-size="13" font-weight="700" text-anchor="middle">
+    <text x="436" y="344">2021</text>
+    <text x="544" y="344">2023</text>
+    <text x="652" y="344">2025</text>
+    <text x="441" y="236" text-anchor="start">柱：零售额</text>
+    <text x="588" y="236" fill="#fff1e5" text-anchor="start">线：实物线上化</text>
+  </g>
+  <text x="46" y="386" fill="#fff7f7" opacity=".5" font-family="Microsoft YaHei, Arial, sans-serif" font-size="12">官方统计 + CNNIC 用户口径；不混写平台 GMV。</text>
+  </g>
+</svg>

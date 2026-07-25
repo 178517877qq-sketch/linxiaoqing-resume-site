@@ -1,0 +1,6 @@
+year,sample_rule,top_shelf_count_title,top_shelf_count_10k,primary_style_rule,signal_rule,heat_metric_boundary
+2021,Top 100 fiction after exclusions,People We Meet on Vacation,394,one primary style per book,multiple signals allowed,Goodreads platform attention proxy not sales
+2022,Top 100 fiction after exclusions,The Housemaid,625,one primary style per book,multiple signals allowed,Goodreads platform attention proxy not sales
+2023,Top 100 fiction after exclusions,Fourth Wing,637,one primary style per book,multiple signals allowed,Goodreads platform attention proxy not sales
+2024,Top 100 fiction after exclusions,The Women,317,one primary style per book,multiple signals allowed,Goodreads platform attention proxy not sales
+2025,Top 100 fiction after exclusions,Onyx Storm,326,one primary style per book,multiple signals allowed,Goodreads platform attention proxy not sales

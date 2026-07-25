@@ -1,0 +1,559 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex" />
+<link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+<title>林晓庆 - 业务数据分析师 - 简历</title>
+<style>
+  :root {
+    color-scheme: light;
+    --red: #b3121f;
+    --red-dark: #850c16;
+    --ink: #21191b;
+    --gray: #554a4d;
+    --muted: #6f6266;
+    --line: #dfd3d5;
+    --soft: #faf6f6;
+  }
+
+  * {
+    box-sizing: border-box;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  html { background: #e9e3e4; }
+
+  body {
+    margin: 0;
+    color: var(--ink);
+    background: #e9e3e4;
+    font-family: "Microsoft YaHei UI", "PingFang SC", "Segoe UI", system-ui, sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  a {
+    color: inherit;
+    text-decoration-color: rgba(179, 18, 31, 0.45);
+    text-underline-offset: 2px;
+  }
+
+  a:hover { color: var(--red-dark); }
+
+  a:focus-visible {
+    outline: 2px solid var(--red);
+    outline-offset: 2px;
+  }
+
+  .page {
+    width: min(210mm, calc(100% - 32px));
+    min-height: 297mm;
+    margin: 24px auto;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 8px 34px rgba(40, 10, 14, 0.15);
+  }
+
+  .head {
+    position: relative;
+    padding: 25px 34px 19px;
+    overflow: hidden;
+    border-bottom: 3px solid var(--red);
+    background: linear-gradient(135deg, #fff 62%, var(--soft));
+  }
+
+  .head::after {
+    position: absolute;
+    right: 30px;
+    bottom: 6px;
+    color: rgba(179, 18, 31, 0.06);
+    content: "DATA ANALYST";
+    font-size: 38px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    pointer-events: none;
+  }
+
+  .identity {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .head h1 {
+    margin: 0;
+    font-size: 28px;
+    line-height: 1.1;
+    letter-spacing: 2px;
+  }
+
+  .title {
+    margin: 0;
+    padding: 4px 10px;
+    border-radius: 3px;
+    color: #fff;
+    background: var(--red);
+    font-size: 13px;
+    font-weight: 700;
+  }
+
+  .tagline {
+    position: relative;
+    z-index: 1;
+    margin: 8px 0 0;
+    color: var(--gray);
+    font-size: 12.5px;
+  }
+
+  .contact-row {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 22px;
+    margin: 10px 0 0;
+    color: var(--gray);
+    font-size: 11.5px;
+    font-style: normal;
+  }
+
+  .contact-row b {
+    margin-right: 4px;
+    color: var(--red-dark);
+  }
+
+  .columns {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 214px;
+  }
+
+  .main { padding: 18px 22px 22px 34px; }
+
+  .side {
+    padding: 18px 23px 22px 20px;
+    border-left: 1px solid var(--line);
+    background: var(--soft);
+  }
+
+  .section + .section { margin-top: 16px; }
+
+  h2 {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin: 0 0 9px;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 1.5px;
+  }
+
+  h2::before {
+    width: 4px;
+    height: 14px;
+    border-radius: 1px;
+    background: var(--red);
+    content: "";
+    flex: 0 0 auto;
+  }
+
+  h2 .en {
+    color: var(--muted);
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+
+  p, li { margin: 0; }
+
+  .summary {
+    color: var(--gray);
+    font-size: 11.5px;
+    line-height: 1.6;
+    text-align: justify;
+  }
+
+  .timeline {
+    position: relative;
+    padding-left: 14px;
+  }
+
+  .timeline::before {
+    position: absolute;
+    top: 6px;
+    bottom: 5px;
+    left: 3px;
+    width: 1px;
+    background: var(--line);
+    content: "";
+  }
+
+  .job {
+    position: relative;
+    break-inside: avoid;
+  }
+
+  .job + .job { margin-top: 10px; }
+
+  .job::before {
+    position: absolute;
+    top: 5px;
+    left: -14px;
+    width: 7px;
+    height: 7px;
+    border: 2px solid var(--red);
+    border-radius: 50%;
+    background: #fff;
+    content: "";
+  }
+
+  .job.early::before { border-color: #aa9b9f; }
+
+  .job-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 10px;
+  }
+
+  .job-head strong { font-size: 12.4px; }
+
+  .date {
+    color: #5f5356;
+    font-size: 10.4px;
+    font-style: normal;
+    font-weight: 650;
+    white-space: nowrap;
+  }
+
+  .role {
+    margin: 1px 0 3px;
+    color: var(--red-dark);
+    font-size: 11.2px;
+    font-weight: 700;
+  }
+
+  .job ul {
+    margin: 0;
+    padding-left: 15px;
+  }
+
+  .job li,
+  .job-note {
+    color: var(--gray);
+    font-size: 10.8px;
+    line-height: 1.5;
+  }
+
+  .job li + li { margin-top: 2px; }
+
+  .job li b { color: var(--ink); }
+
+  .projects {
+    display: grid;
+    gap: 7px;
+  }
+
+  .project {
+    padding: 7px 9px;
+    border-left: 3px solid var(--red);
+    background: var(--soft);
+    break-inside: avoid;
+  }
+
+  .project h3 {
+    margin: 0 0 3px;
+    font-size: 11.4px;
+    line-height: 1.35;
+  }
+
+  .project p {
+    color: var(--gray);
+    font-size: 10.3px;
+    line-height: 1.46;
+  }
+
+  .project b {
+    color: var(--red-dark);
+    font-weight: 700;
+  }
+
+  .skill,
+  .edu,
+  .highlight-list,
+  .portfolio-box { break-inside: avoid; }
+
+  .skill + .skill { margin-top: 9px; }
+
+  .skill strong {
+    display: block;
+    margin-bottom: 2px;
+    font-size: 11.3px;
+  }
+
+  .skill p {
+    color: var(--gray);
+    font-size: 10.4px;
+    line-height: 1.48;
+  }
+
+  .highlight-list {
+    display: grid;
+    gap: 6px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .highlight-list li {
+    position: relative;
+    padding-left: 11px;
+    color: var(--gray);
+    font-size: 10.7px;
+    line-height: 1.4;
+  }
+
+  .highlight-list li::before {
+    position: absolute;
+    left: 0;
+    color: var(--red);
+    content: "•";
+    font-weight: 900;
+  }
+
+  .edu strong { font-size: 11.4px; }
+
+  .edu p {
+    margin-top: 2px;
+    color: var(--gray);
+    font-size: 10.6px;
+  }
+
+  .portfolio-box {
+    padding: 9px 10px;
+    border: 1px solid rgba(179, 18, 31, 0.32);
+    background: #fff;
+    color: var(--gray);
+    font-size: 10.4px;
+    line-height: 1.5;
+  }
+
+  .portfolio-box strong {
+    display: block;
+    margin-bottom: 3px;
+    color: var(--red-dark);
+    font-size: 11px;
+  }
+
+  .portfolio-box a {
+    display: inline-block;
+    margin-top: 4px;
+    color: var(--ink);
+    font-weight: 700;
+  }
+
+  @media (max-width: 700px) {
+    .page {
+      width: 100%;
+      min-height: 0;
+      margin: 0;
+      box-shadow: none;
+    }
+
+    .head { padding: 24px 20px 18px; }
+    .head::after { display: none; }
+    .identity { align-items: flex-start; flex-direction: column; gap: 8px; }
+    .columns { grid-template-columns: 1fr; }
+    .main, .side { padding: 20px; }
+    .side { border-top: 1px solid var(--line); border-left: 0; }
+    .job-head { align-items: flex-start; flex-direction: column; gap: 0; }
+  }
+
+  @media print {
+    @page { size: A4; margin: 0; }
+
+    html,
+    body {
+      width: 210mm;
+      height: 297mm;
+      background: #fff;
+    }
+
+    body { font-size: 9pt; }
+
+    .page {
+      display: grid;
+      grid-template-rows: auto 1fr;
+      width: 210mm;
+      height: 297mm;
+      min-height: 0;
+      margin: 0;
+      overflow: hidden;
+      box-shadow: none;
+      break-after: avoid;
+      break-inside: avoid;
+    }
+
+    .head { padding: 7mm 9mm 5mm; }
+    .columns {
+      grid-template-columns: minmax(0, 1fr) 57mm;
+      min-height: 0;
+    }
+    .main { padding: 5mm 5.5mm 5mm 9mm; }
+    .side { padding: 5mm 7mm 5mm 5mm; }
+    .section + .section { margin-top: 4mm; }
+    h2 { margin-bottom: 2.2mm; break-after: avoid; }
+    .job, .project, .skill, .edu, .portfolio-box { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<article class="page" aria-label="林晓庆业务数据分析师简历">
+  <header class="head">
+    <div class="identity">
+      <h1>林晓庆</h1>
+      <p class="title">业务数据分析师</p>
+    </div>
+    <p class="tagline">业务数据分析 · 指标监控 · 数据治理 · 数据需求协同</p>
+    <address class="contact-row" aria-label="联系方式">
+      <span><b>邮箱</b><a href="mailto:xunni8214@gmail.com">xunni8214@gmail.com</a></span>
+      <span><b>经验</b>3 年+ 核心数据分析岗位</span>
+      <span><b>作品集</b><a href="https://178517877qq-sketch.github.io/linxiaoqing-resume-site/">在线查看完整项目</a></span>
+    </address>
+  </header>
+
+  <div class="columns">
+    <main class="main">
+      <section class="section" aria-labelledby="summary-title">
+        <h2 id="summary-title">个人概述 <span class="en">SUMMARY</span></h2>
+        <p class="summary">聚焦业务数据分析，熟悉数据口径治理、资源规则管理、经营指标监控、会议复盘支持和数据功能需求协同。能够把业务问题整理成清晰的指标逻辑、数据流程和复盘结论，支持经营判断与跨团队沟通；日常工作贯穿“定义口径 → 监控指标 → 定位异常 → 复盘沉淀 → 推动改进”的完整链路。</p>
+      </section>
+
+      <section class="section" aria-labelledby="experience-title">
+        <h2 id="experience-title">工作经历 <span class="en">EXPERIENCE</span></h2>
+        <div class="timeline">
+          <article class="job">
+            <div class="job-head"><strong>广发银行</strong><span class="date">2022.09 - 2025.12</span></div>
+            <p class="role">数据分析师</p>
+            <ul>
+              <li>制定数据管理与派发规则、客群质量分层并精准下发，带动合作商 <b>GMV 提升约 10%</b></li>
+              <li>搭建 <b>20+ 核心指标</b>监控与异常跟进机制，异常发现时效从 <b>T+3 提前到 T+1</b></li>
+              <li>与开发共建外呼接通率响应模型，<b>外呼接通率提升约 8%</b></li>
+              <li>主持每周对数复盘会，统一口径并沉淀字段与报表文档，支持经营复盘和策略调整</li>
+            </ul>
+          </article>
+
+          <article class="job">
+            <div class="job-head"><strong>广发信用卡中心（中英项目）</strong><span class="date">2022.02 - 2022.06</span></div>
+              <p class="role">数据岗（资源管理与经营检视）</p>
+            <p class="job-note">负责客户资源管理、资源下发规则、周/月度数据检视和异常追踪，支持资源分配、进度复盘和业务策略调整。</p>
+          </article>
+
+          <article class="job early">
+            <div class="job-head"><strong>广州乐芙信息科技有限公司</strong><span class="date">2021.08 - 2022.01</span></div>
+            <p class="role">电商老师</p>
+            <p class="job-note">维护 1500+ 会员，制定销售方案，通过退单率、业绩结构等数据寻找体验提升点。</p>
+          </article>
+
+          <article class="job early">
+            <div class="job-head"><strong>泉后（广州）生物科技有限公司</strong><span class="date">2020.12 - 2021.06</span></div>
+            <p class="role">社群运营</p>
+            <p class="job-note">协同 150+ 线下门店，参与直播会员引入、售后处理、销售计划和私域活跃维护。</p>
+          </article>
+
+          <article class="job early">
+            <div class="job-head"><strong>中国平安广州电销分中心</strong><span class="date">2018.03 - 2020.09</span></div>
+            <p class="role">小组长</p>
+            <p class="job-note">负责新人培训、产品讲解、入职流程协同和每日数据追踪，帮助新人提升业务理解与产出效率。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="projects-title">
+        <h2 id="projects-title">数据分析项目 <span class="en">PROJECTS</span></h2>
+        <div class="projects">
+          <article class="project">
+            <h3>经营数据分析与业务优化（广发银行）</h3>
+            <p><b>动作</b> 派发规则与客群分层、20+ 指标监控、接通率模型共建、每周对数复盘。<b>结果</b> 合作商 GMV 提升约 10%，外呼接通率提升约 8%，异常发现 T+3 → T+1。</p>
+          </article>
+          <article class="project">
+            <h3>中国电商消费趋势分析（统计局 / CNNIC 公开数据）</h3>
+            <p><b>动作</b> 对齐 CNNIC 与国家统计局 2 类权威公开来源，形成事实表、来源记录、SQL 视图和 HTML 报告。<b>交付</b> 可导入数据库的数据包，五年序列可追溯，官方值与分析标签分开维护。</p>
+          </article>
+          <article class="project">
+            <h3>国际热门小说年度趋势分析（Goodreads）</h3>
+            <p><b>动作</b> 抓取年度热门榜并清洗为 500 本书档案，统计书架标记、评分、评论与题材标签。<b>口径</b> shelf_count 仅作为热度代理，不等同销量。</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <aside class="side" aria-label="补充信息">
+      <section class="section" aria-labelledby="skills-title">
+        <h2 id="skills-title">核心能力 <span class="en">SKILLS</span></h2>
+        <div class="skills-list">
+          <div class="skill">
+            <strong>数据口径与治理</strong>
+            <p>字段口径梳理、状态流转规则、一致性检查、口径文档沉淀</p>
+          </div>
+          <div class="skill">
+            <strong>经营指标监控</strong>
+            <p>日/周指标视图维护、异常定位、波动归因到规则、客群或环节</p>
+          </div>
+          <div class="skill">
+            <strong>业务复盘与汇报</strong>
+            <p>结构化复盘材料、数据结论转行动项、调整效果跟踪</p>
+          </div>
+          <div class="skill">
+            <strong>数据需求协同</strong>
+            <p>需求拆解、报表逻辑核对、联调验收、真实数据交叉验证</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="highlights-title">
+        <h2 id="highlights-title">关键成果 <span class="en">HIGHLIGHTS</span></h2>
+        <ul class="highlight-list">
+          <li>合作商 GMV 提升约 10%</li>
+          <li>外呼接通率提升约 8%</li>
+          <li>异常发现 T+3 → T+1</li>
+          <li>20+ 核心指标监控体系</li>
+          <li>500 本小说样本清洗建档</li>
+          <li>2 类权威公开来源可追溯</li>
+        </ul>
+      </section>
+
+      <section class="section" aria-labelledby="education-title">
+        <h2 id="education-title">教育背景 <span class="en">EDUCATION</span></h2>
+        <div class="edu">
+          <strong>广东理工学院</strong>
+          <p>机械设计与制造 · 专科</p>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="portfolio-title">
+        <h2 id="portfolio-title">在线作品集 <span class="en">PORTFOLIO</span></h2>
+        <div class="portfolio-box">
+          <strong>项目证据与完整口径</strong>
+          查看三个项目的数据来源、分析过程与详细结论。
+          <a href="https://178517877qq-sketch.github.io/linxiaoqing-resume-site/">打开在线作品集</a>
+        </div>
+      </section>
+    </aside>
+  </div>
+</article>
+
+
+<script>
+  if (new URLSearchParams(location.search).has("print")) {
+    window.addEventListener("load", function () {
+      setTimeout(function () { window.print(); }, 300);
+    });
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-labelledby="title desc">
+  <title id="title">国际热门小说平台行为指标封面</title>
+  <desc id="desc">展示样本档案、覆盖题材、题材结构和 Goodreads 平台行为图表。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#21070b"/>
+      <stop offset="0.56" stop-color="#070405"/>
+      <stop offset="1" stop-color="#5c0711"/>
+    </linearGradient>
+    <linearGradient id="red" x1="0" x2="1">
+      <stop offset="0" stop-color="#ff7b86"/>
+      <stop offset="1" stop-color="#ff243d"/>
+    </linearGradient>
+    <linearGradient id="cream" x1="0" x2="1">
+      <stop offset="0" stop-color="#fff1e5"/>
+      <stop offset="1" stop-color="#ff8a94"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="420" rx="24" fill="url(#bg)"/>
+  <path d="M0 78H720M0 156H720M0 234H720M0 312H720M90 0V420M180 0V420M270 0V420M360 0V420M450 0V420M540 0V420M630 0V420" stroke="#fff" stroke-opacity=".06"/>
+  <g transform="translate(-43.2 -25.2) scale(1.12)">
+  <g fill="#15070a" stroke="#ff6b78" stroke-opacity=".38">
+    <rect x="46" y="44" width="188" height="96" rx="16"/>
+    <rect x="266" y="44" width="188" height="96" rx="16"/>
+    <rect x="486" y="44" width="188" height="96" rx="16"/>
+    <rect x="46" y="178" width="292" height="178" rx="18"/>
+    <rect x="382" y="178" width="292" height="178" rx="18"/>
+  </g>
+  <g font-family="Microsoft YaHei, Arial, sans-serif" fill="#fff7f7">
+    <text x="140" y="82" font-size="21" opacity=".9" font-weight="800" text-anchor="middle">样本</text>
+    <text x="140" y="122" font-size="34" font-weight="900" text-anchor="middle">500本</text>
+    <text x="360" y="82" font-size="21" opacity=".9" font-weight="800" text-anchor="middle">Top5 风格</text>
+    <text x="360" y="122" font-size="34" font-weight="900" text-anchor="middle">5类</text>
+    <text x="580" y="82" font-size="21" opacity=".9" font-weight="800" text-anchor="middle">主风格</text>
+    <text x="580" y="122" font-size="34" font-weight="900" text-anchor="middle">28本</text>
+    <text x="70" y="220" font-size="18" font-weight="900">主风格五年变化</text>
+    <text x="406" y="220" font-size="18" font-weight="900">2025 主风格分布</text>
+  </g>
+  <path d="M78 326H316M78 291H316M78 256H316" stroke="#fff" stroke-opacity=".09"/>
+  <path d="M88 284 L142 260 L196 236 L250 254 L304 266" stroke="url(#red)" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M88 272 L142 284 L196 302 L250 272 L304 266" stroke="url(#cream)" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".72"/>
+  <path d="M88 278 L142 314 L196 266 L250 290 L304 284" stroke="#fff7f7" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".45"/>
+  <g fill="#fff7f7" opacity=".82">
+    <circle cx="88" cy="284" r="5"/>
+    <circle cx="142" cy="260" r="5"/>
+    <circle cx="196" cy="236" r="5"/>
+    <circle cx="250" cy="254" r="5"/>
+    <circle cx="304" cy="266" r="5"/>
+  </g>
+  <g font-family="Microsoft YaHei, Arial, sans-serif" fill="#fff7f7" opacity=".65" font-size="10" font-weight="800" text-anchor="middle">
+    <text x="88" y="346">2021</text>
+    <text x="142" y="346">2022</text>
+    <text x="196" y="346">2023</text>
+    <text x="250" y="346">2024</text>
+    <text x="304" y="346">2025</text>
+    <text x="196" y="228" fill="#ff8a94">Romance</text>
+    <text x="196" y="316" fill="#fff1e5">Thriller</text>
+    <text x="250" y="304">Romantasy</text>
+  </g>
+  <g fill="url(#red)">
+    <rect x="414" y="242" width="26" height="90" rx="7"/>
+    <rect x="468" y="242" width="26" height="90" rx="7" opacity=".86"/>
+    <rect x="522" y="252" width="26" height="80" rx="7" opacity=".74"/>
+    <rect x="576" y="303" width="26" height="29" rx="7" opacity=".8"/>
+    <rect x="630" y="316" width="26" height="16" rx="6" opacity=".58"/>
+  </g>
+  <g font-family="Microsoft YaHei, Arial, sans-serif" fill="#fff7f7" opacity=".72" font-size="10" font-weight="700" text-anchor="middle">
+    <text x="427" y="350">Romance</text>
+    <text x="481" y="350">Thriller</text>
+    <text x="535" y="350">Romant.</text>
+    <text x="589" y="350">Histor.</text>
+    <text x="643" y="350">Literary</text>
+    <text x="427" y="235">28</text>
+    <text x="481" y="235">28</text>
+    <text x="535" y="245">25</text>
+    <text x="589" y="296">9</text>
+    <text x="643" y="309">5</text>
+  </g>
+  <text x="46" y="386" fill="#fff7f7" opacity=".5" font-family="Microsoft YaHei, Arial, sans-serif" font-size="12">Goodreads Top 100 小说样本；年度索引主风格口径。</text>
+  </g>
+</svg>
