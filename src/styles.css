@@ -1288,12 +1288,7 @@ p {
     grid-template-columns: 1fr;
   }
 
-  /* 单列布局：取消第四张卡居中限宽 */
-  .project-grid .project-card:last-child:nth-child(3n + 1) {
-    grid-column: auto;
-    width: auto;
-    justify-self: auto;
-  }
+  .brand-mark {
     width: 50px;
     height: 48px;
     flex: 0 0 auto;
