@@ -839,7 +839,7 @@ p {
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 24px;
 }
 
@@ -899,6 +899,12 @@ p {
   background:
     conic-gradient(from 180deg at 50% 50%, rgba(255, 36, 61, 0.66), rgba(255, 241, 229, 0.16), rgba(157, 7, 24, 0.52), rgba(255, 36, 61, 0.66)),
     #130609;
+}
+
+.visual-4 {
+  background:
+    radial-gradient(circle at 78% 22%, rgba(255, 36, 61, 0.38), transparent 32%),
+    linear-gradient(145deg, #1a080b, #080304 66%);
 }
 
 .project-body {
@@ -1201,19 +1207,6 @@ p {
   }
 }
 
-@media (min-width: 1081px) and (max-width: 1200px) {
-  .project-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  /* 两列网格下让落单卡片居中，并保留封面的固定比例。 */
-  .project-grid .project-card:last-child:nth-child(odd) {
-    grid-column: 1 / -1;
-    width: calc((100% - 24px) / 2);
-    justify-self: center;
-  }
-}
-
 @media (max-width: 1080px) {
   .top-nav {
     left: 20px;
@@ -1260,7 +1253,6 @@ p {
     border-radius: 0 0 8px 0;
   }
 
-  .project-grid,
   .profile-layout {
     grid-template-columns: 1fr;
   }
@@ -1290,6 +1282,10 @@ p {
     right: 14px;
     display: flex;
     gap: 8px;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
   }
 
   .brand-mark {
@@ -1730,6 +1726,10 @@ p {
     padding-top: 108px;
   }
 
+  .detail-page h1 {
+    font-size: clamp(22px, 7vw, 27px);
+  }
+
   .detail-meta,
   .resource-grid {
     grid-template-columns: 1fr;
@@ -1740,6 +1740,7 @@ p {
   }
 
   .detail-table {
+    min-width: 640px;
     font-size: 12.5px;
   }
 

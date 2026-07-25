@@ -78,6 +78,7 @@ try {
         "bank.html",
         "ecommerce.html",
         "novel.html",
+        "feimiao.html",
         "vite.config.ts",
         "package.json",
         "package-lock.json",

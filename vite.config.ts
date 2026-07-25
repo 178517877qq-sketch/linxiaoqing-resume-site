@@ -10,7 +10,8 @@ export default defineConfig({
         index: resolve(process.cwd(), "index.html"),
         bank: resolve(process.cwd(), "bank.html"),
         ecommerce: resolve(process.cwd(), "ecommerce.html"),
-        novel: resolve(process.cwd(), "novel.html")
+        novel: resolve(process.cwd(), "novel.html"),
+        feimiao: resolve(process.cwd(), "feimiao.html")
       }
     }
   }

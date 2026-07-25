@@ -20,13 +20,15 @@ const heroImage = assetPath("assets/hero-data-flow-clean.jpg");
 const projectPagePaths: Record<string, string> = {
   bank: "bank.html",
   ecommerce: "ecommerce.html",
-  novel: "novel.html"
+  novel: "novel.html",
+  feimiao: "feimiao.html"
 };
 
 const projectDocumentTitles: Record<string, string> = {
   bank: "经营数据分析与业务优化 | 林晓庆数据分析作品集",
   ecommerce: "中国电商消费趋势分析 | 林晓庆数据分析作品集",
-  novel: "国际热门小说年度趋势分析 | 林晓庆数据分析作品集"
+  novel: "国际热门小说年度趋势分析 | 林晓庆数据分析作品集",
+  feimiao: "肥喵记账个人财务数据产品 | 林晓庆数据分析作品集"
 };
 
 const projectHref = (id: string) => assetPath(projectPagePaths[id] ?? "index.html");
@@ -141,6 +143,29 @@ const projects = [
     tags: ["读者行为代理", "样本清洗", "内容洞察"],
     image: assetPath("assets/project-novel-market.svg?v=20260711-label-spacing"),
     imageAlt: "国际热门小说主风格五年变化与 2025 主风格分布封面"
+  },
+  {
+    id: "feimiao",
+    type: "INDEPENDENT DATA PRODUCT",
+    title: "肥喵记账｜个人财务数据产品",
+    metric: "从交易数据模型到预算、统计与资产复盘的产品闭环",
+    casePoints: [
+      {
+        label: "业务问题",
+        text: "日常账目容易分散在不同账户和场景中，转账、退款、报销、预算等口径也容易混用。"
+      },
+      {
+        label: "分析动作",
+        text: "围绕交易、账户、分类、标签、预算与资产设计数据结构，串联录入、查询、统计和复盘流程。"
+      },
+      {
+        label: "输出价值",
+        text: "形成可运行的 Android 产品，把数据口径、用户需求和持续验收落成真实使用链路。"
+      }
+    ],
+    tags: ["数据产品", "指标口径", "产品迭代"],
+    image: assetPath("assets/project-feimiao-accounting.svg?v=20260719-portfolio"),
+    imageAlt: "肥喵记账个人财务数据产品界面结构示意封面，不含真实账单数据"
   }
 ];
 
@@ -475,6 +500,109 @@ const projectDetails: Record<string, ProjectDetailData> = {
         body: [
           "shelf_count 为 Goodreads 平台行为代理，受平台用户结构影响，不代表出版市场真实销售；「每年 100 本」是采样规则而非分析结论；年度对比未对时间累积效应做折算，跨年热度对比需谨慎。",
           "项目不下载受版权保护的小说全文，仅基于公开元数据建档；合法文本来源状态单独记录在案。"
+        ]
+      }
+    ]
+  },
+  feimiao: {
+    type: "INDEPENDENT DATA PRODUCT",
+    title: "肥喵记账｜个人财务数据产品",
+    metric: "从交易数据模型到预算、统计与资产复盘的产品闭环",
+    meta: [
+      { label: "项目性质", value: "独立 Android 数据产品" },
+      { label: "本人职责", value: "产品定义、数据口径、交互验收与版本迭代" },
+      { label: "技术与数据", value: "Flutter / Dart / SQLite / Android" },
+      { label: "公开状态", value: "Android 测试版持续迭代，作品集不展示真实账单" }
+    ],
+    resources: [
+      {
+        label: "Android 测试版",
+        description: "进入公开发布页查看安装说明与当前测试版本，不在作品集页面直接触发大文件下载。",
+        href: "https://github.com/178517877qq-sketch/xunni/releases/tag/android-latest"
+      },
+      {
+        label: "公开源码分支",
+        description: "查看 Flutter、SQLite 数据层、测试与持续迭代记录。",
+        href: "https://github.com/178517877qq-sketch/xunni/tree/codex/feimiao-p0-fixes"
+      },
+      {
+        label: "脱敏界面结构",
+        description: "封面依据真实功能结构绘制，仅作界面示意，不含个人金额、商户、账户或通知信息。"
+      },
+      {
+        label: "工程验证记录",
+        description: "版本交付包含静态分析、自动化测试、Release 构建、签名与文件哈希核验。"
+      }
+    ],
+    sections: [
+      {
+        heading: "摘要与产品定位",
+        body: [
+          "肥喵记账是一款本地优先的 Android 个人财务数据产品。它不只解决“记一笔账”，而是把交易语义、账户流转、分类标签、预算计划、统计报告与资产记录组织成可以持续回顾的数据链路。本人负责产品定义、数据口径、交互验收和版本推进，并通过 Flutter 与 SQLite 工程把需求落成可运行产品。",
+          "这个项目补充了传统分析报告之外的能力证明：从用户任务出发定义字段和状态，处理退款、转账、报销、不计入等边界，再把同一套语义供查询、预算、统计、报告与 Widget 等消费端使用。"
+        ]
+      },
+      {
+        heading: "一、核心任务：从快速记录到周期复盘",
+        list: [
+          "记录：支持手动与 AI 辅助录入，补充账户、分类、标签、日期、备注、报销和不计入等信息",
+          "管理：按账本与账户组织交易，提供搜索、编辑、退款、转账、分类管理和导入导出流程",
+          "计划：围绕周期预算、分类范围与专项计划管理可花边界，并保留调整后的历史语义",
+          "分析：提供周、月、年与自定义周期统计，从收支、分类、趋势和预算执行角度回顾消费",
+          "扩展：将资产、报告、定时与自动记账、桌面 Widget 等能力接入同一套本地数据基础"
+        ]
+      },
+      {
+        heading: "二、数据模型：先定义业务语义，再做页面",
+        table: {
+          caption: "肥喵记账核心数据对象与边界",
+          head: ["数据对象", "承担的业务语义", "关键边界"],
+          rows: [
+            ["账本与账户", "组织个人财务范围、资金归属与账户流转", "账本视图与总账本视图分开，转账记录双边账户关系"],
+            ["交易", "收入、支出、转账、退款等原始事实", "金额、归属日期、账户、分类和状态独立保存，不以页面颜色代替语义"],
+            ["分类与标签", "承担统计分组、搜索筛选和用户自定义维度", "层级分类与多标签分开，避免把同一维度重复计数"],
+            ["预算与专项", "描述周期目标、范围和执行进度", "计划值与实际发生分开，周期、范围和调整记录均需明确"],
+            ["资产与报告", "连接账户余额、物品记录、估值与周期复盘", "事实、推定和待确认状态分开呈现，不把未知值伪装成零"]
+          ]
+        }
+      },
+      {
+        heading: "三、指标口径：处理看似简单的边界问题",
+        list: [
+          "转账描述账户之间的资金移动，不作为普通收入或支出重复进入消费统计",
+          "退款与原交易建立关联，统计时关注退款后的净影响，而不是把退款简单当作一笔新收入",
+          "报销、不计入和时间精度作为显式状态保留，让页面知道哪些金额参与预算、哪些只用于资金结算",
+          "预算、统计、报告与 Widget 以共享的数据语义为目标，避免同一个金额在不同页面出现不同解释",
+          "对未知、部分可用或证据冲突的数据保留状态，不用默认值制造看似完整的结论"
+        ]
+      },
+      {
+        heading: "四、统计与复盘：让记录产生下一步行动",
+        body: [
+          "统计页支持周、月、年和自定义周期，围绕收支、结余、分类构成、趋势和预算执行组织信息。产品设计不追求堆满图表，而是让用户能回答三个问题：钱花到哪里、与计划差多少、下一周期需要调整什么。",
+          "报告与 AI 能力建立在用户已有账本数据之上，用于查询、归纳和周期回顾；没有真实证据时不展示用户量、节省金额或商业效果等指标。"
+        ]
+      },
+      {
+        heading: "五、工程与验收：把迭代过程也当作数据质量问题",
+        list: [
+          "SQLite 使用版本化迁移和事务边界维护历史数据，导入、退款、定时任务等多步骤操作需要幂等与回滚保护",
+          "功能交付执行静态分析、定向回归与全量自动化测试，Release 包继续核对版本、结构、签名和 SHA256",
+          "界面验收覆盖窄屏、长金额、主题切换、键盘焦点和后台任务恢复等真实使用边界",
+          "版本文档区分已发布基线、本地开发包和待真机复测项，不把构建成功等同于运行态全部通过"
+        ]
+      },
+      {
+        heading: "公开与数据边界",
+        body: [
+          "账本数据默认保存在设备本地；当用户主动启用 AI 功能时，所选择的输入与上下文可能发送给用户配置的模型服务，因此本页不使用“绝不上传”或“绝对隐私”等表述。",
+          "作品集封面为脱敏界面结构示意，不含真实账单、账户、金额、商户、头像或通知内容。页面仅链接公开测试版发布页和公开源码分支，不公开签名材料、API Key、内部发布地址或个人账本文件。"
+        ]
+      },
+      {
+        heading: "结论与下一步",
+        body: [
+          "肥喵记账证明了我可以把“字段怎么定义、状态如何流转、指标如何解释”继续推进到实际产品：从需求拆解到数据模型、从页面交互到回归验收，最终形成可持续迭代的 Android 应用。后续重点仍是用真实设备反馈继续校准启动体验、数据一致性与复杂财务边界，而不是用未经验证的增长数字包装产品。"
         ]
       }
     ]
@@ -969,7 +1097,7 @@ function HomePage() {
       </section>
 
       <section className="projects-section page-band" id="projects" data-motion-section>
-        <SectionHeading label="Selected Cases" title="精选数据分析项目。" />
+        <SectionHeading label="Selected Cases" title="精选数据分析与产品项目。" />
         <div className="project-grid">
           {projects.map((project, index) => (
             <article
