@@ -776,34 +776,8 @@ function usePortfolioMotion() {
       return true;
     };
     let ticking = false;
-    const navLinks = nav
-      ? Array.from(nav.querySelectorAll<HTMLAnchorElement>("a[href^='#']"))
-      : [];
-    const updateActiveLink = () => {
-      const sections = (["projects", "profile", "strengths", "contact"] as const).map(
-        (id) => document.getElementById(id)
-      );
-      let active = "";
-      for (const sec of sections) {
-        if (sec && sec.getBoundingClientRect().top <= 160) {
-          active = sec.id;
-        }
-      }
-      // 页面顶部尚未滚动到任何 section 时，默认高亮第一个
-      if (!active) active = "projects";
-      navLinks.forEach((a) => {
-        const matches = a.getAttribute("href") === `#${active}`;
-        a.classList.toggle("is-active", matches);
-        if (matches) {
-          a.setAttribute("aria-current", "location");
-        } else {
-          a.removeAttribute("aria-current");
-        }
-      });
-    };
     const updateNav = () => {
       nav?.classList.toggle("is-floating", window.scrollY > window.innerHeight * 0.82);
-      updateActiveLink();
       ticking = false;
     };
     const onScroll = () => {

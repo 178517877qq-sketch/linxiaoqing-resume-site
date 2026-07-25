@@ -210,11 +210,6 @@ p {
   background: rgba(255, 36, 61, 0.24);
 }
 
-.top-nav nav a.is-active {
-  color: #fff;
-  background: rgba(255, 36, 61, 0.18);
-}
-
 .contact-chip {
   min-height: 52px;
   padding: 14px 22px;
@@ -772,25 +767,6 @@ p {
   grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 16px;
   margin-top: 48px;
-  position: relative;
-}
-
-.timeline::before {
-  content: "";
-  position: absolute;
-  top: 43px;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 107, 120, 0.3) 4%,
-    rgba(255, 107, 120, 0.3) 96%,
-    transparent
-  );
-  pointer-events: none;
-  z-index: 0;
 }
 
 .timeline-card {
@@ -1449,10 +1425,6 @@ p {
     grid-template-columns: 1fr;
     gap: 14px;
     margin-top: 32px;
-  }
-
-  .timeline::before {
-    display: none;
   }
 
   .timeline-card {
