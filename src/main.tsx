@@ -789,8 +789,10 @@ function usePortfolioMotion() {
           active = sec.id;
         }
       }
+      // 页面顶部尚未滚动到任何 section 时，默认高亮第一个
+      if (!active) active = "projects";
       navLinks.forEach((a) => {
-        const matches = active ? a.getAttribute("href") === `#${active}` : false;
+        const matches = a.getAttribute("href") === `#${active}`;
         a.classList.toggle("is-active", matches);
         if (matches) {
           a.setAttribute("aria-current", "location");
