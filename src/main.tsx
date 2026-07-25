@@ -988,6 +988,7 @@ function ProjectDetailPage({ id }: { id: string }) {
               </ul>
             )}
             {section.table && (
+              <>
               <div className="detail-table-wrap" tabIndex={0} aria-label={`${section.table.caption ?? section.heading}，可横向滚动`}>
                 <table className="detail-table">
                   {section.table.caption && <caption>{section.table.caption}</caption>}
@@ -1013,6 +1014,8 @@ function ProjectDetailPage({ id }: { id: string }) {
                   </tbody>
                 </table>
               </div>
+              <p className="table-scroll-hint" aria-hidden="true">← 横向滑动查看</p>
+              </>
             )}
           </section>
         ))}

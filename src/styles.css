@@ -1663,9 +1663,13 @@ p {
 }
 
 .detail-table-wrap {
-  margin: 4px 0 8px;
+  margin: 4px 0 4px;
   overflow-x: auto;
   border-radius: 4px;
+}
+
+.table-scroll-hint {
+  display: none;
 }
 
 .detail-table caption {
@@ -1747,6 +1751,13 @@ p {
   .detail-table th,
   .detail-table td {
     padding: 7px 8px;
+  }
+
+  .table-scroll-hint {
+    display: block;
+    margin: 5px 0 8px;
+    color: var(--dim);
+    font-size: 11.5px;
   }
 }
 
