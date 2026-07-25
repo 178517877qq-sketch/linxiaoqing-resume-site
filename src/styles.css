@@ -210,6 +210,11 @@ p {
   background: rgba(255, 36, 61, 0.24);
 }
 
+.top-nav nav a.is-active {
+  color: #fff;
+  background: rgba(255, 36, 61, 0.18);
+}
+
 .contact-chip {
   min-height: 52px;
   padding: 14px 22px;
@@ -767,6 +772,25 @@ p {
   grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 16px;
   margin-top: 48px;
+  position: relative;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 43px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 107, 120, 0.3) 4%,
+    rgba(255, 107, 120, 0.3) 96%,
+    transparent
+  );
+  pointer-events: none;
+  z-index: 0;
 }
 
 .timeline-card {
@@ -839,8 +863,15 @@ p {
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 24px;
+}
+
+/* 三列四卡时，最后一张落单居中 */
+.project-grid .project-card:last-child:nth-child(3n + 1) {
+  grid-column: 1 / -1;
+  width: calc((100% - 48px) / 3);
+  justify-self: center;
 }
 
 .project-card {
@@ -1288,7 +1319,12 @@ p {
     grid-template-columns: 1fr;
   }
 
-  .brand-mark {
+  /* 单列布局：取消第四张卡居中限宽 */
+  .project-grid .project-card:last-child:nth-child(3n + 1) {
+    grid-column: auto;
+    width: auto;
+    justify-self: auto;
+  }
     width: 50px;
     height: 48px;
     flex: 0 0 auto;
@@ -1420,6 +1456,10 @@ p {
     grid-template-columns: 1fr;
     gap: 14px;
     margin-top: 32px;
+  }
+
+  .timeline::before {
+    display: none;
   }
 
   .timeline-card {
