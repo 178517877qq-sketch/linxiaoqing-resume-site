@@ -38,8 +38,8 @@ const profile = {
   role: "业务数据分析师",
   title: "业务数据分析师 / 指标监控 / 数据治理 / 数据需求协同",
   email: "xunni8214@gmail.com",
-  educationSchool: "广东理工学院",
-  educationDetail: "机械设计与制造 · 专科",
+  educationSchool: "广东外语外贸大学",
+  educationDetail: "人力资源管理 · 本科",
   summary:
     "聚焦业务数据分析，熟悉数据口径治理、资源规则管理、经营指标监控、会议复盘支持和数据功能需求协同。能够把业务问题整理成清晰的指标逻辑、数据流程和复盘结论，支持经营判断与跨团队沟通。"
 };
