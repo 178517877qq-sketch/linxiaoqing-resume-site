@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "vite --host 127.0.0.1 --port 5173",
     "build": "tsc && vite build",
-    "build:github": "tsc && vite build --base=/linxiaoqing-resume-site/",
+    "build:github": "tsc && vite build --base=/",
     "preview": "vite preview --host 127.0.0.1 --port 4188"
   },
   "dependencies": {

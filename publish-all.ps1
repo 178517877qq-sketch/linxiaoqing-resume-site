@@ -149,7 +149,7 @@ try {
     Invoke-CheckedNative -FilePath "git" -ArgumentList @("-C", $deployDir, "push", "--force", "origin", "gh-pages") -FailureMessage "Push to gh-pages failed; main was pushed but the live site was not updated"
 
     Write-Host "Source and deployment completed successfully." -ForegroundColor Green
-    Write-Host "Check: https://178517877qq-sketch.github.io/linxiaoqing-resume-site/"
+    Write-Host "Check: https://lin.xunnia.com/"
 } catch {
     $scriptExitCode = 1
     Write-Host ""

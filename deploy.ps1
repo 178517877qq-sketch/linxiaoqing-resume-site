@@ -79,7 +79,7 @@ try {
     Invoke-CheckedNative -FilePath "git" -ArgumentList @("-C", $deployDir, "push", "--force", "origin", "gh-pages") -FailureMessage "Push to gh-pages failed"
 
     Write-Host "Deployment completed successfully." -ForegroundColor Green
-    Write-Host "Check: https://178517877qq-sketch.github.io/linxiaoqing-resume-site/"
+    Write-Host "Check: https://lin.xunnia.com/"
 } catch {
     $scriptExitCode = 1
     Write-Host ""
