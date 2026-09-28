@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-labelledby="title desc">
+  <title id="title">经营数据分析与业务优化封面</title>
+  <desc id="desc">展示广发银行项目的合作商 GMV、外呼接通率、异常发现时效和脱敏示意图表。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#21070b"/>
+      <stop offset="0.56" stop-color="#070405"/>
+      <stop offset="1" stop-color="#5c0711"/>
+    </linearGradient>
+    <linearGradient id="red" x1="0" x2="1">
+      <stop offset="0" stop-color="#ff7b86"/>
+      <stop offset="1" stop-color="#ff243d"/>
+    </linearGradient>
+    <linearGradient id="cream" x1="0" x2="1">
+      <stop offset="0" stop-color="#fff1e5"/>
+      <stop offset="1" stop-color="#ff8a94"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="420" rx="24" fill="url(#bg)"/>
+  <path d="M0 78H720M0 156H720M0 234H720M0 312H720M90 0V420M180 0V420M270 0V420M360 0V420M450 0V420M540 0V420M630 0V420" stroke="#fff" stroke-opacity=".06"/>
+  <g transform="translate(-43.2 -25.2) scale(1.12)">
+  <g fill="#15070a" stroke="#ff6b78" stroke-opacity=".38">
+    <rect x="46" y="44" width="188" height="96" rx="16"/>
+    <rect x="266" y="44" width="188" height="96" rx="16"/>
+    <rect x="486" y="44" width="188" height="96" rx="16"/>
+    <rect x="46" y="178" width="292" height="178" rx="18"/>
+    <rect x="382" y="178" width="292" height="178" rx="18"/>
+  </g>
+  <g font-family="Microsoft YaHei, Arial, sans-serif" fill="#fff7f7">
+    <text x="140" y="82" font-size="21" opacity=".9" font-weight="800" text-anchor="middle">合作商 GMV</text>
+    <text x="140" y="122" font-size="27" font-weight="900" text-anchor="middle">提升约 10%</text>
+    <text x="360" y="82" font-size="21" opacity=".9" font-weight="800" text-anchor="middle">外呼接通率</text>
+    <text x="360" y="122" font-size="27" font-weight="900" text-anchor="middle">提升约 8%</text>
+    <text x="580" y="82" font-size="21" opacity=".9" font-weight="800" text-anchor="middle">异常发现</text>
+    <text x="580" y="122" font-size="30" font-weight="900" text-anchor="middle">T+3→T+1</text>
+    <text x="70" y="220" font-size="18" font-weight="900">指标监控趋势</text>
+    <text x="406" y="220" font-size="18" font-weight="900">口径/异常分布</text>
+  </g>
+  <path d="M78 326H316M78 291H316M78 256H316" stroke="#fff" stroke-opacity=".09"/>
+  <path d="M88 309 L162 286 L236 258 L310 238" stroke="url(#red)" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M88 317 L162 302 L236 284 L310 268" stroke="url(#cream)" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".72"/>
+  <g fill="#fff7f7" opacity=".82">
+    <circle cx="88" cy="309" r="5"/>
+    <circle cx="162" cy="286" r="5"/>
+    <circle cx="236" cy="258" r="5"/>
+    <circle cx="310" cy="238" r="5"/>
+  </g>
+  <g font-family="Microsoft YaHei, Arial, sans-serif" fill="#fff7f7" opacity=".72" font-size="13" font-weight="800" text-anchor="middle">
+    <text x="88" y="346">Q1</text>
+    <text x="162" y="346">Q2</text>
+    <text x="236" y="346">Q3</text>
+    <text x="310" y="346">Q4</text>
+    <text x="102" y="245">监控</text>
+    <text x="222" y="278" fill="#fff1e5">异常</text>
+  </g>
+  <path d="M414 326H646M414 291H646M414 256H646" stroke="#fff" stroke-opacity=".09"/>
+  <g fill="url(#red)">
+    <rect x="424" y="252" width="30" height="74" rx="7"/>
+    <rect x="480" y="274" width="30" height="52" rx="7" opacity=".86"/>
+    <rect x="536" y="294" width="30" height="32" rx="7" opacity=".72"/>
+    <rect x="592" y="281" width="30" height="45" rx="7" opacity=".82"/>
+  </g>
+  <g font-family="Microsoft YaHei, Arial, sans-serif" fill="#fff7f7" opacity=".78" font-size="13" font-weight="700" text-anchor="middle">
+    <text x="439" y="344">字段</text>
+    <text x="495" y="344">状态</text>
+    <text x="551" y="344">规则</text>
+    <text x="607" y="344">异常</text>
+  </g>
+  <text x="46" y="386" fill="#fff7f7" opacity=".5" font-family="Microsoft YaHei, Arial, sans-serif" font-size="12">广发银行真实项目；相对口径展示，不含敏感绝对值。</text>
+  </g>
+</svg>

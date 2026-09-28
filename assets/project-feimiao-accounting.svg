@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-labelledby="title desc">
+  <title id="title">肥喵记账个人财务数据产品封面</title>
+  <desc id="desc">以脱敏界面结构示意展示快速记账、预算管理、统计复盘和本地数据模型，不含真实账单。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#25080d"/>
+      <stop offset="0.58" stop-color="#090506"/>
+      <stop offset="1" stop-color="#5b0914"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#fff8ed"/>
+      <stop offset="1" stop-color="#f4dfba"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" x2="1">
+      <stop offset="0" stop-color="#ff8d98"/>
+      <stop offset="1" stop-color="#ff243d"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#000" flood-opacity=".42"/>
+    </filter>
+  </defs>
+  <rect width="720" height="420" rx="24" fill="url(#bg)"/>
+  <path d="M0 70H720M0 140H720M0 210H720M0 280H720M0 350H720M80 0V420M160 0V420M240 0V420M320 0V420M400 0V420M480 0V420M560 0V420M640 0V420" stroke="#fff" stroke-opacity=".045"/>
+  <g transform="translate(-43.2 -25.2) scale(1.12)">
+    <g font-family="Microsoft YaHei, Arial, sans-serif">
+      <text x="52" y="72" fill="#ff7d8a" font-size="13" font-weight="800" letter-spacing="1.6">INDEPENDENT DATA PRODUCT</text>
+      <text x="52" y="118" fill="#fff7f7" font-size="35" font-weight="900">肥喵记账</text>
+      <text x="52" y="147" fill="#fff1e5" fill-opacity=".76" font-size="15" font-weight="700">个人财务数据产品实践</text>
+
+      <g fill="#16070a" stroke="#ff6b78" stroke-opacity=".36">
+        <rect x="52" y="176" width="88" height="32" rx="9"/>
+        <rect x="148" y="176" width="82" height="32" rx="9"/>
+        <rect x="52" y="218" width="178" height="32" rx="9"/>
+      </g>
+      <g fill="#fff7f7" fill-opacity=".84" font-size="12" font-weight="700" text-anchor="middle">
+        <text x="96" y="197">本地优先</text>
+        <text x="189" y="197">Android</text>
+        <text x="141" y="239">Flutter · SQLite</text>
+      </g>
+
+      <g fill="none" stroke="#ff6575" stroke-width="2.5" stroke-linecap="round">
+        <path d="M57 283H215" stroke-opacity=".35"/>
+        <path d="M60 283L96 283L125 304L160 267L212 267"/>
+      </g>
+      <g fill="#ff6575">
+        <circle cx="60" cy="283" r="5"/>
+        <circle cx="125" cy="304" r="5"/>
+        <circle cx="160" cy="267" r="5"/>
+        <circle cx="212" cy="267" r="5"/>
+      </g>
+      <g fill="#fff7f7" fill-opacity=".72" font-size="12" font-weight="700" text-anchor="middle">
+        <text x="60" y="329">记录</text>
+        <text x="111" y="329">口径</text>
+        <text x="162" y="329">预算</text>
+        <text x="212" y="329">复盘</text>
+      </g>
+    </g>
+
+    <g filter="url(#shadow)">
+      <rect x="274" y="42" width="390" height="330" rx="28" fill="#12080a" stroke="#ff7b87" stroke-opacity=".34"/>
+      <rect x="292" y="60" width="354" height="294" rx="21" fill="url(#screen)"/>
+    </g>
+
+    <g font-family="Microsoft YaHei, Arial, sans-serif">
+      <g transform="translate(313 79)">
+        <g fill="#2c3038">
+          <circle cx="9" cy="8" r="4"/>
+          <circle cx="20" cy="4" r="4"/>
+          <circle cx="31" cy="8" r="4"/>
+          <ellipse cx="20" cy="18" rx="14" ry="11"/>
+        </g>
+        <text x="44" y="20" fill="#20242b" font-size="18" font-weight="900">肥喵记账</text>
+        <rect x="242" y="0" width="72" height="30" rx="15" fill="#fff" fill-opacity=".72" stroke="#b9a982" stroke-opacity=".38"/>
+        <text x="278" y="20" text-anchor="middle" fill="#505660" font-size="12" font-weight="700">总账本</text>
+      </g>
+
+      <rect x="313" y="122" width="207" height="104" rx="17" fill="#fff" fill-opacity=".72" stroke="#c4b38d" stroke-opacity=".35"/>
+      <text x="331" y="150" fill="#3d424a" font-size="13" font-weight="800">本期收支概览</text>
+      <text x="331" y="181" fill="#1e2228" font-size="26" font-weight="900">¥ —</text>
+      <g fill="#676e78" font-size="11" font-weight="700">
+        <text x="331" y="209">收入</text>
+        <text x="395" y="209">支出</text>
+        <text x="459" y="209">结余</text>
+      </g>
+
+      <rect x="534" y="122" width="91" height="104" rx="17" fill="#fff" fill-opacity=".72" stroke="#c4b38d" stroke-opacity=".35"/>
+      <text x="550" y="150" fill="#3d424a" font-size="12" font-weight="800">预算进度</text>
+      <circle cx="579" cy="184" r="25" fill="none" stroke="#dad0bb" stroke-width="8"/>
+      <path d="M579 159A25 25 0 0 1 602 194" fill="none" stroke="url(#accent)" stroke-width="8" stroke-linecap="round"/>
+
+      <rect x="313" y="240" width="143" height="91" rx="17" fill="#fff" fill-opacity=".72" stroke="#c4b38d" stroke-opacity=".35"/>
+      <text x="331" y="265" fill="#3d424a" font-size="12" font-weight="800">快速记账</text>
+      <g fill="url(#accent)">
+        <rect x="332" y="282" width="20" height="30" rx="6"/>
+        <rect x="361" y="272" width="20" height="40" rx="6" opacity=".82"/>
+        <rect x="390" y="289" width="20" height="23" rx="6" opacity=".66"/>
+        <rect x="419" y="278" width="20" height="34" rx="6" opacity=".76"/>
+      </g>
+
+      <rect x="470" y="240" width="155" height="91" rx="17" fill="#fff" fill-opacity=".72" stroke="#c4b38d" stroke-opacity=".35"/>
+      <text x="488" y="265" fill="#3d424a" font-size="12" font-weight="800">统计与复盘</text>
+      <path d="M489 307L517 291L544 299L574 278L607 286" fill="none" stroke="#63798f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      <g fill="#ff596b">
+        <circle cx="517" cy="291" r="4"/>
+        <circle cx="574" cy="278" r="4"/>
+      </g>
+    </g>
+
+    <text x="52" y="386" fill="#fff7f7" fill-opacity=".5" font-family="Microsoft YaHei, Arial, sans-serif" font-size="12">产品界面结构示意 · 不含真实账单或个人金额。</text>
+  </g>
+</svg>
